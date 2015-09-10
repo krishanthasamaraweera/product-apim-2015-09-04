@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="Nuwans-MacBook-Pro.local" name="org.wso2.am.integration.tests.login.LoginValidationTestCase" tests="19" failures="1" timestamp="20 Aug 2015 14:37:43 GMT" time="102.096" errors="0">
+  <testcase name="testInvalidLoginAsPublisherTestCase" time="0.052" classname="org.wso2.am.integration.tests.login.LoginValidationTestCase"/>
+  <testcase name="testInvalidLoginAsPublisherTestCase" time="0.064" classname="org.wso2.am.integration.tests.login.LoginValidationTestCase"/>
+  <testcase name="testInvalidLoginAsSubscriberTestCase" time="0.348" classname="org.wso2.am.integration.tests.login.LoginValidationTestCase"/>
+  <testcase name="testInvalidLoginAsSubscriberTestCase" time="0.277" classname="org.wso2.am.integration.tests.login.LoginValidationTestCase"/>
+  <testcase name="testLoginToStoreTestCase" time="1.694" classname="org.wso2.am.integration.tests.login.LoginValidationTestCase"/>
+  <testcase name="testLoginToStoreTestCase" time="1.493" classname="org.wso2.am.integration.tests.login.LoginValidationTestCase"/>
+  <testcase name="APIInvocationFailureForSuperTenant" time="5.243" classname="org.wso2.am.integration.tests.other.APIInvocationFailureTestCase"/>
+  <testcase name="APIInvocationFailureForTenant" time="12.754" classname="org.wso2.am.integration.tests.other.APIInvocationFailureTestCase"/>
+  <testcase name="testSetScopeToResourceTestCase" time="9.358" classname="org.wso2.am.integration.tests.resources.APIResourceModificationTestCase"/>
+  <testcase name="testSetScopeToResourceTestCase" time="9.538" classname="org.wso2.am.integration.tests.resources.APIResourceModificationTestCase"/>
+  <testcase name="testDefaultVersionAPI" time="4.266" classname="org.wso2.am.integration.tests.version.DefaultVersionAPITestCase"/>
+  <testcase name="testDefaultVersionAPI" time="4.24" classname="org.wso2.am.integration.tests.version.DefaultVersionAPITestCase"/>
+  <testcase name="testRESTURITemplate" time="0.06" classname="org.wso2.am.integration.tests.rest.URLMappingRESTTestCase"/>
+  <testcase name="testRESTURITemplate" time="0.037" classname="org.wso2.am.integration.tests.rest.URLMappingRESTTestCase"/>
+  <testcase name="checkEndpointValidation" time="0.208" classname="org.wso2.am.integration.tests.other.APIMANAGER2611EndpointValidationTestCase"/>
+  <testcase name="checkEndpointValidation" time="0.15" classname="org.wso2.am.integration.tests.other.APIMANAGER2611EndpointValidationTestCase"/>
+  <testcase name="testSetScopeToResourceTestCase" time="7.57" classname="org.wso2.am.integration.tests.other.APIScopeTestCase">
+    <failure type="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException" message="Unable to generate API access token ">
+      <![CDATA[org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Unable to generate API access token 
+	at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:187)
+	at org.wso2.am.integration.tests.other.APIScopeTestCase.testSetScopeToResourceTestCase(APIScopeTestCase.java:183)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.Exception: Connection error (is server running at http://192.168.19.34:8280/token ?): java.io.IOException: Server returned HTTP response code: 500 for URL: http://192.168.19.34:8280/token
+	at org.wso2.carbon.automation.test.utils.http.client.HttpRequestUtil.doPost(HttpRequestUtil.java:257)
+	at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:184)
+	... 29 more
+... Removed 22 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="testAPIWithLocationHeader" time="4.147" classname="org.wso2.am.integration.tests.other.LocationHeaderTestCase"/>
+  <testcase name="testAPIWithRelativeUrlLocationHeader" time="3.814" classname="org.wso2.am.integration.tests.other.RelativeUrlLocationHeaderTestCase"/>
+</testsuite>

@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="584.354" tests="136" errors="0" skipped="19" failures="11">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries"/>
+    <property name="java.vm.version" value="20.65-b04-462"/>
+    <property name="awt.nativeDoubleBuffering" value="true"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="mrj.build" value="11M4609"/>
+    <property name="java.vm.vendor" value="Apple Inc."/>
+    <property name="java.vendor.url" value="http://www.apple.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/nuwanw/wso2/git/nuwanw/product-apim/modules/integration/tests-integration/tests-backend"/>
+    <property name="java.runtime.version" value="1.6.0_65-b14-462-11M4609"/>
+    <property name="java.awt.graphicsenv" value="apple.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/vs/y12hg7g55mx44ng1r21blwjr0000gn/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Users/nuwanw/wso2/software/apache-maven-3.0.5/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="MacRoman"/>
+    <property name="java.library.path" value=".:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.9.4"/>
+    <property name="user.home" value="/Users/nuwanw"/>
+    <property name="user.timezone" value="Asia/Colombo"/>
+    <property name="java.awt.printerjob" value="apple.awt.CPrinterJob"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="file.encoding" value="MacRoman"/>
+    <property name="user.name" value="nuwanw"/>
+    <property name="java.class.path" value="/Users/nuwanw/wso2/software/apache-maven-3.0.5/boot/plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install -o"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="apple.awt.CToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.6.0_65"/>
+    <property name="java.ext.dirs" value="/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext"/>
+    <property name="sun.boot.class.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar"/>
+    <property name="java.vendor" value="Apple Inc."/>
+    <property name="maven.home" value="/Users/nuwanw/wso2/software/apache-maven-3.0.5"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.apple.com/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="mrj.version" value="1070.1.6.0_65-462"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="testInvokeAPIBeforeChangeAPILifecycleToRetired" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase" time="4.578"/>
+  <testcase name="testInvokeAPIBeforeChangeAPILifecycleToRetired" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase" time="3.144">
+    <failure message="Error in API Subscribe. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin Response Code:200 Response Data :{&quot;error&quot; : true, &quot;message&quot; : &quot;org.wso2.carbon.apimgt.api.APIManagementException: Error while adding the subscription for user: admin&quot;}" type="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException">org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Subscribe. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin Response Code:200 Response Data :{"error" : true, "message" : "org.wso2.carbon.apimgt.api.APIManagementException: Error while adding the subscription for user: admin"}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.createPublishAndSubscribeToAPI(APIManagerLifecycleBaseTest.java:372)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToRetired(AccessibilityOfRetireAPITestCase.java:93)
+</failure>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test success...
+INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - Running the test method --- org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToRetired ----
+INFO  [org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest] - API Created : API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin 
+INFO  [org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest] - API Published : API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin 
+]]></system-out>
+  </testcase>
+  <testcase name="testChangeAPILifecycleToRetired" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase" time="1.167"/>
+  <testcase name="testChangeAPILifecycleToRetired" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test failure...
+]]></system-out>
+  </testcase>
+  <testcase name="testAvailabilityOfRetiredAPIInStore" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase" time="0.199"/>
+  <testcase name="testAvailabilityOfRetiredAPIInStore" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testInvokeAPIAfterChangeAPILifecycleToRetired" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase" time="0.046"/>
+  <testcase name="testInvokeAPIAfterChangeAPILifecycleToRetired" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testInvokeAPIBeforeChangeAPILifecycleToBlock" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase" time="3.94">
+    <failure message="Response code mismatched when invoke api before block expected:&lt;200&gt; but was:&lt;302&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Response code mismatched when invoke api before block expected:<200> but was:<302>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:365)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToBlock(AccessibilityOfBlockAPITestCase.java:104)
+]]></failure>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test success...
+INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - Running the test method --- org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToBlock ----
+INFO  [org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest] - API Created : API Name:BlockAPITest API Version:1.0.0 API Provider Name :admin 
+INFO  [org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest] - API Published : API Name:BlockAPITest API Version:1.0.0 API Provider Name :admin 
+INFO  [org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest] - API Subscribed : API Name:BlockAPITest API Version:1.0.0 API Provider Name :admin 
+]]></system-out>
+  </testcase>
+  <testcase name="testChangeAPILifecycleToBlock" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test failure...
+]]></system-out>
+  </testcase>
+  <testcase name="testInvokeAPIAfterChangeAPILifecycleToBlock" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test skipped...
+]]></system-out>
+  </testcase>
+  <testcase name="testSubscriptionOfOldAPI" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase" time="3.583"/>
+  <testcase name="testPublishCopiedAPIWithOutReSubscriptionRequired" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase" time="3.48"/>
+  <testcase name="testInvokeOldAPIBeforeSubscribeTheNewVersion" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase" time="0.995"/>
+  <testcase name="testInvokeNewAPIWithoutSubscribeTheNewVersion" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase" time="0.155"/>
+  <testcase name="cleanUpArtifacts" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase" time="4.352">
+    <failure message="Exception when delete a API" type="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException">org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+</failure>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test skipped...
+]]></system-out>
+  </testcase>
+  <testcase name="cleanUpArtifacts" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase" time="4.419">
+    <failure message="Exception when delete a API" type="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException">org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+</failure>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test skipped...
+]]></system-out>
+  </testcase>
+  <testcase name="cleanUpArtifacts" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase" time="4.487">
+    <failure message="Exception when delete a API" type="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException">org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+</failure>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test skipped...
+]]></system-out>
+  </testcase>
+  <testcase name="testInvokeGETResource" classname="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase" time="4.11"/>
+  <testcase name="testInvokePOSTResourceBeforeAddingPOSTResource" classname="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase" time="0.023"/>
+  <testcase name="testInvokePOSTAndGETResourceAfterAddingPOSTResource" classname="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase" time="3.036"/>
+  <testcase name="testInvokePOSTAndGetResourceAfterAddingURLPattern" classname="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase" time="3.014"/>
+  <testcase name="testInvokeGETAndPOSTResourceAfterRemovePOSTResource" classname="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase" time="2.981"/>
+  <testcase name="testAPICreation" classname="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase" time="1.927"/>
+  <testcase name="testVisibilityOfAPIInStoreBeforePublishing" classname="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase" time="0.091"/>
+  <testcase name="testAPIPublishing" classname="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase" time="1.371"/>
+  <testcase name="testVisibilityOfAPIInStoreAfterPublishing" classname="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase" time="0.087"/>
+  <testcase name="testVisibilityForCreatorInPublisher" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase" time="3.087"/>
+  <testcase name="testVisibilityForCreatorInStore" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase" time="0.215"/>
+  <testcase name="testVisibilityForAdminInSameDomainInPublisher" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase" time="0.081"/>
+  <testcase name="testVisibilityForAdminInSameDomainInStore" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase" time="0.077"/>
+  <testcase name="testVisibilityForAnotherUserInSameDomainInPublisher" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase" time="0.08"/>
+  <testcase name="testVisibilityForAnotherUserInSameDomainInStore" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase" time="0.135"/>
+  <testcase name="testVisibilityForAnotherUserInOtherDomainInPublisher" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase" time="0.149"/>
+  <testcase name="testVisibilityForAnotherUserInOtherDomainInStore" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase" time="0.413"/>
+  <testcase name="testVisibilityForAdminInOtherDomainInPublisher" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase" time="0.025"/>
+  <testcase name="testVisibilityForAdminInOtherDomainInStore" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase" time="0.11"/>
+  <testcase name="testVisibilityForAnonymousUserInSameDomainInStore" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase" time="0.518">
+    <failure message="API  visible to anonymous user in same domain API Store. When Visibility is private.   API Name:APIVisibilityByDomainTest API Version:1.0.0 API Provider Name :testu1  expected:&lt;false&gt; but was:&lt;true&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: API  visible to anonymous user in same domain API Store. When Visibility is private.   API Name:APIVisibilityByDomainTest API Version:1.0.0 API Provider Name :testu1  expected:<false> but was:<true>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertFalse(Assert.java:58)
+	at org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnonymousUserInSameDomainInStore(APIVisibilityByDomainTestCase.java:264)
+]]></failure>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test success...
+INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - Running the test method --- org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnonymousUserInSameDomainInStore ----
+]]></system-out>
+  </testcase>
+  <testcase name="testVisibilityForAnonymousUserInOtherDomainInStore" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test failure...
+]]></system-out>
+  </testcase>
+  <testcase name="testVisibilityForCreatorInPublisher" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase" time="6.257"/>
+  <testcase name="testVisibilityForCreatorInStore" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase" time="0.108"/>
+  <testcase name="testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInPublisher" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase" time="0.108"/>
+  <testcase name="testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase" time="0.006">
+    <failure message="API with  Role admin  visibility is not visible to Admin user with Admin and subscriber role in same domain  in API Store. API Name:APIVisibilityByRoleTest API Version:1.0.0 API Provider Name :testu1  expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: API with  Role admin  visibility is not visible to Admin user with Admin and subscriber role in same domain  in API Store. API Name:APIVisibilityByRoleTest API Version:1.0.0 API Provider Name :testu1  expected:<true> but was:<false>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertTrue(Assert.java:37)
+	at org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore(APIVisibilityByRoleTestCase.java:260)
+]]></failure>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test success...
+INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - Running the test method --- org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore ----
+]]></system-out>
+  </testcase>
+  <testcase name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInPublisher" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test failure...
+]]></system-out>
+  </testcase>
+  <testcase name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInStore" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test skipped...
+]]></system-out>
+  </testcase>
+  <testcase name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInPublisher" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test skipped...
+]]></system-out>
+  </testcase>
+  <testcase name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInStore" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test skipped...
+]]></system-out>
+  </testcase>
+  <testcase name="testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInPublisher" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test skipped...
+]]></system-out>
+  </testcase>
+  <testcase name="testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInStore" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test skipped...
+]]></system-out>
+  </testcase>
+  <testcase name="testVisibilityForAnotherUserWithSubscriberRoleInSameDomainInStore" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test skipped...
+]]></system-out>
+  </testcase>
+  <testcase name="testVisibilityForAnotherUserWithSubscriberRoleInOtherDomainInStore" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test skipped...
+]]></system-out>
+  </testcase>
+  <testcase name="testVisibilityForAnonymousUserInOtherDomainInStore" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test skipped...
+]]></system-out>
+  </testcase>
+  <testcase name="testVisibilityForAnonymousUserInSameDomainInStore" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test skipped...
+]]></system-out>
+  </testcase>
+  <testcase name="testAPIInvocationBeforeChangeTheEndPointURL" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase" time="3.935"/>
+  <testcase name="testEditEndPointURL" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase" time="2.844"/>
+  <testcase name="testInvokeAPIAfterChangeAPIEndPointURLWithNewEndPointURL" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase" time="2.345"/>
+  <testcase name="testFilterByTagsBeforeTagChange" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase" time="12.042">
+    <failure message="API is not listed  with correct tag, API:APITagTest2 Tag:Tag3 expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: API is not listed  with correct tag, API:APITagTest2 Tag:Tag3 expected:<true> but was:<false>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertTrue(Assert.java:37)
+	at org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase.testFilterByTagsBeforeTagChange(ChangeAPITagsTestCase.java:115)
+]]></failure>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test success...
+INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - Running the test method --- org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase.testFilterByTagsBeforeTagChange ----
+INFO  [org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest] - API Created : API Name:APITagTest2 API Version:1.0.0 API Provider Name :admin 
+INFO  [org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest] - API Published : API Name:APITagTest2 API Version:1.0.0 API Provider Name :admin 
+INFO  [org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest] - API Created : API Name:APITagTest3 API Version:1.0.0 API Provider Name :admin 
+INFO  [org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest] - API Published : API Name:APITagTest3 API Version:1.0.0 API Provider Name :admin 
+INFO  [org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest] - API Created : API Name:APITagTest1 API Version:1.0.0 API Provider Name :admin 
+INFO  [org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest] - API Published : API Name:APITagTest1 API Version:1.0.0 API Provider Name :admin 
+INFO  [org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest] - API Created : API Name:APITagTest4 API Version:1.0.0 API Provider Name :admin 
+INFO  [org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest] - API Published : API Name:APITagTest4 API Version:1.0.0 API Provider Name :admin 
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdateTagsAndFilterByTags" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test failure...
+]]></system-out>
+  </testcase>
+  <testcase name="testInvokingWithGoldTier" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase" time="5.045"/>
+  <testcase name="testInvokingAfterExpireThrottleExpireTime" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase" time="65.058"/>
+  <testcase name="testEditAPITierToSilver" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase" time="2.841"/>
+  <testcase name="testInvokingWithSilverTier" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase" time="66.7"/>
+  <testcase name="testInvokingWithAPIGoldTierApplicationSilver" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase" time="4.892"/>
+  <testcase name="testInvokingWithAPIGoldTierApplicationGold" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase" time="66.376"/>
+  <testcase name="testInvokingWithAPIGoldTierApplicationSilverFor2ndTime" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase" time="65.667"/>
+  <testcase name="testInvokeResourceWithAuthTypeApplicationAndApplicationUser" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase" time="4.783"/>
+  <testcase name="testInvokeResourceWithAuthTypeApplication" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase" time="2.832"/>
+  <testcase name="testInvokeGETResourceWithAuthTypeApplicationUser" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase" time="2.936">
+    <failure message="Unable to generate API access token " type="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException">org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Unable to generate API access token 
+	at org.wso2.carbon.automation.test.utils.http.client.HttpRequestUtil.doPost(HttpRequestUtil.java:257)
+	at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:184)
+	at org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeGETResourceWithAuthTypeApplicationUser(ChangeAuthTypeOfResourceTestCase.java:170)
+</failure>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test success...
+INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - Running the test method --- org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeGETResourceWithAuthTypeApplicationUser ----
+]]></system-out>
+  </testcase>
+  <testcase name="testInvokeGETResourceWithAuthTypeNone" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test failure...
+]]></system-out>
+  </testcase>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="3.994"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.487"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.575"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.623"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.821"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.597"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.54"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.548"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.658"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.697"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.626"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.672"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.591"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.706"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.582"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.612"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.708"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.748"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.64"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.656"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.623"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.695"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.611"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.592"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.66"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.581"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.612"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.623"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.719"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.489"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase" time="2.623"/>
+  <testcase name="testInvokingWithAPIGoldTierApplicationGoldResourceUnlimited" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase" time="5.406"/>
+  <testcase name="testInvokingWithAPIGoldTierApplicationGoldResourceSilver" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase" time="68.029"/>
+  <testcase name="testInvokingWithAPIGoldTierApplicationGoldResourceGold" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase" time="68.187"/>
+  <testcase name="testEditAPIInformation" classname="org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase" time="5.79"/>
+  <testcase name="testUpdatedAPIInformationFromAPIPublisher" classname="org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase" time="0.118"/>
+  <testcase name="testInvokeAPIBeforeChangeAPIContext" classname="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase" time="3.928"/>
+  <testcase name="testEditAPIContext" classname="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase" time="2.493"/>
+  <testcase name="testInvokeAPIAfterChangeAPIContextWithOldContext" classname="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase" time="0.03"/>
+  <testcase name="testInvokeAPIAfterChangeAPIContextWithNewContext" classname="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase" time="0.149"/>
+  <testcase name="testAvailabilityOfTiersInPermissionPageBeforeChangeTiersXML" classname="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase" time="3.013"/>
+  <testcase name="testAvailabilityOfTiersInAPIManagePageBeforeChangeTiersXML" classname="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase" time="0.2"/>
+  <testcase name="testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML" classname="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase" time="0.074">
+    <failure message="new tier Platinum  is not available in Tier Permission page before  add new tear in tiers.xml expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: new tier Platinum  is not available in Tier Permission page before  add new tear in tiers.xml expected:<true> but was:<false>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertTrue(Assert.java:37)
+	at org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML(EditTiersXMLAndVerifyInPublisherTestCase.java:145)
+]]></failure>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test success...
+INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - Running the test method --- org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML ----
+]]></system-out>
+  </testcase>
+  <testcase name="testAvailabilityOfTiersInAPIManagePageAfterChangeTiersXML" classname="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase" time="0">
+    <skipped/>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test failure...
+]]></system-out>
+  </testcase>
+  <testcase name="testNumberOfUsersInAPIOverview" classname="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase" time="4.464"/>
+  <testcase name="testUsersInformationInUserTabInAPIOverview" classname="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase" time="0.134"/>
+  <testcase name="testDocInformationInDocsTabInAPIOverview" classname="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase" time="2.902"/>
+  <testcase name="testPluggableVersioningStratergy" classname="org.wso2.am.integration.tests.api.lifecycle.PluggableVersioningStrategyTestCase" time="4.643"/>
+  <testcase name="testInvalidLoginAsPublisherTestCase" classname="org.wso2.am.integration.tests.login.LoginValidationTestCase" time="0.052"/>
+  <testcase name="testInvalidLoginAsPublisherTestCase" classname="org.wso2.am.integration.tests.login.LoginValidationTestCase" time="0.064"/>
+  <testcase name="testInvalidLoginAsSubscriberTestCase" classname="org.wso2.am.integration.tests.login.LoginValidationTestCase" time="0.348"/>
+  <testcase name="testInvalidLoginAsSubscriberTestCase" classname="org.wso2.am.integration.tests.login.LoginValidationTestCase" time="0.277"/>
+  <testcase name="testLoginToStoreTestCase" classname="org.wso2.am.integration.tests.login.LoginValidationTestCase" time="1.694"/>
+  <testcase name="testLoginToStoreTestCase" classname="org.wso2.am.integration.tests.login.LoginValidationTestCase" time="1.493"/>
+  <testcase name="APIInvocationFailureForSuperTenant" classname="org.wso2.am.integration.tests.other.APIInvocationFailureTestCase" time="5.243"/>
+  <testcase name="APIInvocationFailureForTenant" classname="org.wso2.am.integration.tests.other.APIInvocationFailureTestCase" time="12.754"/>
+  <testcase name="testSetScopeToResourceTestCase" classname="org.wso2.am.integration.tests.resources.APIResourceModificationTestCase" time="9.357"/>
+  <testcase name="testSetScopeToResourceTestCase" classname="org.wso2.am.integration.tests.resources.APIResourceModificationTestCase" time="9.538"/>
+  <testcase name="testDefaultVersionAPI" classname="org.wso2.am.integration.tests.version.DefaultVersionAPITestCase" time="4.265"/>
+  <testcase name="testDefaultVersionAPI" classname="org.wso2.am.integration.tests.version.DefaultVersionAPITestCase" time="4.24"/>
+  <testcase name="testRESTURITemplate" classname="org.wso2.am.integration.tests.rest.URLMappingRESTTestCase" time="0.061"/>
+  <testcase name="testRESTURITemplate" classname="org.wso2.am.integration.tests.rest.URLMappingRESTTestCase" time="0.036"/>
+  <testcase name="checkEndpointValidation" classname="org.wso2.am.integration.tests.other.APIMANAGER2611EndpointValidationTestCase" time="0.208"/>
+  <testcase name="checkEndpointValidation" classname="org.wso2.am.integration.tests.other.APIMANAGER2611EndpointValidationTestCase" time="0.151"/>
+  <testcase name="testSetScopeToResourceTestCase" classname="org.wso2.am.integration.tests.other.APIScopeTestCase" time="7.57">
+    <failure message="Unable to generate API access token " type="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException">org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Unable to generate API access token 
+	at org.wso2.carbon.automation.test.utils.http.client.HttpRequestUtil.doPost(HttpRequestUtil.java:257)
+	at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:184)
+	at org.wso2.am.integration.tests.other.APIScopeTestCase.testSetScopeToResourceTestCase(APIScopeTestCase.java:183)
+</failure>
+    <system-out><![CDATA[INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - On test success...
+INFO  [org.wso2.carbon.automation.engine.testlisteners.TestManagerListener] - Running the test method --- org.wso2.am.integration.tests.other.APIScopeTestCase.testSetScopeToResourceTestCase ----
+INFO  [org.apache.axis2.deployment.ModuleDeployer] - Deploying module: wso2caching-4.2.0 - file:/Users/nuwanw/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+]]></system-out>
+  </testcase>
+  <testcase name="testAPIWithLocationHeader" classname="org.wso2.am.integration.tests.other.LocationHeaderTestCase" time="4.146"/>
+  <testcase name="testAPIWithRelativeUrlLocationHeader" classname="org.wso2.am.integration.tests.other.RelativeUrlLocationHeaderTestCase" time="3.815"/>
+</testsuite>

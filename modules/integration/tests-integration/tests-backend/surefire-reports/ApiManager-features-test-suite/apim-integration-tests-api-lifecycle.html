@@ -1,0 +1,1130 @@
+<html>
+<head>
+<title>TestNG:  apim-integration-tests-api-lifecycle</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>apim-integration-tests-api-lifecycle</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>88/7/19</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Aug 20 19:55:00 IST 2015</td>
+</tr>
+<tr><td>Total time:</td><td>661 seconds (661074 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts()'><b>cleanUpArtifacts</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase</td>
+<td><div><pre>org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:172)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Deletion. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin  API Context :org.wso2.carbon.automation.test.utils.http.client.HttpResponse@2c91e143Response Code:200 Response Data :{&quot;error&quot; : true, &quot;message&quot; : &quot; Failed to remove the API from : /apimgt/applicationdata/provider/admin/RetireAPITest/1.0.0&quot;}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	... 29 more
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace492571793", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace492571793'><pre>org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:172)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:525)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:202)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:130)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:222)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Deletion. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin  API Context :org.wso2.carbon.automation.test.utils.http.client.HttpResponse@2c91e143Response Code:200 Response Data :{"error" : true, "message" : " Failed to remove the API from : /apimgt/applicationdata/provider/admin/RetireAPITest/1.0.0"}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	... 29 more
+</pre></div></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase@3ffef80a</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts()'><b>cleanUpArtifacts</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase</td>
+<td><div><pre>org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:172)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Deletion. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin  API Context :org.wso2.carbon.automation.test.utils.http.client.HttpResponse@1393537dResponse Code:200 Response Data :{&quot;error&quot; : true, &quot;message&quot; : &quot; Failed to remove the API from : /apimgt/applicationdata/provider/admin/RetireAPITest/1.0.0&quot;}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	... 29 more
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace760102293", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace760102293'><pre>org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:172)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:525)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:202)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:130)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:222)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Deletion. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin  API Context :org.wso2.carbon.automation.test.utils.http.client.HttpResponse@1393537dResponse Code:200 Response Data :{"error" : true, "message" : " Failed to remove the API from : /apimgt/applicationdata/provider/admin/RetireAPITest/1.0.0"}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	... 29 more
+</pre></div></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase@3ffef80a</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts()'><b>cleanUpArtifacts</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase</td>
+<td><div><pre>org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:172)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Deletion. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin  API Context :org.wso2.carbon.automation.test.utils.http.client.HttpResponse@311f56a3Response Code:200 Response Data :{&quot;error&quot; : true, &quot;message&quot; : &quot; Failed to remove the API from : /apimgt/applicationdata/provider/admin/RetireAPITest/1.0.0&quot;}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	... 29 more
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace7405703", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace7405703'><pre>org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:172)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:525)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:202)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:130)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:222)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Deletion. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin  API Context :org.wso2.carbon.automation.test.utils.http.client.HttpResponse@311f56a3Response Code:200 Response Data :{"error" : true, "message" : " Failed to remove the API from : /apimgt/applicationdata/provider/admin/RetireAPITest/1.0.0"}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	... 29 more
+</pre></div></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase@3ffef80a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML()'><b>testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase<br>Test method: test availability of tiers in Permission Page after change tiers XML</td>
+<td><div><pre>java.lang.AssertionError: new tier Platinum  is not available in Tier Permission page before  add new tear in tiers.xml expected:&lt;true&gt; but was:&lt;false&gt;
+	at org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML(EditTiersXMLAndVerifyInPublisherTestCase.java:145)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace869295101", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace869295101'><pre>java.lang.AssertionError: new tier Platinum  is not available in Tier Permission page before  add new tear in tiers.xml expected:&lt;true&gt; but was:&lt;false&gt;
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertTrue(Assert.java:37)
+	at org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML(EditTiersXMLAndVerifyInPublisherTestCase.java:145)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase@36101d01</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase.testFilterByTagsBeforeTagChange()'><b>testFilterByTagsBeforeTagChange</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase<br>Test method: Test the filter by Tags before changing the Tags</td>
+<td><div><pre>java.lang.AssertionError: API is not listed  with correct tag, API:APITagTest2 Tag:Tag3 expected:&lt;true&gt; but was:&lt;false&gt;
+	at org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase.testFilterByTagsBeforeTagChange(ChangeAPITagsTestCase.java:115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1265516423", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1265516423'><pre>java.lang.AssertionError: API is not listed  with correct tag, API:APITagTest2 Tag:Tag3 expected:&lt;true&gt; but was:&lt;false&gt;
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertTrue(Assert.java:37)
+	at org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase.testFilterByTagsBeforeTagChange(ChangeAPITagsTestCase.java:115)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div></td>
+<td>12</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase@4d480773</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToBlock()'><b>testInvokeAPIBeforeChangeAPILifecycleToBlock</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase<br>Test method: Test invocation of the APi before block</td>
+<td><div><pre>java.lang.AssertionError: Response code mismatched when invoke api before block expected:&lt;200&gt; but was:&lt;302&gt;
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToBlock(AccessibilityOfBlockAPITestCase.java:104)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1493459568", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1493459568'><pre>java.lang.AssertionError: Response code mismatched when invoke api before block expected:&lt;200&gt; but was:&lt;302&gt;
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:365)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToBlock(AccessibilityOfBlockAPITestCase.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div></td>
+<td>3</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase@7c959fa1</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToRetired()'><b>testInvokeAPIBeforeChangeAPILifecycleToRetired</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<br>Test method: Test invocation of the APi before retire</td>
+<td><div><pre>org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Subscribe. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin Response Code:200 Response Data :{&quot;error&quot; : true, &quot;message&quot; : &quot;org.wso2.carbon.apimgt.api.APIManagementException: Error while adding the subscription for user: admin&quot;}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.createPublishAndSubscribeToAPI(APIManagerLifecycleBaseTest.java:372)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToRetired(AccessibilityOfRetireAPITestCase.java:93)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2120900821", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2120900821'><pre>org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Subscribe. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin Response Code:200 Response Data :{"error" : true, "message" : "org.wso2.carbon.apimgt.api.APIManagementException: Error while adding the subscription for user: admin"}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.createPublishAndSubscribeToAPI(APIManagerLifecycleBaseTest.java:372)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToRetired(AccessibilityOfRetireAPITestCase.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div></td>
+<td>3</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase@3ffef80a</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeGETResourceWithAuthTypeApplicationUser()'><b>testInvokeGETResourceWithAuthTypeApplicationUser</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase<br>Test method: Invoke a resource with auth type Application User</td>
+<td><div><pre>org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Unable to generate API access token 
+	at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:187)
+	at org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeGETResourceWithAuthTypeApplicationUser(ChangeAuthTypeOfResourceTestCase.java:170)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.Exception: Connection error (is server running at http://192.168.19.34:8280/token ?): java.io.IOException: Server returned HTTP response code: 500 for URL: http://192.168.19.34:8280/token
+	at org.wso2.carbon.automation.test.utils.http.client.HttpRequestUtil.doPost(HttpRequestUtil.java:257)
+	at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:184)
+	... 29 more
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1993902754", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1993902754'><pre>org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Unable to generate API access token 
+	at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:187)
+	at org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeGETResourceWithAuthTypeApplicationUser(ChangeAuthTypeOfResourceTestCase.java:170)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.Exception: Connection error (is server running at http://192.168.19.34:8280/token ?): java.io.IOException: Server returned HTTP response code: 500 for URL: http://192.168.19.34:8280/token
+	at org.wso2.carbon.automation.test.utils.http.client.HttpRequestUtil.doPost(HttpRequestUtil.java:257)
+	at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:184)
+	... 29 more
+</pre></div></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase@14a97f68</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore()'><b>testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<br>Test method: Test the visibility pf API in Store for admin in same domain </td>
+<td><div><pre>java.lang.AssertionError: API with  Role admin  visibility is not visible to Admin user with Admin and subscriber role in same domain  in API Store. API Name:APIVisibilityByRoleTest API Version:1.0.0 API Provider Name :testu1  expected:&lt;true&gt; but was:&lt;false&gt;
+	at org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore(APIVisibilityByRoleTestCase.java:260)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace173329337", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace173329337'><pre>java.lang.AssertionError: API with  Role admin  visibility is not visible to Admin user with Admin and subscriber role in same domain  in API Store. API Name:APIVisibilityByRoleTest API Version:1.0.0 API Provider Name :testu1  expected:&lt;true&gt; but was:&lt;false&gt;
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertTrue(Assert.java:37)
+	at org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore(APIVisibilityByRoleTestCase.java:260)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase@3a1be20c</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnonymousUserInSameDomainInStore()'><b>testVisibilityForAnonymousUserInSameDomainInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<br>Test method: Test the visibility for API in Same domainStore for anonymous user</td>
+<td><div><pre>java.lang.AssertionError: API  visible to anonymous user in same domain API Store. When Visibility is private.   API Name:APIVisibilityByDomainTest API Version:1.0.0 API Provider Name :testu1  expected:&lt;false&gt; but was:&lt;true&gt;
+	at org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnonymousUserInSameDomainInStore(APIVisibilityByDomainTestCase.java:264)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace930458854", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace930458854'><pre>java.lang.AssertionError: API  visible to anonymous user in same domain API Store. When Visibility is private.   API Name:APIVisibilityByDomainTest API Version:1.0.0 API Provider Name :testu1  expected:&lt;false&gt; but was:&lt;true&gt;
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertFalse(Assert.java:58)
+	at org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnonymousUserInSameDomainInStore(APIVisibilityByDomainTestCase.java:264)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase@456c1227</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase.testAPICreation()'><b>testAPICreation</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase<br>Test method: Create a API and  check its availability in Publisher.</td>
+<td></td>
+<td>1</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase@5a2d13c1</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase.testAPIInvocationBeforeChangeTheEndPointURL()'><b>testAPIInvocationBeforeChangeTheEndPointURL</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase<br>Test method: Test  invocation of API before change the  api end point URL.</td>
+<td></td>
+<td>3</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase@400c02a</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase.testAPIPublishing()'><b>testAPIPublishing</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase<br>Test method: Test the API publishing action. Response HTTP message should contains API status change from  CREATED to PUBLISHED</td>
+<td></td>
+<td>1</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase@5a2d13c1</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testAvailabilityOfRetiredAPIInStore()'><b>testAvailabilityOfRetiredAPIInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<br>Test method: Test the availability of retired API in the store</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase@3ffef80a</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInAPIManagePageBeforeChangeTiersXML()'><b>testAvailabilityOfTiersInAPIManagePageBeforeChangeTiersXML</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase<br>Test method: Test availability of tiers in API Manage Page before change tiers XML</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase@36101d01</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInPermissionPageBeforeChangeTiersXML()'><b>testAvailabilityOfTiersInPermissionPageBeforeChangeTiersXML</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase<br>Test method: test availability of tiers in Permission Page before change tiers XML</td>
+<td></td>
+<td>3</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase@36101d01</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testChangeAPILifecycleToRetired()'><b>testChangeAPILifecycleToRetired</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<br>Test method: Change API lifecycle to Retired</td>
+<td></td>
+<td>1</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase@3ffef80a</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase.testDocInformationInDocsTabInAPIOverview()'><b>testDocInformationInDocsTabInAPIOverview</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase<br>Test method: test user information in API overview Docs tab is correct</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase@61b00766</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase.testEditAPIContext()'><b>testEditAPIContext</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase<br>Test method: Test changing of the API context</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase@3c9ce70</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase.testEditAPIInformation()'><b>testEditAPIInformation</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase<br>Test method: Edit the API Information</td>
+<td></td>
+<td>5</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase@83ba4f1</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase.testEditAPITierToSilver()'><b>testEditAPITierToSilver</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase<br>Test method: Test changing of the API Tier from Gold to Silver</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase@33e136a8</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase.testEditEndPointURL()'><b>testEditEndPointURL</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase<br>Test method: Test changing of the API end point URL</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase@400c02a</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase.testInvokeAPIAfterChangeAPIContextWithNewContext()'><b>testInvokeAPIAfterChangeAPIContextWithNewContext</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase<br>Test method: Test the invocation of API using new context after Context change</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase@3c9ce70</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase.testInvokeAPIAfterChangeAPIContextWithOldContext()'><b>testInvokeAPIAfterChangeAPIContextWithOldContext</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase<br>Test method: Test the invocation of API using old context after Context change after the API context change</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase@3c9ce70</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase.testInvokeAPIAfterChangeAPIEndPointURLWithNewEndPointURL()'><b>testInvokeAPIAfterChangeAPIEndPointURLWithNewEndPointURL</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase<br>Test method: Test the invocation of API using new end point URL  after end point URL  change</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase@400c02a</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testInvokeAPIAfterChangeAPILifecycleToRetired()'><b>testInvokeAPIAfterChangeAPILifecycleToRetired</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<br>Test method: Test the invocation of the API after retire</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase@3ffef80a</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase.testInvokeAPIBeforeChangeAPIContext()'><b>testInvokeAPIBeforeChangeAPIContext</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase<br>Test method: Test invoke the API before the context change</td>
+<td></td>
+<td>3</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase@3c9ce70</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToRetired()'><b>testInvokeAPIBeforeChangeAPILifecycleToRetired</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<br>Test method: Test invocation of the APi before retire</td>
+<td></td>
+<td>4</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase@3ffef80a</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase.testInvokeGETAndPOSTResourceAfterRemovePOSTResource()'><b>testInvokeGETAndPOSTResourceAfterRemovePOSTResource</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase<br>Test method: Test the invocation of POST and GET resource, after Remove POST resource</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase@7c4e7958</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase.testInvokeGETResource()'><b>testInvokeGETResource</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase<br>Test method: Test the invocation of GET resource</td>
+<td></td>
+<td>4</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase@7c4e7958</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: !</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: @</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: #</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: $</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: %</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: ^</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: &</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: *</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: (</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: )</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: _</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: -</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: +</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: =</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: {</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: [</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: }</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: ]</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: |</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: \</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: :</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: ;</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: "</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: '</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: <</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: ,</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: ></td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: .</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: ?</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword()'><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with complex password<br>Parameters: /</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters()'><b>testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<br>Test method: Test the API with endpoint security enabled with simple password that only has characters and numbers</td>
+<td></td>
+<td>3</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase@3eb8f71</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase.testInvokeNewAPIWithoutSubscribeTheNewVersion()'><b>testInvokeNewAPIWithoutSubscribeTheNewVersion</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase<br>Test method: Test invocation of new API version before the new version is subscribed.</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase@432342ed</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase.testInvokeOldAPIBeforeSubscribeTheNewVersion()'><b>testInvokeOldAPIBeforeSubscribeTheNewVersion</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase<br>Test method: Test invocation of old API version  before the new version is subscribed.</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase@432342ed</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase.testInvokePOSTAndGETResourceAfterAddingPOSTResource()'><b>testInvokePOSTAndGETResourceAfterAddingPOSTResource</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase<br>Test method: Test the invocation of POST and GET resource, after adding a POST resource</td>
+<td></td>
+<td>3</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase@7c4e7958</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase.testInvokePOSTAndGetResourceAfterAddingURLPattern()'><b>testInvokePOSTAndGetResourceAfterAddingURLPattern</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase<br>Test method: Test the invocation of POST and GET resource, after adding a URL pattern</td>
+<td></td>
+<td>3</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase@7c4e7958</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase.testInvokePOSTResourceBeforeAddingPOSTResource()'><b>testInvokePOSTResourceBeforeAddingPOSTResource</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase<br>Test method: Test the invocation of POST resource, before adding a POSt resource</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase@7c4e7958</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeResourceWithAuthTypeApplication()'><b>testInvokeResourceWithAuthTypeApplication</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase<br>Test method: Invoke a resource with auth type Application</td>
+<td></td>
+<td>2</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase@14a97f68</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeResourceWithAuthTypeApplicationAndApplicationUser()'><b>testInvokeResourceWithAuthTypeApplicationAndApplicationUser</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase<br>Test method: Invoke a resource with auth type Application And Application User</td>
+<td></td>
+<td>4</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase@14a97f68</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase.testInvokingAfterExpireThrottleExpireTime()'><b>testInvokingAfterExpireThrottleExpireTime</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase<br>Test method: test  invocation of APi after expire the throttling block time.</td>
+<td></td>
+<td>65</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase@33e136a8</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase.testInvokingWithAPIGoldTierApplicationGold()'><b>testInvokingWithAPIGoldTierApplicationGold</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase<br>Test method: test  invocation of  api under API tier Gold  and Application Tire Gold..</td>
+<td></td>
+<td>66</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase@6cb6a34</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase.testInvokingWithAPIGoldTierApplicationGoldResourceGold()'><b>testInvokingWithAPIGoldTierApplicationGoldResourceGold</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase<br>Test method: test  the  throttling of a API. API Tier :Gold, Application Tier: GOLD, Resource Tier: Gold.</td>
+<td></td>
+<td>68</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase@5e1645b9</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase.testInvokingWithAPIGoldTierApplicationGoldResourceSilver()'><b>testInvokingWithAPIGoldTierApplicationGoldResourceSilver</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase<br>Test method: test  the  throttling of a API. API Tier :Gold, Application Tier: GOLD, Resource Tier: Silver.</td>
+<td></td>
+<td>68</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase@5e1645b9</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase.testInvokingWithAPIGoldTierApplicationGoldResourceUnlimited()'><b>testInvokingWithAPIGoldTierApplicationGoldResourceUnlimited</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase<br>Test method: test  the  throttling of a API. API Tier :Gold, Application Tier: GOLD, Resource Tier: Unlimited.</td>
+<td></td>
+<td>5</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase@5e1645b9</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase.testInvokingWithAPIGoldTierApplicationSilver()'><b>testInvokingWithAPIGoldTierApplicationSilver</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase<br>Test method: test  invocation of  api under  API tier Gold  and Application Tire Silver.</td>
+<td></td>
+<td>4</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase@6cb6a34</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase.testInvokingWithAPIGoldTierApplicationSilverFor2ndTime()'><b>testInvokingWithAPIGoldTierApplicationSilverFor2ndTime</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase<br>Test method: test  invocation of  api under API tier Gold  and Application Tire Silver.Change the Application tire to silver and test </td>
+<td></td>
+<td>65</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase@6cb6a34</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase.testInvokingWithGoldTier()'><b>testInvokingWithGoldTier</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase<br>Test method: test  invocation of  api under tier Gold.</td>
+<td></td>
+<td>5</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase@33e136a8</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase.testInvokingWithSilverTier()'><b>testInvokingWithSilverTier</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase<br>Test method: test  invocation of  api under tier Silver.</td>
+<td></td>
+<td>66</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase@33e136a8</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase.testNumberOfUsersInAPIOverview()'><b>testNumberOfUsersInAPIOverview</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase<br>Test method: test the user count in API overview is correct</td>
+<td></td>
+<td>4</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase@61b00766</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.PluggableVersioningStrategyTestCase.testPluggableVersioningStratergy()'><b>testPluggableVersioningStratergy</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.PluggableVersioningStrategyTestCase<br>Test method: This test method tests the pluggable versioning stratergy</td>
+<td></td>
+<td>4</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.PluggableVersioningStrategyTestCase@5be04861</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase.testPublishCopiedAPIWithOutReSubscriptionRequired()'><b>testPublishCopiedAPIWithOutReSubscriptionRequired</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase<br>Test method: Test publishing of copied API with out re-subscription required</td>
+<td></td>
+<td>3</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase@432342ed</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase.testSubscriptionOfOldAPI()'><b>testSubscriptionOfOldAPI</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase<br>Test method: Test subscribe of old api version.</td>
+<td></td>
+<td>3</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase@432342ed</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase.testUpdatedAPIInformationFromAPIPublisher()'><b>testUpdatedAPIInformationFromAPIPublisher</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase<br>Test method: Test whether the updated information available in the publisher </td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase@83ba4f1</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase.testUsersInformationInUserTabInAPIOverview()'><b>testUsersInformationInUserTabInAPIOverview</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase<br>Test method: test user information in API overview Users tab is correct</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase@61b00766</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAdminInOtherDomainInPublisher()'><b>testVisibilityForAdminInOtherDomainInPublisher</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<br>Test method: Test the visibility pf API in Publisher for admin in other domain</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase@456c1227</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAdminInOtherDomainInStore()'><b>testVisibilityForAdminInOtherDomainInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<br>Test method: Test the visibility pf API in Store for admin in other domain</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase@456c1227</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAdminInSameDomainInPublisher()'><b>testVisibilityForAdminInSameDomainInPublisher</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<br>Test method: Test the visibility pf API in Publisher for admin in same domain </td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase@456c1227</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAdminInSameDomainInStore()'><b>testVisibilityForAdminInSameDomainInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<br>Test method: Test the visibility pf API in Store for admin in same domain </td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase@456c1227</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInPublisher()'><b>testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInPublisher</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<br>Test method: Test the visibility pf API in Publisher for admin in same domain </td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase@3a1be20c</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnotherUserInOtherDomainInPublisher()'><b>testVisibilityForAnotherUserInOtherDomainInPublisher</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<br>Test method: Test the visibility pf API in Publisher for another user in other domain</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase@456c1227</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnotherUserInOtherDomainInStore()'><b>testVisibilityForAnotherUserInOtherDomainInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<br>Test method: Test the visibility pf API in Store for another user in other domain</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase@456c1227</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnotherUserInSameDomainInPublisher()'><b>testVisibilityForAnotherUserInSameDomainInPublisher</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<br>Test method: Test the visibility pf API in Publisher for another user in same domain</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase@456c1227</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnotherUserInSameDomainInStore()'><b>testVisibilityForAnotherUserInSameDomainInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<br>Test method: Test the visibility pf API in Store for another user in same domain</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase@456c1227</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForCreatorInPublisher()'><b>testVisibilityForCreatorInPublisher</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<br>Test method: Test the visibility pf API in Publisher for API creator </td>
+<td></td>
+<td>3</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase@456c1227</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForCreatorInPublisher()'><b>testVisibilityForCreatorInPublisher</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<br>Test method: Test the visibility pf API in Publisher for API creator </td>
+<td></td>
+<td>6</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase@3a1be20c</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForCreatorInStore()'><b>testVisibilityForCreatorInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<br>Test method: Test the visibility pf API in Store for API creator</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase@456c1227</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForCreatorInStore()'><b>testVisibilityForCreatorInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<br>Test method: Test the visibility pf API in Store for API creator</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase@3a1be20c</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase.testVisibilityOfAPIInStoreAfterPublishing()'><b>testVisibilityOfAPIInStoreAfterPublishing</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase<br>Test method: Test the visibility of API in the store after API publish.</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase@5a2d13c1</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase.testVisibilityOfAPIInStoreBeforePublishing()'><b>testVisibilityOfAPIInStoreBeforePublishing</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase<br>Test method: Check the visibility of API in Store before the API publish. it should not be available in store.</td>
+<td></td>
+<td>0</td>
+<td>org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase@5a2d13c1</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testAvailabilityOfRetiredAPIInStore()'><b>testAvailabilityOfRetiredAPIInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<br>Test method: Test the availability of retired API in the store</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInAPIManagePageAfterChangeTiersXML()'><b>testAvailabilityOfTiersInAPIManagePageAfterChangeTiersXML</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase<br>Test method: Test availability of tiers in API Manage Page after change tiers XML</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase.testChangeAPILifecycleToBlock()'><b>testChangeAPILifecycleToBlock</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase<br>Test method: Change API lifecycle to block</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testChangeAPILifecycleToRetired()'><b>testChangeAPILifecycleToRetired</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<br>Test method: Change API lifecycle to Retired</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase.testInvokeAPIAfterChangeAPILifecycleToBlock()'><b>testInvokeAPIAfterChangeAPILifecycleToBlock</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase<br>Test method: Invocation og the APi after block</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testInvokeAPIAfterChangeAPILifecycleToRetired()'><b>testInvokeAPIAfterChangeAPILifecycleToRetired</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<br>Test method: Test the invocation of the API after retire</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeGETResourceWithAuthTypeNone()'><b>testInvokeGETResourceWithAuthTypeNone</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase<br>Test method: Invoke a resource with auth type None</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase.testUpdateTagsAndFilterByTags()'><b>testUpdateTagsAndFilterByTags</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase<br>Test method: Test the filter by Tags After changing the Tags</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInPublisher()'><b>testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInPublisher</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<br>Test method: Test the visibility pf API in Publisher for admin in other domain</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInStore()'><b>testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<br>Test method: Test the visibility pf API in Store for admin in other domain</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnonymousUserInOtherDomainInStore()'><b>testVisibilityForAnonymousUserInOtherDomainInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<br>Test method: Test the visibility for API in other domainStore for anonymous user</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnonymousUserInOtherDomainInStore()'><b>testVisibilityForAnonymousUserInOtherDomainInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<br>Test method: Test the visibility for API in other domainStore for anonymous user</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnonymousUserInSameDomainInStore()'><b>testVisibilityForAnonymousUserInSameDomainInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<br>Test method: Test the visibility for API in Same domainStore for anonymous user</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInPublisher()'><b>testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInPublisher</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<br>Test method: Test the visibility pf API in Publisher for another user in other domain</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInStore()'><b>testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<br>Test method: Test the visibility pf API in Store for another user in other domain</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInPublisher()'><b>testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInPublisher</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<br>Test method: Test the visibility pf API in Publisher for another user in same domain</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInStore()'><b>testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<br>Test method: Test the visibility pf API in Store for another user in same domain</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithSubscriberRoleInOtherDomainInStore()'><b>testVisibilityForAnotherUserWithSubscriberRoleInOtherDomainInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<br>Test method: Test the visibility pf API in Store for another user in same domain</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithSubscriberRoleInSameDomainInStore()'><b>testVisibilityForAnotherUserWithSubscriberRoleInSameDomainInStore</b><br>Test class: org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<br>Test method: Test the visibility pf API in Store for another user in same domain</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+</table><p>
+</body>
+</html>

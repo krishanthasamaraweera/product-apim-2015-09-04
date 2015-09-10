@@ -1,0 +1,658 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.param,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.param td,table.param th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.param th {vertical-align:bottom}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.param td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.param tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><th colspan="7">apim-server-startup</th></tr>
+<tr><td style="text-align:left;padding-right:2em">apim-integration-tests-server-mgt</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><th colspan="7">ApiManager-features-test-suite</th></tr>
+<tr><td style="text-align:left;padding-right:2em">apim-integration-tests-samples</td><td class="numi">18</td><td class="numi">18</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">102.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">apim-integration-tests-api-lifecycle</td><td class="numi">88</td><td class="numi">88</td><td class="numi_attn">19</td><td class="numi_attn">7</td><td class="numi">661.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">106</td><td class="numi">106</td><td class="numi_attn">19</td><td class="numi_attn">8</td><td class="numi">763.2 seconds</td><td colspan="2">&nbsp;</td></tr>
+</table>
+<a id="summary"></a>
+<table cellspacing=0 cellpadding=0 class="passed">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Time<br/>(Msecs)</th></tr>
+<tr><th colspan="4">apim-server-startup</th></tr>
+<tr><th colspan="4">ApiManager-features-test-suite</th></tr>
+<tr><th colspan="4">apim-integration-tests-samples &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">org.wso2.am.integration.tests.other.APIScopeTestCase<td><a href="#m1"><b>testSetScopeToResourceTestCase</b> (wso2.am) ("Testing the scopes with admin, subscriber roles")</a></td><td class="numi">1</td><td class="numi">7570</td></tr>
+<tr><th colspan="4">apim-integration-tests-samples &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.version.DefaultVersionAPITestCase<td><a href="#m2"><b>testDefaultVersionAPI</b> (wso2.am) ("Check functionality of the default version API")</a></td><td class="numi">2</td><td class="numi">12654</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.other.RelativeUrlLocationHeaderTestCase<td><a href="#m3"><b>testAPIWithRelativeUrlLocationHeader</b> (wso2.am) ("Check functionality of the API for relative URL location header")</a></td><td class="numi">1</td><td class="numi">3814</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.other.APIMANAGER2611EndpointValidationTestCase<td><a href="#m4"><b>checkEndpointValidation</b> (wso2.am) ("Validate endpoint with Http Head not support End point")</a></td><td class="numi">2</td><td class="numi">730</td></tr>
+<tr class="passedeven"><td rowspan="3">org.wso2.am.integration.tests.login.LoginValidationTestCase<td><a href="#m5"><b>testInvalidLoginAsSubscriberTestCase</b> (wso2.am) ("Login to publisher as subscriber user")</a></td><td class="numi">2</td><td class="numi">625</td></tr><tr class="passedeven"><td><a href="#m6"><b>testInvalidLoginAsPublisherTestCase</b> (wso2.am) ("Login as invalid user to publisher")</a></td><td class="numi">2</td><td class="numi">363</td></tr><tr class="passedeven"><td><a href="#m7"><b>testLoginToStoreTestCase</b> (wso2.am) ("Login to API store test scenario")</a></td><td class="numi">2</td><td class="numi">3188</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.other.APIInvocationFailureTestCase<td><a href="#m8"><b>APIInvocationFailureForTenant</b> (wso2.am) ("Invalid token for tenant user api")</a></td><td class="numi">1</td><td class="numi">12754</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.rest.URLMappingRESTTestCase<td><a href="#m9"><b>testRESTURITemplate</b> (wso2.am) ("Sending a Message Via REST to test uri template fix")</a></td><td class="numi">2</td><td class="numi">3560</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.resources.APIResourceModificationTestCase<td><a href="#m10"><b>testSetScopeToResourceTestCase</b> (wso2.am) ("add scope to resource test case")</a></td><td class="numi">2</td><td class="numi">18966</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.login.LoginValidationTestCase<td><a href="#m11"><b>testInvalidLoginAsPublisherTestCase</b> (wso2.am) ("Login as invalid user to publisher")</a></td><td class="numi">2</td><td class="numi">363</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.rest.URLMappingRESTTestCase<td><a href="#m12"><b>testRESTURITemplate</b> (wso2.am) ("Sending a Message Via REST to test uri template fix")</a></td><td class="numi">2</td><td class="numi">3560</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.other.LocationHeaderTestCase<td><a href="#m13"><b>testAPIWithLocationHeader</b> (wso2.am) ("Check whether the Location header is correct")</a></td><td class="numi">1</td><td class="numi">4147</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.login.LoginValidationTestCase<td><a href="#m14"><b>testLoginToStoreTestCase</b> (wso2.am) ("Login to API store test scenario")</a></td><td class="numi">2</td><td class="numi">3188</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.other.APIInvocationFailureTestCase<td><a href="#m15"><b>APIInvocationFailureForSuperTenant</b> (wso2.am) ("Invalid token for tenant user api")</a></td><td class="numi">1</td><td class="numi">5243</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.version.DefaultVersionAPITestCase<td><a href="#m16"><b>testDefaultVersionAPI</b> (wso2.am) ("Check functionality of the default version API")</a></td><td class="numi">2</td><td class="numi">12654</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.resources.APIResourceModificationTestCase<td><a href="#m17"><b>testSetScopeToResourceTestCase</b> (wso2.am) ("add scope to resource test case")</a></td><td class="numi">2</td><td class="numi">18966</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.other.APIMANAGER2611EndpointValidationTestCase<td><a href="#m18"><b>checkEndpointValidation</b> (wso2.am) ("Validate endpoint with Http Head not support End point")</a></td><td class="numi">2</td><td class="numi">730</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.login.LoginValidationTestCase<td><a href="#m19"><b>testInvalidLoginAsSubscriberTestCase</b> (wso2.am) ("Login to publisher as subscriber user")</a></td><td class="numi">2</td><td class="numi">625</td></tr>
+<tr><th colspan="4">apim-integration-tests-api-lifecycle &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="3">org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<td><a href="#m20"><b>cleanUpArtifacts</b>  </a></td><td class="numi">3</td><td class="numi">144</td></tr><tr class="failedodd"><td><a href="#m21"><b>cleanUpArtifacts</b>  </a></td><td class="numi">3</td><td class="numi">144</td></tr><tr class="failedodd"><td><a href="#m22"><b>cleanUpArtifacts</b>  </a></td><td class="numi">3</td><td class="numi">144</td></tr>
+<tr><th colspan="4">apim-integration-tests-api-lifecycle &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<td><a href="#m23"><b>testVisibilityForAnonymousUserInSameDomainInStore</b> (wso2.am) ("Test the visibility for API in Same domainStore for anonymous user")</a></td><td class="numi">1</td><td class="numi">518</td></tr>
+<tr class="failedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase<td><a href="#m24"><b>testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML</b> (wso2.am) ("test availability of tiers in Permission Page after change tiers XML")</a></td><td class="numi">1</td><td class="numi">74</td></tr>
+<tr class="failedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase<td><a href="#m25"><b>testFilterByTagsBeforeTagChange</b> (wso2.am) ("Test the filter by Tags before changing the Tags")</a></td><td class="numi">1</td><td class="numi">12043</td></tr>
+<tr class="failedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase<td><a href="#m26"><b>testInvokeAPIBeforeChangeAPILifecycleToBlock</b> (wso2.am) ("Test invocation of the APi before block")</a></td><td class="numi">1</td><td class="numi">3934</td></tr>
+<tr class="failedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<td><a href="#m27"><b>testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore</b> (wso2.am) ("Test the visibility pf API in Store for admin in same domain ")</a></td><td class="numi">1</td><td class="numi">5</td></tr>
+<tr class="failedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase<td><a href="#m28"><b>testInvokeGETResourceWithAuthTypeApplicationUser</b> (wso2.am) ("Invoke a resource with auth type Application User")</a></td><td class="numi">1</td><td class="numi">2935</td></tr>
+<tr class="failedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<td><a href="#m29"><b>testInvokeAPIBeforeChangeAPILifecycleToRetired</b> (wso2.am) ("Test invocation of the APi before retire")</a></td><td class="numi">1</td><td class="numi">3140</td></tr>
+<tr><th colspan="4">apim-integration-tests-api-lifecycle &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="4">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<td><a href="#m30"><b>testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInStore</b> (wso2.am) ("Test the visibility pf API in Store for another user in other domain")</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m31"><b>testVisibilityForAnotherUserWithSubscriberRoleInOtherDomainInStore</b> (wso2.am) ("Test the visibility pf API in Store for another user in same domain")</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m32"><b>testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInPublisher</b> (wso2.am) ("Test the visibility pf API in Publisher for another user in other domain")</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m33"><b>testVisibilityForAnonymousUserInOtherDomainInStore</b> (wso2.am) ("Test the visibility for API in other domainStore for anonymous user")</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="skippedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<td><a href="#m34"><b>testAvailabilityOfRetiredAPIInStore</b> (wso2.am) ("Test the availability of retired API in the store")</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="skippedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase<td><a href="#m35"><b>testUpdateTagsAndFilterByTags</b> (wso2.am) ("Test the filter by Tags After changing the Tags")</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="skippedeven"><td rowspan="3">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<td><a href="#m36"><b>testVisibilityForAnonymousUserInSameDomainInStore</b> (wso2.am) ("Test the visibility for API in Same domainStore for anonymous user")</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="skippedeven"><td><a href="#m37"><b>testVisibilityForAnotherUserWithSubscriberRoleInSameDomainInStore</b> (wso2.am) ("Test the visibility pf API in Store for another user in same domain")</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="skippedeven"><td><a href="#m38"><b>testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInStore</b> (wso2.am) ("Test the visibility pf API in Store for admin in other domain")</a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<td><a href="#m39"><b>testInvokeAPIAfterChangeAPILifecycleToRetired</b> (wso2.am) ("Test the invocation of the API after retire")</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="skippedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<td><a href="#m40"><b>testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInPublisher</b> (wso2.am) ("Test the visibility pf API in Publisher for another user in same domain")</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="skippedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<td><a href="#m41"><b>testChangeAPILifecycleToRetired</b> (wso2.am) ("Change API lifecycle to Retired")</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="skippedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase<td><a href="#m42"><b>testAvailabilityOfTiersInAPIManagePageAfterChangeTiersXML</b> (wso2.am) ("Test availability of tiers in API Manage Page after change tiers XML")</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="skippedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase<td><a href="#m43"><b>testInvokeAPIAfterChangeAPILifecycleToBlock</b> (wso2.am) ("Invocation og the APi after block")</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="skippedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<td><a href="#m44"><b>testVisibilityForAnonymousUserInOtherDomainInStore</b> (wso2.am) ("Test the visibility for API in other domainStore for anonymous user")</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="skippedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase<td><a href="#m45"><b>testChangeAPILifecycleToBlock</b> (wso2.am) ("Change API lifecycle to block")</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="skippedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<td><a href="#m46"><b>testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInPublisher</b> (wso2.am) ("Test the visibility pf API in Publisher for admin in other domain")</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="skippedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase<td><a href="#m47"><b>testInvokeGETResourceWithAuthTypeNone</b> (wso2.am) ("Invoke a resource with auth type None")</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="skippedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<td><a href="#m48"><b>testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInStore</b> (wso2.am) ("Test the visibility pf API in Store for another user in same domain")</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr><th colspan="4">apim-integration-tests-api-lifecycle &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase<td><a href="#m49"><b>testInvokingWithSilverTier</b> (wso2.am) ("test  invocation of  api under tier Silver.")</a></td><td class="numi">1</td><td class="numi">66701</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase<td><a href="#m50"><b>testAPIInvocationBeforeChangeTheEndPointURL</b> (wso2.am) ("Test  invocation of API before change the  api end point URL.")</a></td><td class="numi">1</td><td class="numi">3935</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<td><a href="#m51"><b>testAvailabilityOfRetiredAPIInStore</b> (wso2.am) ("Test the availability of retired API in the store")</a></td><td class="numi">1</td><td class="numi">199</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m52"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<td><a href="#m53"><b>testVisibilityForAnotherUserInSameDomainInPublisher</b> (wso2.am) ("Test the visibility pf API in Publisher for another user in same domain")</a></td><td class="numi">1</td><td class="numi">79</td></tr>
+<tr class="passedeven"><td rowspan="2">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m54"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr><tr class="passedeven"><td><a href="#m55"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase<td><a href="#m56"><b>testInvokeAPIAfterChangeAPIEndPointURLWithNewEndPointURL</b> (wso2.am) ("Test the invocation of API using new end point URL  after end point URL  change")</a></td><td class="numi">1</td><td class="numi">2345</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase<td><a href="#m57"><b>testUsersInformationInUserTabInAPIOverview</b> (wso2.am) ("test user information in API overview Users tab is correct")</a></td><td class="numi">1</td><td class="numi">134</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase<td><a href="#m58"><b>testAvailabilityOfTiersInPermissionPageBeforeChangeTiersXML</b> (wso2.am) ("test availability of tiers in Permission Page before change tiers XML")</a></td><td class="numi">1</td><td class="numi">3012</td></tr>
+<tr class="passedeven"><td rowspan="2">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m59"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr><tr class="passedeven"><td><a href="#m60"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase<td><a href="#m61"><b>testDocInformationInDocsTabInAPIOverview</b> (wso2.am) ("test user information in API overview Docs tab is correct")</a></td><td class="numi">1</td><td class="numi">2901</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<td><a href="#m62"><b>testVisibilityForAdminInSameDomainInPublisher</b> (wso2.am) ("Test the visibility pf API in Publisher for admin in same domain ")</a></td><td class="numi">1</td><td class="numi">81</td></tr>
+<tr class="passedodd"><td rowspan="2">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m63"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr><tr class="passedodd"><td><a href="#m64"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase<td><a href="#m65"><b>testNumberOfUsersInAPIOverview</b> (wso2.am) ("test the user count in API overview is correct")</a></td><td class="numi">1</td><td class="numi">4464</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase<td><a href="#m66"><b>testUpdatedAPIInformationFromAPIPublisher</b> (wso2.am) ("Test whether the updated information available in the publisher ")</a></td><td class="numi">1</td><td class="numi">119</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<td><a href="#m67"><b>testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInPublisher</b> (wso2.am) ("Test the visibility pf API in Publisher for admin in same domain ")</a></td><td class="numi">1</td><td class="numi">108</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<td><a href="#m68"><b>testVisibilityForAnotherUserInSameDomainInStore</b> (wso2.am) ("Test the visibility pf API in Store for another user in same domain")</a></td><td class="numi">1</td><td class="numi">134</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<td><a href="#m69"><b>testVisibilityForCreatorInStore</b> (wso2.am) ("Test the visibility pf API in Store for API creator")</a></td><td class="numi">1</td><td class="numi">107</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase<td><a href="#m70"><b>testInvokingWithAPIGoldTierApplicationSilver</b> (wso2.am) ("test  invocation of  api under  API tier Gold  and Application Tire Silver.")</a></td><td class="numi">1</td><td class="numi">4893</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<td><a href="#m71"><b>testVisibilityForAdminInSameDomainInStore</b> (wso2.am) ("Test the visibility pf API in Store for admin in same domain ")</a></td><td class="numi">1</td><td class="numi">77</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m72"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase<td><a href="#m73"><b>testInvokeNewAPIWithoutSubscribeTheNewVersion</b> (wso2.am) ("Test invocation of new API version before the new version is subscribed.")</a></td><td class="numi">1</td><td class="numi">154</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase<td><a href="#m74"><b>testInvokePOSTResourceBeforeAddingPOSTResource</b> (wso2.am) ("Test the invocation of POST resource, before adding a POSt resource")</a></td><td class="numi">1</td><td class="numi">22</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m75"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.PluggableVersioningStrategyTestCase<td><a href="#m76"><b>testPluggableVersioningStratergy</b> (wso2.am) ("This test method tests the pluggable versioning stratergy")</a></td><td class="numi">1</td><td class="numi">4643</td></tr>
+<tr class="passedeven"><td rowspan="2">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m77"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr><tr class="passedeven"><td><a href="#m78"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase<td><a href="#m79"><b>testInvokeOldAPIBeforeSubscribeTheNewVersion</b> (wso2.am) ("Test invocation of old API version  before the new version is subscribed.")</a></td><td class="numi">1</td><td class="numi">995</td></tr>
+<tr class="passedeven"><td rowspan="3">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m80"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr><tr class="passedeven"><td><a href="#m81"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr><tr class="passedeven"><td><a href="#m82"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase<td><a href="#m83"><b>testPublishCopiedAPIWithOutReSubscriptionRequired</b> (wso2.am) ("Test publishing of copied API with out re-subscription required")</a></td><td class="numi">1</td><td class="numi">3479</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<td><a href="#m84"><b>testVisibilityForCreatorInStore</b> (wso2.am) ("Test the visibility pf API in Store for API creator")</a></td><td class="numi">1</td><td class="numi">216</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m85"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedeven"><td rowspan="2">org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase<td><a href="#m86"><b>testVisibilityOfAPIInStoreBeforePublishing</b> (wso2.am) ("Check the visibility of API in Store before the API publish. it should not be available in store.")</a></td><td class="numi">1</td><td class="numi">91</td></tr><tr class="passedeven"><td><a href="#m87"><b>testVisibilityOfAPIInStoreAfterPublishing</b> (wso2.am) ("Test the visibility of API in the store after API publish.")</a></td><td class="numi">1</td><td class="numi">87</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<td><a href="#m88"><b>testChangeAPILifecycleToRetired</b> (wso2.am) ("Change API lifecycle to Retired")</a></td><td class="numi">1</td><td class="numi">1168</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase<td><a href="#m89"><b>testInvokeAPIBeforeChangeAPIContext</b> (wso2.am) ("Test invoke the API before the context change")</a></td><td class="numi">1</td><td class="numi">3929</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m90"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<td><a href="#m91"><b>testVisibilityForCreatorInPublisher</b> (wso2.am) ("Test the visibility pf API in Publisher for API creator ")</a></td><td class="numi">1</td><td class="numi">3087</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase<td><a href="#m92"><b>testEditAPIInformation</b> (wso2.am) ("Edit the API Information")</a></td><td class="numi">1</td><td class="numi">5791</td></tr>
+<tr class="passedeven"><td rowspan="3">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m93"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr><tr class="passedeven"><td><a href="#m94"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr><tr class="passedeven"><td><a href="#m95"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase<td><a href="#m96"><b>testInvokeAPIAfterChangeAPIContextWithOldContext</b> (wso2.am) ("Test the invocation of API using old context after Context change after the API context change")</a></td><td class="numi">1</td><td class="numi">30</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<td><a href="#m97"><b>testInvokeAPIBeforeChangeAPILifecycleToRetired</b> (wso2.am) ("Test invocation of the APi before retire")</a></td><td class="numi">1</td><td class="numi">4578</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase<td><a href="#m98"><b>testAPIPublishing</b> (wso2.am) ("Test the API publishing action. Response HTTP message should contains API status change from  CREATED to PUBLISHED")</a></td><td class="numi">1</td><td class="numi">1371</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase<td><a href="#m99"><b>testInvokingWithAPIGoldTierApplicationGoldResourceGold</b> (wso2.am) ("test  the  throttling of a API. API Tier :Gold, Application Tier: GOLD, Resource Tier: Gold.")</a></td><td class="numi">1</td><td class="numi">68186</td></tr>
+<tr class="passedodd"><td rowspan="4">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m100"><b>testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters</b> (wso2.am) ("Test the API with endpoint security enabled with simple password that only has characters and numbers")</a></td><td class="numi">1</td><td class="numi">3993</td></tr><tr class="passedodd"><td><a href="#m101"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr><tr class="passedodd"><td><a href="#m102"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr><tr class="passedodd"><td><a href="#m103"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<td><a href="#m104"><b>testVisibilityForAnotherUserInOtherDomainInPublisher</b> (wso2.am) ("Test the visibility pf API in Publisher for another user in other domain")</a></td><td class="numi">1</td><td class="numi">149</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase<td><a href="#m105"><b>testInvokingWithAPIGoldTierApplicationGold</b> (wso2.am) ("test  invocation of  api under API tier Gold  and Application Tire Gold..")</a></td><td class="numi">1</td><td class="numi">66376</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m106"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase<td><a href="#m107"><b>testEditEndPointURL</b> (wso2.am) ("Test changing of the API end point URL")</a></td><td class="numi">1</td><td class="numi">2843</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase<td><a href="#m108"><b>testVisibilityForCreatorInPublisher</b> (wso2.am) ("Test the visibility pf API in Publisher for API creator ")</a></td><td class="numi">1</td><td class="numi">6257</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<td><a href="#m109"><b>testVisibilityForAdminInOtherDomainInStore</b> (wso2.am) ("Test the visibility pf API in Store for admin in other domain")</a></td><td class="numi">1</td><td class="numi">110</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase<td><a href="#m110"><b>testInvokingWithAPIGoldTierApplicationGoldResourceUnlimited</b> (wso2.am) ("test  the  throttling of a API. API Tier :Gold, Application Tier: GOLD, Resource Tier: Unlimited.")</a></td><td class="numi">1</td><td class="numi">5406</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m111"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase<td><a href="#m112"><b>testInvokePOSTAndGETResourceAfterAddingPOSTResource</b> (wso2.am) ("Test the invocation of POST and GET resource, after adding a POST resource")</a></td><td class="numi">1</td><td class="numi">3035</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m113"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedeven"><td rowspan="2">org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase<td><a href="#m114"><b>testInvokeGETResource</b> (wso2.am) ("Test the invocation of GET resource")</a></td><td class="numi">1</td><td class="numi">4109</td></tr><tr class="passedeven"><td><a href="#m115"><b>testInvokeGETAndPOSTResourceAfterRemovePOSTResource</b> (wso2.am) ("Test the invocation of POST and GET resource, after Remove POST resource")</a></td><td class="numi">1</td><td class="numi">2981</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase<td><a href="#m116"><b>testEditAPIContext</b> (wso2.am) ("Test changing of the API context")</a></td><td class="numi">1</td><td class="numi">2493</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase<td><a href="#m117"><b>testAvailabilityOfTiersInAPIManagePageBeforeChangeTiersXML</b> (wso2.am) ("Test availability of tiers in API Manage Page before change tiers XML")</a></td><td class="numi">1</td><td class="numi">201</td></tr>
+<tr class="passedodd"><td rowspan="2">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m118"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr><tr class="passedodd"><td><a href="#m119"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedeven"><td rowspan="2">org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase<td><a href="#m120"><b>testEditAPITierToSilver</b> (wso2.am) ("Test changing of the API Tier from Gold to Silver")</a></td><td class="numi">1</td><td class="numi">2841</td></tr><tr class="passedeven"><td><a href="#m121"><b>testInvokingAfterExpireThrottleExpireTime</b> (wso2.am) ("test  invocation of APi after expire the throttling block time.")</a></td><td class="numi">1</td><td class="numi">65058</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m122"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase<td><a href="#m123"><b>testInvokingWithGoldTier</b> (wso2.am) ("test  invocation of  api under tier Gold.")</a></td><td class="numi">1</td><td class="numi">5045</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m124"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase<td><a href="#m125"><b>testSubscriptionOfOldAPI</b> (wso2.am) ("Test subscribe of old api version.")</a></td><td class="numi">1</td><td class="numi">3584</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase<td><a href="#m126"><b>testInvokeResourceWithAuthTypeApplicationAndApplicationUser</b> (wso2.am) ("Invoke a resource with auth type Application And Application User")</a></td><td class="numi">1</td><td class="numi">4782</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase<td><a href="#m127"><b>testInvokePOSTAndGetResourceAfterAddingURLPattern</b> (wso2.am) ("Test the invocation of POST and GET resource, after adding a URL pattern")</a></td><td class="numi">1</td><td class="numi">3014</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase<td><a href="#m128"><b>testInvokeResourceWithAuthTypeApplication</b> (wso2.am) ("Invoke a resource with auth type Application")</a></td><td class="numi">1</td><td class="numi">2831</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase<td><a href="#m129"><b>testInvokeGETResourceWithSecuredEndPointComplexPassword</b> (wso2.am) ("Test the API with endpoint security enabled with complex password")</a></td><td class="numi">30</td><td class="numi">78921</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase<td><a href="#m130"><b>testAPICreation</b> (wso2.am) ("Create a API and  check its availability in Publisher.")</a></td><td class="numi">1</td><td class="numi">1927</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<td><a href="#m131"><b>testVisibilityForAnotherUserInOtherDomainInStore</b> (wso2.am) ("Test the visibility pf API in Store for another user in other domain")</a></td><td class="numi">1</td><td class="numi">413</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase<td><a href="#m132"><b>testInvokingWithAPIGoldTierApplicationSilverFor2ndTime</b> (wso2.am) ("test  invocation of  api under API tier Gold  and Application Tire Silver.Change the Application tire to silver and test ")</a></td><td class="numi">1</td><td class="numi">65667</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase<td><a href="#m133"><b>testVisibilityForAdminInOtherDomainInPublisher</b> (wso2.am) ("Test the visibility pf API in Publisher for admin in other domain")</a></td><td class="numi">1</td><td class="numi">24</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase<td><a href="#m134"><b>testInvokeAPIAfterChangeAPIContextWithNewContext</b> (wso2.am) ("Test the invocation of API using new context after Context change")</a></td><td class="numi">1</td><td class="numi">149</td></tr>
+<tr class="passedeven"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase<td><a href="#m135"><b>testInvokingWithAPIGoldTierApplicationGoldResourceSilver</b> (wso2.am) ("test  the  throttling of a API. API Tier :Gold, Application Tier: GOLD, Resource Tier: Silver.")</a></td><td class="numi">1</td><td class="numi">68030</td></tr>
+<tr class="passedodd"><td rowspan="1">org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase<td><a href="#m136"><b>testInvokeAPIAfterChangeAPILifecycleToRetired</b> (wso2.am) ("Test the invocation of the API after retire")</a></td><td class="numi">1</td><td class="numi">46</td></tr>
+</table>
+<h1>apim-integration-tests-server-mgt</h1>
+<h1>apim-integration-tests-samples</h1>
+<a id="m1"></a><h2>org.wso2.am.integration.tests.other.APIScopeTestCase:testSetScopeToResourceTestCase</h2>
+<div style="padding-left:3em">
+<p>Unable to generate API access token </p>
+org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:187)
+<br/>at org.wso2.am.integration.tests.other.APIScopeTestCase.testSetScopeToResourceTestCase(APIScopeTestCase.java:183)
+<br/>29 lines not shown
+<p>Caused by Connection error (is server running at http://192.168.19.34:8280/token ?): java.io.IOException: Server returned HTTP response code: 500 for URL: http://192.168.19.34:8280/token</p>
+org.wso2.carbon.automation.test.utils.http.client.HttpRequestUtil.doPost(HttpRequestUtil.java:257)
+<br/>at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:184)
+<br/>at org.wso2.am.integration.tests.other.APIScopeTestCase.testSetScopeToResourceTestCase(APIScopeTestCase.java:183)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m2"></a><h2>org.wso2.am.integration.tests.version.DefaultVersionAPITestCase:testDefaultVersionAPI</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m3"></a><h2>org.wso2.am.integration.tests.other.RelativeUrlLocationHeaderTestCase:testAPIWithRelativeUrlLocationHeader</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m4"></a><h2>org.wso2.am.integration.tests.other.APIMANAGER2611EndpointValidationTestCase:checkEndpointValidation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m5"></a><h2>org.wso2.am.integration.tests.login.LoginValidationTestCase:testInvalidLoginAsSubscriberTestCase</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m6"></a><h2>org.wso2.am.integration.tests.login.LoginValidationTestCase:testInvalidLoginAsPublisherTestCase</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m7"></a><h2>org.wso2.am.integration.tests.login.LoginValidationTestCase:testLoginToStoreTestCase</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m8"></a><h2>org.wso2.am.integration.tests.other.APIInvocationFailureTestCase:APIInvocationFailureForTenant</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m9"></a><h2>org.wso2.am.integration.tests.rest.URLMappingRESTTestCase:testRESTURITemplate</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m10"></a><h2>org.wso2.am.integration.tests.resources.APIResourceModificationTestCase:testSetScopeToResourceTestCase</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m11"></a><h2>org.wso2.am.integration.tests.login.LoginValidationTestCase:testInvalidLoginAsPublisherTestCase</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m12"></a><h2>org.wso2.am.integration.tests.rest.URLMappingRESTTestCase:testRESTURITemplate</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m13"></a><h2>org.wso2.am.integration.tests.other.LocationHeaderTestCase:testAPIWithLocationHeader</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m14"></a><h2>org.wso2.am.integration.tests.login.LoginValidationTestCase:testLoginToStoreTestCase</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m15"></a><h2>org.wso2.am.integration.tests.other.APIInvocationFailureTestCase:APIInvocationFailureForSuperTenant</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m16"></a><h2>org.wso2.am.integration.tests.version.DefaultVersionAPITestCase:testDefaultVersionAPI</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m17"></a><h2>org.wso2.am.integration.tests.resources.APIResourceModificationTestCase:testSetScopeToResourceTestCase</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m18"></a><h2>org.wso2.am.integration.tests.other.APIMANAGER2611EndpointValidationTestCase:checkEndpointValidation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m19"></a><h2>org.wso2.am.integration.tests.login.LoginValidationTestCase:testInvalidLoginAsSubscriberTestCase</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>apim-integration-tests-api-lifecycle</h1>
+<a id="m20"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase:cleanUpArtifacts</h2>
+<div style="padding-left:3em">
+<p>Exception when delete a API</p>
+org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:172)
+<br/>at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+<br/>29 lines not shown
+<p>Caused by Error in API Deletion. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin  API Context :org.wso2.carbon.automation.test.utils.http.client.HttpResponse@1393537dResponse Code:200 Response Data :{&quot;error&quot; : true, &quot;message&quot; : &quot; Failed to remove the API from : /apimgt/applicationdata/provider/admin/RetireAPITest/1.0.0&quot;}</p>
+org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+<br/>at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m21"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase:cleanUpArtifacts</h2>
+<div style="padding-left:3em">
+<p>Exception when delete a API</p>
+org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:172)
+<br/>at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+<br/>29 lines not shown
+<p>Caused by Error in API Deletion. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin  API Context :org.wso2.carbon.automation.test.utils.http.client.HttpResponse@311f56a3Response Code:200 Response Data :{&quot;error&quot; : true, &quot;message&quot; : &quot; Failed to remove the API from : /apimgt/applicationdata/provider/admin/RetireAPITest/1.0.0&quot;}</p>
+org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+<br/>at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m22"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase:cleanUpArtifacts</h2>
+<div style="padding-left:3em">
+<p>Exception when delete a API</p>
+org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:172)
+<br/>at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+<br/>29 lines not shown
+<p>Caused by Error in API Deletion. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin  API Context :org.wso2.carbon.automation.test.utils.http.client.HttpResponse@2c91e143Response Code:200 Response Data :{&quot;error&quot; : true, &quot;message&quot; : &quot; Failed to remove the API from : /apimgt/applicationdata/provider/admin/RetireAPITest/1.0.0&quot;}</p>
+org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+<br/>at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m23"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase:testVisibilityForAnonymousUserInSameDomainInStore</h2>
+<div style="padding-left:3em">
+<p>API  visible to anonymous user in same domain API Store. When Visibility is private.   API Name:APIVisibilityByDomainTest API Version:1.0.0 API Provider Name :testu1  expected:&lt;false&gt; but was:&lt;true&gt;</p>
+org.testng.Assert.fail(Assert.java:89)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:489)
+<br/>at org.testng.Assert.assertFalse(Assert.java:58)
+<br/>at org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnonymousUserInSameDomainInStore(APIVisibilityByDomainTestCase.java:264)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m24"></a><h2>org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase:testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML</h2>
+<div style="padding-left:3em">
+<p>new tier Platinum  is not available in Tier Permission page before  add new tear in tiers.xml expected:&lt;true&gt; but was:&lt;false&gt;</p>
+org.testng.Assert.fail(Assert.java:89)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:489)
+<br/>at org.testng.Assert.assertTrue(Assert.java:37)
+<br/>at org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML(EditTiersXMLAndVerifyInPublisherTestCase.java:145)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m25"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase:testFilterByTagsBeforeTagChange</h2>
+<div style="padding-left:3em">
+<p>API is not listed  with correct tag, API:APITagTest2 Tag:Tag3 expected:&lt;true&gt; but was:&lt;false&gt;</p>
+org.testng.Assert.fail(Assert.java:89)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:489)
+<br/>at org.testng.Assert.assertTrue(Assert.java:37)
+<br/>at org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase.testFilterByTagsBeforeTagChange(ChangeAPITagsTestCase.java:115)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m26"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase:testInvokeAPIBeforeChangeAPILifecycleToBlock</h2>
+<div style="padding-left:3em">
+<p>Response code mismatched when invoke api before block expected:&lt;200&gt; but was:&lt;302&gt;</p>
+org.testng.Assert.fail(Assert.java:89)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:489)
+<br/>at org.testng.Assert.assertEquals(Assert.java:118)
+<br/>at org.testng.Assert.assertEquals(Assert.java:365)
+<br/>at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToBlock(AccessibilityOfBlockAPITestCase.java:104)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m27"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase:testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore</h2>
+<div style="padding-left:3em">
+<p>API with  Role admin  visibility is not visible to Admin user with Admin and subscriber role in same domain  in API Store. API Name:APIVisibilityByRoleTest API Version:1.0.0 API Provider Name :testu1  expected:&lt;true&gt; but was:&lt;false&gt;</p>
+org.testng.Assert.fail(Assert.java:89)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:489)
+<br/>at org.testng.Assert.assertTrue(Assert.java:37)
+<br/>at org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore(APIVisibilityByRoleTestCase.java:260)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m28"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase:testInvokeGETResourceWithAuthTypeApplicationUser</h2>
+<div style="padding-left:3em">
+<p>Unable to generate API access token </p>
+org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:187)
+<br/>at org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeGETResourceWithAuthTypeApplicationUser(ChangeAuthTypeOfResourceTestCase.java:170)
+<br/>29 lines not shown
+<p>Caused by Connection error (is server running at http://192.168.19.34:8280/token ?): java.io.IOException: Server returned HTTP response code: 500 for URL: http://192.168.19.34:8280/token</p>
+org.wso2.carbon.automation.test.utils.http.client.HttpRequestUtil.doPost(HttpRequestUtil.java:257)
+<br/>at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:184)
+<br/>at org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeGETResourceWithAuthTypeApplicationUser(ChangeAuthTypeOfResourceTestCase.java:170)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m29"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase:testInvokeAPIBeforeChangeAPILifecycleToRetired</h2>
+<div style="padding-left:3em">
+<p>Error in API Subscribe. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin Response Code:200 Response Data :{&quot;error&quot; : true, &quot;message&quot; : &quot;org.wso2.carbon.apimgt.api.APIManagementException: Error while adding the subscription for user: admin&quot;}</p>
+org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.createPublishAndSubscribeToAPI(APIManagerLifecycleBaseTest.java:372)
+<br/>at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToRetired(AccessibilityOfRetireAPITestCase.java:93)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m30"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase:testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInStore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m31"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase:testVisibilityForAnotherUserWithSubscriberRoleInOtherDomainInStore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m32"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase:testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInPublisher</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m33"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase:testVisibilityForAnonymousUserInOtherDomainInStore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m34"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase:testAvailabilityOfRetiredAPIInStore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m35"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase:testUpdateTagsAndFilterByTags</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m36"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase:testVisibilityForAnonymousUserInSameDomainInStore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m37"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase:testVisibilityForAnotherUserWithSubscriberRoleInSameDomainInStore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m38"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase:testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInStore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m39"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase:testInvokeAPIAfterChangeAPILifecycleToRetired</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m40"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase:testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInPublisher</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m41"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase:testChangeAPILifecycleToRetired</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m42"></a><h2>org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase:testAvailabilityOfTiersInAPIManagePageAfterChangeTiersXML</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m43"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase:testInvokeAPIAfterChangeAPILifecycleToBlock</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m44"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase:testVisibilityForAnonymousUserInOtherDomainInStore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m45"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase:testChangeAPILifecycleToBlock</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m46"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase:testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInPublisher</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m47"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase:testInvokeGETResourceWithAuthTypeNone</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m48"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase:testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInStore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m49"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase:testInvokingWithSilverTier</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m50"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase:testAPIInvocationBeforeChangeTheEndPointURL</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m51"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase:testAvailabilityOfRetiredAPIInStore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m52"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">=</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m53"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase:testVisibilityForAnotherUserInSameDomainInPublisher</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m54"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">&lt;</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m55"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">*</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m56"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase:testInvokeAPIAfterChangeAPIEndPointURLWithNewEndPointURL</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m57"></a><h2>org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase:testUsersInformationInUserTabInAPIOverview</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m58"></a><h2>org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase:testAvailabilityOfTiersInPermissionPageBeforeChangeTiersXML</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m59"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">.</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m60"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">#</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m61"></a><h2>org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase:testDocInformationInDocsTabInAPIOverview</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m62"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase:testVisibilityForAdminInSameDomainInPublisher</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m63"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">/</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m64"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">@</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m65"></a><h2>org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase:testNumberOfUsersInAPIOverview</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m66"></a><h2>org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase:testUpdatedAPIInformationFromAPIPublisher</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m67"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase:testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInPublisher</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m68"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase:testVisibilityForAnotherUserInSameDomainInStore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m69"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase:testVisibilityForCreatorInStore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m70"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase:testInvokingWithAPIGoldTierApplicationSilver</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m71"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase:testVisibilityForAdminInSameDomainInStore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m72"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">_</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m73"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase:testInvokeNewAPIWithoutSubscribeTheNewVersion</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m74"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase:testInvokePOSTResourceBeforeAddingPOSTResource</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m75"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">&</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m76"></a><h2>org.wso2.am.integration.tests.api.lifecycle.PluggableVersioningStrategyTestCase:testPluggableVersioningStratergy</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m77"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">}</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m78"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">]</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m79"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase:testInvokeOldAPIBeforeSubscribeTheNewVersion</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m80"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">%</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m81"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">|</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m82"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">)</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m83"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase:testPublishCopiedAPIWithOutReSubscriptionRequired</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m84"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase:testVisibilityForCreatorInStore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m85"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">^</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m86"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase:testVisibilityOfAPIInStoreBeforePublishing</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m87"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase:testVisibilityOfAPIInStoreAfterPublishing</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m88"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase:testChangeAPILifecycleToRetired</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m89"></a><h2>org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase:testInvokeAPIBeforeChangeAPIContext</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m90"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">\</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m91"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase:testVisibilityForCreatorInPublisher</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m92"></a><h2>org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase:testEditAPIInformation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m93"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">+</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m94"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">(</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m95"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">,</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m96"></a><h2>org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase:testInvokeAPIAfterChangeAPIContextWithOldContext</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m97"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase:testInvokeAPIBeforeChangeAPILifecycleToRetired</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m98"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase:testAPIPublishing</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m99"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase:testInvokingWithAPIGoldTierApplicationGoldResourceGold</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m100"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m101"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">-</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m102"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">:</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m103"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">$</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m104"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase:testVisibilityForAnotherUserInOtherDomainInPublisher</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m105"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase:testInvokingWithAPIGoldTierApplicationGold</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m106"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">&quot;</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m107"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase:testEditEndPointURL</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m108"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase:testVisibilityForCreatorInPublisher</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m109"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase:testVisibilityForAdminInOtherDomainInStore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m110"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase:testInvokingWithAPIGoldTierApplicationGoldResourceUnlimited</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m111"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">&apos;</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m112"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase:testInvokePOSTAndGETResourceAfterAddingPOSTResource</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m113"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">[</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m114"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase:testInvokeGETResource</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m115"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase:testInvokeGETAndPOSTResourceAfterRemovePOSTResource</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m116"></a><h2>org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase:testEditAPIContext</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m117"></a><h2>org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase:testAvailabilityOfTiersInAPIManagePageBeforeChangeTiersXML</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m118"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">!</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m119"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">?</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m120"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase:testEditAPITierToSilver</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m121"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase:testInvokingAfterExpireThrottleExpireTime</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m122"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">&gt;</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m123"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase:testInvokingWithGoldTier</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m124"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">{</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m125"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase:testSubscriptionOfOldAPI</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m126"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase:testInvokeResourceWithAuthTypeApplicationAndApplicationUser</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m127"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase:testInvokePOSTAndGetResourceAfterAddingURLPattern</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m128"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase:testInvokeResourceWithAuthTypeApplication</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m129"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase:testInvokeGETResourceWithSecuredEndPointComplexPassword</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">;</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m130"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase:testAPICreation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m131"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase:testVisibilityForAnotherUserInOtherDomainInStore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m132"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase:testInvokingWithAPIGoldTierApplicationSilverFor2ndTime</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m133"></a><h2>org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase:testVisibilityForAdminInOtherDomainInPublisher</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m134"></a><h2>org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase:testInvokeAPIAfterChangeAPIContextWithNewContext</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m135"></a><h2>org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase:testInvokingWithAPIGoldTierApplicationGoldResourceSilver</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m136"></a><h2>org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase:testInvokeAPIAfterChangeAPILifecycleToRetired</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

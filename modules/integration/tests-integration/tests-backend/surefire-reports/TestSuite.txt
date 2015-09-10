@@ -1,0 +1,72 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 136, Failures: 11, Errors: 0, Skipped: 19, Time elapsed: 773.699 sec <<< FAILURE! - in TestSuite
+testInvokeAPIBeforeChangeAPILifecycleToBlock(org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase)  Time elapsed: 3.94 sec  <<< FAILURE!
+java.lang.AssertionError: Response code mismatched when invoke api before block expected:<200> but was:<302>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:365)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToBlock(AccessibilityOfBlockAPITestCase.java:104)
+
+testInvokeAPIBeforeChangeAPILifecycleToRetired(org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase)  Time elapsed: 3.144 sec  <<< FAILURE!
+org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Subscribe. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin Response Code:200 Response Data :{"error" : true, "message" : "org.wso2.carbon.apimgt.api.APIManagementException: Error while adding the subscription for user: admin"}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.createPublishAndSubscribeToAPI(APIManagerLifecycleBaseTest.java:372)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToRetired(AccessibilityOfRetireAPITestCase.java:93)
+
+cleanUpArtifacts(org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase)  Time elapsed: 4.352 sec  <<< FAILURE!
+org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+
+cleanUpArtifacts(org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase)  Time elapsed: 4.419 sec  <<< FAILURE!
+org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+
+cleanUpArtifacts(org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase)  Time elapsed: 4.487 sec  <<< FAILURE!
+org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+
+testVisibilityForAnonymousUserInSameDomainInStore(org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase)  Time elapsed: 0.518 sec  <<< FAILURE!
+java.lang.AssertionError: API  visible to anonymous user in same domain API Store. When Visibility is private.   API Name:APIVisibilityByDomainTest API Version:1.0.0 API Provider Name :testu1  expected:<false> but was:<true>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertFalse(Assert.java:58)
+	at org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnonymousUserInSameDomainInStore(APIVisibilityByDomainTestCase.java:264)
+
+testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore(org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase)  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.AssertionError: API with  Role admin  visibility is not visible to Admin user with Admin and subscriber role in same domain  in API Store. API Name:APIVisibilityByRoleTest API Version:1.0.0 API Provider Name :testu1  expected:<true> but was:<false>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertTrue(Assert.java:37)
+	at org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore(APIVisibilityByRoleTestCase.java:260)
+
+testFilterByTagsBeforeTagChange(org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase)  Time elapsed: 12.042 sec  <<< FAILURE!
+java.lang.AssertionError: API is not listed  with correct tag, API:APITagTest2 Tag:Tag3 expected:<true> but was:<false>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertTrue(Assert.java:37)
+	at org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase.testFilterByTagsBeforeTagChange(ChangeAPITagsTestCase.java:115)
+
+testInvokeGETResourceWithAuthTypeApplicationUser(org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase)  Time elapsed: 2.936 sec  <<< FAILURE!
+org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Unable to generate API access token 
+	at org.wso2.carbon.automation.test.utils.http.client.HttpRequestUtil.doPost(HttpRequestUtil.java:257)
+	at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:184)
+	at org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeGETResourceWithAuthTypeApplicationUser(ChangeAuthTypeOfResourceTestCase.java:170)
+
+testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML(org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase)  Time elapsed: 0.074 sec  <<< FAILURE!
+java.lang.AssertionError: new tier Platinum  is not available in Tier Permission page before  add new tear in tiers.xml expected:<true> but was:<false>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertTrue(Assert.java:37)
+	at org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML(EditTiersXMLAndVerifyInPublisherTestCase.java:145)
+
+testSetScopeToResourceTestCase(org.wso2.am.integration.tests.other.APIScopeTestCase)  Time elapsed: 7.57 sec  <<< FAILURE!
+org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Unable to generate API access token 
+	at org.wso2.carbon.automation.test.utils.http.client.HttpRequestUtil.doPost(HttpRequestUtil.java:257)
+	at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:184)
+	at org.wso2.am.integration.tests.other.APIScopeTestCase.testSetScopeToResourceTestCase(APIScopeTestCase.java:183)
+

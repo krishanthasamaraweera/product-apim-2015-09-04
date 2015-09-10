@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="Nuwans-MacBook-Pro.local" name="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase" tests="114" failures="7" timestamp="20 Aug 2015 14:36:01 GMT" time="661.074" errors="0">
+  <testcase name="@AfterClass cleanUpArtifacts" time="0.0" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase">
+    <failure type="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException" message="Exception when delete a API">
+      <![CDATA[org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:172)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Deletion. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin  API Context :org.wso2.carbon.automation.test.utils.http.client.HttpResponse@2c91e143Response Code:200 Response Data :{"error" : true, "message" : " Failed to remove the API from : /apimgt/applicationdata/provider/admin/RetireAPITest/1.0.0"}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	... 29 more
+... Removed 22 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="@AfterClass cleanUpArtifacts" time="0.0" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase">
+    <failure type="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException" message="Exception when delete a API">
+      <![CDATA[org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:172)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Deletion. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin  API Context :org.wso2.carbon.automation.test.utils.http.client.HttpResponse@1393537dResponse Code:200 Response Data :{"error" : true, "message" : " Failed to remove the API from : /apimgt/applicationdata/provider/admin/RetireAPITest/1.0.0"}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	... 29 more
+... Removed 22 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="@AfterClass cleanUpArtifacts" time="0.0" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase">
+    <failure type="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException" message="Exception when delete a API">
+      <![CDATA[org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:172)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Deletion. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin  API Context :org.wso2.carbon.automation.test.utils.http.client.HttpResponse@311f56a3Response Code:200 Response Data :{"error" : true, "message" : " Failed to remove the API from : /apimgt/applicationdata/provider/admin/RetireAPITest/1.0.0"}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	... 29 more
+... Removed 22 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="testInvokeAPIBeforeChangeAPILifecycleToRetired" time="4.578" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase"/>
+  <testcase name="testChangeAPILifecycleToRetired" time="1.168" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase"/>
+  <testcase name="testAvailabilityOfRetiredAPIInStore" time="0.199" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase"/>
+  <testcase name="testInvokeAPIAfterChangeAPILifecycleToRetired" time="0.046" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase"/>
+  <testcase name="testInvokeAPIBeforeChangeAPILifecycleToBlock" time="3.934" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase">
+    <failure type="java.lang.AssertionError" message="Response code mismatched when invoke api before block expected:&amp;lt;200&amp;gt; but was:&amp;lt;302&amp;gt;">
+      <![CDATA[java.lang.AssertionError: Response code mismatched when invoke api before block expected:<200> but was:<302>
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToBlock(AccessibilityOfBlockAPITestCase.java:104)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+... Removed 26 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="testChangeAPILifecycleToBlock" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testInvokeAPIAfterChangeAPILifecycleToBlock" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testSubscriptionOfOldAPI" time="3.584" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase"/>
+  <testcase name="testPublishCopiedAPIWithOutReSubscriptionRequired" time="3.479" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase"/>
+  <testcase name="testInvokeOldAPIBeforeSubscribeTheNewVersion" time="0.995" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase"/>
+  <testcase name="testInvokeNewAPIWithoutSubscribeTheNewVersion" time="0.154" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase"/>
+  <testcase name="testInvokeAPIBeforeChangeAPILifecycleToRetired" time="3.14" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase">
+    <failure type="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException" message="Error in API Subscribe. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin Response Code:200 Response Data :{&amp;quot;error&amp;quot; : true, &amp;quot;message&amp;quot; : &amp;quot;org.wso2.carbon.apimgt.api.APIManagementException: Error while adding the subscription for user: admin&amp;quot;}">
+      <![CDATA[org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Subscribe. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin Response Code:200 Response Data :{"error" : true, "message" : "org.wso2.carbon.apimgt.api.APIManagementException: Error while adding the subscription for user: admin"}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.createPublishAndSubscribeToAPI(APIManagerLifecycleBaseTest.java:372)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToRetired(AccessibilityOfRetireAPITestCase.java:93)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+... Removed 22 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="testChangeAPILifecycleToRetired" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testAvailabilityOfRetiredAPIInStore" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testInvokeAPIAfterChangeAPILifecycleToRetired" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testInvokeGETResource" time="4.109" classname="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase"/>
+  <testcase name="testInvokePOSTResourceBeforeAddingPOSTResource" time="0.022" classname="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase"/>
+  <testcase name="testInvokePOSTAndGETResourceAfterAddingPOSTResource" time="3.035" classname="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase"/>
+  <testcase name="testInvokePOSTAndGetResourceAfterAddingURLPattern" time="3.014" classname="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase"/>
+  <testcase name="testInvokeGETAndPOSTResourceAfterRemovePOSTResource" time="2.981" classname="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase"/>
+  <testcase name="testAPICreation" time="1.927" classname="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase"/>
+  <testcase name="testVisibilityOfAPIInStoreBeforePublishing" time="0.091" classname="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase"/>
+  <testcase name="testAPIPublishing" time="1.371" classname="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase"/>
+  <testcase name="testVisibilityOfAPIInStoreAfterPublishing" time="0.087" classname="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase"/>
+  <testcase name="testVisibilityForCreatorInPublisher" time="3.087" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+  <testcase name="testVisibilityForCreatorInStore" time="0.216" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+  <testcase name="testVisibilityForAdminInSameDomainInPublisher" time="0.081" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+  <testcase name="testVisibilityForAdminInSameDomainInStore" time="0.077" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+  <testcase name="testVisibilityForAnotherUserInSameDomainInPublisher" time="0.079" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+  <testcase name="testVisibilityForAnotherUserInSameDomainInStore" time="0.134" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+  <testcase name="testVisibilityForAnotherUserInOtherDomainInPublisher" time="0.149" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+  <testcase name="testVisibilityForAnotherUserInOtherDomainInStore" time="0.413" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+  <testcase name="testVisibilityForAdminInOtherDomainInPublisher" time="0.024" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+  <testcase name="testVisibilityForAdminInOtherDomainInStore" time="0.11" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+  <testcase name="testVisibilityForAnonymousUserInSameDomainInStore" time="0.518" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase">
+    <failure type="java.lang.AssertionError" message="API  visible to anonymous user in same domain API Store. When Visibility is private.   API Name:APIVisibilityByDomainTest API Version:1.0.0 API Provider Name :testu1  expected:&amp;lt;false&amp;gt; but was:&amp;lt;true&amp;gt;">
+      <![CDATA[java.lang.AssertionError: API  visible to anonymous user in same domain API Store. When Visibility is private.   API Name:APIVisibilityByDomainTest API Version:1.0.0 API Provider Name :testu1  expected:<false> but was:<true>
+	at org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnonymousUserInSameDomainInStore(APIVisibilityByDomainTestCase.java:264)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+... Removed 25 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="testVisibilityForAnonymousUserInOtherDomainInStore" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testVisibilityForCreatorInPublisher" time="6.257" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+  <testcase name="testVisibilityForCreatorInStore" time="0.107" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+  <testcase name="testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInPublisher" time="0.108" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+  <testcase name="testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore" time="0.0050" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase">
+    <failure type="java.lang.AssertionError" message="API with  Role admin  visibility is not visible to Admin user with Admin and subscriber role in same domain  in API Store. API Name:APIVisibilityByRoleTest API Version:1.0.0 API Provider Name :testu1  expected:&amp;lt;true&amp;gt; but was:&amp;lt;false&amp;gt;">
+      <![CDATA[java.lang.AssertionError: API with  Role admin  visibility is not visible to Admin user with Admin and subscriber role in same domain  in API Store. API Name:APIVisibilityByRoleTest API Version:1.0.0 API Provider Name :testu1  expected:<true> but was:<false>
+	at org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore(APIVisibilityByRoleTestCase.java:260)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+... Removed 25 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInPublisher" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInStore" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInPublisher" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInStore" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInPublisher" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInStore" time="0.0" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testVisibilityForAnotherUserWithSubscriberRoleInSameDomainInStore" time="0.0" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testVisibilityForAnotherUserWithSubscriberRoleInOtherDomainInStore" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testVisibilityForAnonymousUserInOtherDomainInStore" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testVisibilityForAnonymousUserInSameDomainInStore" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testAPIInvocationBeforeChangeTheEndPointURL" time="3.935" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase"/>
+  <testcase name="testEditEndPointURL" time="2.843" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase"/>
+  <testcase name="testInvokeAPIAfterChangeAPIEndPointURLWithNewEndPointURL" time="2.345" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase"/>
+  <testcase name="testFilterByTagsBeforeTagChange" time="12.043" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase">
+    <failure type="java.lang.AssertionError" message="API is not listed  with correct tag, API:APITagTest2 Tag:Tag3 expected:&amp;lt;true&amp;gt; but was:&amp;lt;false&amp;gt;">
+      <![CDATA[java.lang.AssertionError: API is not listed  with correct tag, API:APITagTest2 Tag:Tag3 expected:<true> but was:<false>
+	at org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase.testFilterByTagsBeforeTagChange(ChangeAPITagsTestCase.java:115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+... Removed 25 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="testUpdateTagsAndFilterByTags" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testInvokingWithGoldTier" time="5.045" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase"/>
+  <testcase name="testInvokingAfterExpireThrottleExpireTime" time="65.058" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase"/>
+  <testcase name="testEditAPITierToSilver" time="2.841" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase"/>
+  <testcase name="testInvokingWithSilverTier" time="66.701" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase"/>
+  <testcase name="testInvokingWithAPIGoldTierApplicationSilver" time="4.893" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase"/>
+  <testcase name="testInvokingWithAPIGoldTierApplicationGold" time="66.376" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase"/>
+  <testcase name="testInvokingWithAPIGoldTierApplicationSilverFor2ndTime" time="65.667" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase"/>
+  <testcase name="testInvokeResourceWithAuthTypeApplicationAndApplicationUser" time="4.782" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase"/>
+  <testcase name="testInvokeResourceWithAuthTypeApplication" time="2.831" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase"/>
+  <testcase name="testInvokeGETResourceWithAuthTypeApplicationUser" time="2.935" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase">
+    <failure type="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException" message="Unable to generate API access token ">
+      <![CDATA[org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Unable to generate API access token 
+	at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:187)
+	at org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeGETResourceWithAuthTypeApplicationUser(ChangeAuthTypeOfResourceTestCase.java:170)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.Exception: Connection error (is server running at http://192.168.19.34:8280/token ?): java.io.IOException: Server returned HTTP response code: 500 for URL: http://192.168.19.34:8280/token
+	at org.wso2.carbon.automation.test.utils.http.client.HttpRequestUtil.doPost(HttpRequestUtil.java:257)
+	at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:184)
+	... 29 more
+... Removed 22 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="testInvokeGETResourceWithAuthTypeNone" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" time="3.993" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.487" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.575" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.623" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.821" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.597" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.54" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.547" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.658" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.697" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.626" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.673" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.59" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.705" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.581" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.612" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.709" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.749" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.64" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.656" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.623" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.695" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.611" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.592" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.661" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.581" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.611" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.622" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.719" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.488" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokeGETResourceWithSecuredEndPointComplexPassword" time="2.622" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+  <testcase name="testInvokingWithAPIGoldTierApplicationGoldResourceUnlimited" time="5.406" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase"/>
+  <testcase name="testInvokingWithAPIGoldTierApplicationGoldResourceSilver" time="68.03" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase"/>
+  <testcase name="testInvokingWithAPIGoldTierApplicationGoldResourceGold" time="68.186" classname="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase"/>
+  <testcase name="testEditAPIInformation" time="5.791" classname="org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase"/>
+  <testcase name="testUpdatedAPIInformationFromAPIPublisher" time="0.119" classname="org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase"/>
+  <testcase name="testInvokeAPIBeforeChangeAPIContext" time="3.929" classname="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase"/>
+  <testcase name="testEditAPIContext" time="2.493" classname="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase"/>
+  <testcase name="testInvokeAPIAfterChangeAPIContextWithOldContext" time="0.03" classname="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase"/>
+  <testcase name="testInvokeAPIAfterChangeAPIContextWithNewContext" time="0.149" classname="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase"/>
+  <testcase name="testAvailabilityOfTiersInPermissionPageBeforeChangeTiersXML" time="3.012" classname="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase"/>
+  <testcase name="testAvailabilityOfTiersInAPIManagePageBeforeChangeTiersXML" time="0.201" classname="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase"/>
+  <testcase name="testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML" time="0.074" classname="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase">
+    <failure type="java.lang.AssertionError" message="new tier Platinum  is not available in Tier Permission page before  add new tear in tiers.xml expected:&amp;lt;true&amp;gt; but was:&amp;lt;false&amp;gt;">
+      <![CDATA[java.lang.AssertionError: new tier Platinum  is not available in Tier Permission page before  add new tear in tiers.xml expected:<true> but was:<false>
+	at org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML(EditTiersXMLAndVerifyInPublisherTestCase.java:145)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+... Removed 25 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="testAvailabilityOfTiersInAPIManagePageAfterChangeTiersXML" time="0.0010" classname="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase">
+    <skipped/>
+  </testcase>
+  <testcase name="testNumberOfUsersInAPIOverview" time="4.464" classname="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase"/>
+  <testcase name="testUsersInformationInUserTabInAPIOverview" time="0.134" classname="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase"/>
+  <testcase name="testDocInformationInDocsTabInAPIOverview" time="2.901" classname="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase"/>
+  <testcase name="testPluggableVersioningStratergy" time="4.643" classname="org.wso2.am.integration.tests.api.lifecycle.PluggableVersioningStrategyTestCase"/>
+</testsuite>

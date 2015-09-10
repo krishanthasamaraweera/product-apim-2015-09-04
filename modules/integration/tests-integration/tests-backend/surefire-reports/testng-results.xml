@@ -1,0 +1,1285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="19" failed="8" total="133" passed="106">
+  <reporter-output>
+  </reporter-output>
+  <suite name="apim-server-startup" duration-ms="4" started-at="2015-08-20T19:55:00Z" finished-at="2015-08-20T19:55:00Z">
+    <groups>
+    </groups>
+    <test name="apim-integration-tests-server-mgt" duration-ms="4" started-at="2015-08-20T19:55:00Z" finished-at="2015-08-20T19:55:00Z">
+    </test>
+  </suite>
+  <suite name="ApiManager-features-test-suite" duration-ms="763193" started-at="2015-08-20T19:55:00Z" finished-at="2015-08-20T20:07:43Z">
+    <groups>
+      <group name="wso2.am">
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase.testAPICreation()" name="testAPICreation" class="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase.testVisibilityOfAPIInStoreBeforePublishing()" name="testVisibilityOfAPIInStoreBeforePublishing" class="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase.testAPIPublishing()" name="testAPIPublishing" class="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase.testVisibilityOfAPIInStoreAfterPublishing()" name="testVisibilityOfAPIInStoreAfterPublishing" class="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForCreatorInPublisher()" name="testVisibilityForCreatorInPublisher" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForCreatorInStore()" name="testVisibilityForCreatorInStore" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAdminInSameDomainInPublisher()" name="testVisibilityForAdminInSameDomainInPublisher" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAdminInSameDomainInStore()" name="testVisibilityForAdminInSameDomainInStore" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnotherUserInSameDomainInPublisher()" name="testVisibilityForAnotherUserInSameDomainInPublisher" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnotherUserInSameDomainInStore()" name="testVisibilityForAnotherUserInSameDomainInStore" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnotherUserInOtherDomainInPublisher()" name="testVisibilityForAnotherUserInOtherDomainInPublisher" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnotherUserInOtherDomainInStore()" name="testVisibilityForAnotherUserInOtherDomainInStore" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAdminInOtherDomainInPublisher()" name="testVisibilityForAdminInOtherDomainInPublisher" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAdminInOtherDomainInStore()" name="testVisibilityForAdminInOtherDomainInStore" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnonymousUserInSameDomainInStore()" name="testVisibilityForAnonymousUserInSameDomainInStore" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnonymousUserInOtherDomainInStore()" name="testVisibilityForAnonymousUserInOtherDomainInStore" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForCreatorInPublisher()" name="testVisibilityForCreatorInPublisher" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForCreatorInStore()" name="testVisibilityForCreatorInStore" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInPublisher()" name="testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInPublisher" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore()" name="testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInPublisher()" name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInPublisher" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInStore()" name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInStore" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInPublisher()" name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInPublisher" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInStore()" name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInStore" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInPublisher()" name="testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInPublisher" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInStore()" name="testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInStore" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithSubscriberRoleInSameDomainInStore()" name="testVisibilityForAnotherUserWithSubscriberRoleInSameDomainInStore" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithSubscriberRoleInOtherDomainInStore()" name="testVisibilityForAnotherUserWithSubscriberRoleInOtherDomainInStore" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnonymousUserInOtherDomainInStore()" name="testVisibilityForAnonymousUserInOtherDomainInStore" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnonymousUserInSameDomainInStore()" name="testVisibilityForAnonymousUserInSameDomainInStore" class="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToBlock()" name="testInvokeAPIBeforeChangeAPILifecycleToBlock" class="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase.testChangeAPILifecycleToBlock()" name="testChangeAPILifecycleToBlock" class="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase.testInvokeAPIAfterChangeAPILifecycleToBlock()" name="testInvokeAPIAfterChangeAPILifecycleToBlock" class="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase.testSubscriptionOfOldAPI()" name="testSubscriptionOfOldAPI" class="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase.testPublishCopiedAPIWithOutReSubscriptionRequired()" name="testPublishCopiedAPIWithOutReSubscriptionRequired" class="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase.testInvokeOldAPIBeforeSubscribeTheNewVersion()" name="testInvokeOldAPIBeforeSubscribeTheNewVersion" class="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase.testInvokeNewAPIWithoutSubscribeTheNewVersion()" name="testInvokeNewAPIWithoutSubscribeTheNewVersion" class="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToRetired()" name="testInvokeAPIBeforeChangeAPILifecycleToRetired" class="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testChangeAPILifecycleToRetired()" name="testChangeAPILifecycleToRetired" class="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testAvailabilityOfRetiredAPIInStore()" name="testAvailabilityOfRetiredAPIInStore" class="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testInvokeAPIAfterChangeAPILifecycleToRetired()" name="testInvokeAPIAfterChangeAPILifecycleToRetired" class="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase.testInvokeGETResource()" name="testInvokeGETResource" class="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase.testInvokePOSTResourceBeforeAddingPOSTResource()" name="testInvokePOSTResourceBeforeAddingPOSTResource" class="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase.testInvokePOSTAndGETResourceAfterAddingPOSTResource()" name="testInvokePOSTAndGETResourceAfterAddingPOSTResource" class="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase.testInvokePOSTAndGetResourceAfterAddingURLPattern()" name="testInvokePOSTAndGetResourceAfterAddingURLPattern" class="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase.testInvokeGETAndPOSTResourceAfterRemovePOSTResource()" name="testInvokeGETAndPOSTResourceAfterRemovePOSTResource" class="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase.testAPIInvocationBeforeChangeTheEndPointURL()" name="testAPIInvocationBeforeChangeTheEndPointURL" class="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase.testEditEndPointURL()" name="testEditEndPointURL" class="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase.testInvokeAPIAfterChangeAPIEndPointURLWithNewEndPointURL()" name="testInvokeAPIAfterChangeAPIEndPointURLWithNewEndPointURL" class="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase.testFilterByTagsBeforeTagChange()" name="testFilterByTagsBeforeTagChange" class="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase.testUpdateTagsAndFilterByTags()" name="testUpdateTagsAndFilterByTags" class="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase.testInvokingWithGoldTier()" name="testInvokingWithGoldTier" class="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase.testInvokingAfterExpireThrottleExpireTime()" name="testInvokingAfterExpireThrottleExpireTime" class="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase.testEditAPITierToSilver()" name="testEditAPITierToSilver" class="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase.testInvokingWithSilverTier()" name="testInvokingWithSilverTier" class="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase.testInvokingWithAPIGoldTierApplicationSilver()" name="testInvokingWithAPIGoldTierApplicationSilver" class="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase.testInvokingWithAPIGoldTierApplicationGold()" name="testInvokingWithAPIGoldTierApplicationGold" class="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase.testInvokingWithAPIGoldTierApplicationSilverFor2ndTime()" name="testInvokingWithAPIGoldTierApplicationSilverFor2ndTime" class="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeResourceWithAuthTypeApplicationAndApplicationUser()" name="testInvokeResourceWithAuthTypeApplicationAndApplicationUser" class="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeResourceWithAuthTypeApplication()" name="testInvokeResourceWithAuthTypeApplication" class="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeGETResourceWithAuthTypeApplicationUser()" name="testInvokeGETResourceWithAuthTypeApplicationUser" class="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeGETResourceWithAuthTypeNone()" name="testInvokeGETResourceWithAuthTypeNone" class="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters()" name="testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" class="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" class="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase.testInvokingWithAPIGoldTierApplicationGoldResourceUnlimited()" name="testInvokingWithAPIGoldTierApplicationGoldResourceUnlimited" class="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase.testInvokingWithAPIGoldTierApplicationGoldResourceSilver()" name="testInvokingWithAPIGoldTierApplicationGoldResourceSilver" class="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase.testInvokingWithAPIGoldTierApplicationGoldResourceGold()" name="testInvokingWithAPIGoldTierApplicationGoldResourceGold" class="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase.testEditAPIInformation()" name="testEditAPIInformation" class="org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase.testUpdatedAPIInformationFromAPIPublisher()" name="testUpdatedAPIInformationFromAPIPublisher" class="org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase.testInvokeAPIBeforeChangeAPIContext()" name="testInvokeAPIBeforeChangeAPIContext" class="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase.testEditAPIContext()" name="testEditAPIContext" class="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase.testInvokeAPIAfterChangeAPIContextWithOldContext()" name="testInvokeAPIAfterChangeAPIContextWithOldContext" class="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase.testInvokeAPIAfterChangeAPIContextWithNewContext()" name="testInvokeAPIAfterChangeAPIContextWithNewContext" class="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInPermissionPageBeforeChangeTiersXML()" name="testAvailabilityOfTiersInPermissionPageBeforeChangeTiersXML" class="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInAPIManagePageBeforeChangeTiersXML()" name="testAvailabilityOfTiersInAPIManagePageBeforeChangeTiersXML" class="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML()" name="testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML" class="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInAPIManagePageAfterChangeTiersXML()" name="testAvailabilityOfTiersInAPIManagePageAfterChangeTiersXML" class="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.PluggableVersioningStrategyTestCase.testPluggableVersioningStratergy()" name="testPluggableVersioningStratergy" class="org.wso2.am.integration.tests.api.lifecycle.PluggableVersioningStrategyTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase.testNumberOfUsersInAPIOverview()" name="testNumberOfUsersInAPIOverview" class="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase.testUsersInformationInUserTabInAPIOverview()" name="testUsersInformationInUserTabInAPIOverview" class="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase"/>
+        <method signature="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase.testDocInformationInDocsTabInAPIOverview()" name="testDocInformationInDocsTabInAPIOverview" class="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase"/>
+        <method signature="org.wso2.am.integration.tests.login.LoginValidationTestCase.testInvalidLoginAsPublisherTestCase()" name="testInvalidLoginAsPublisherTestCase" class="org.wso2.am.integration.tests.login.LoginValidationTestCase"/>
+        <method signature="org.wso2.am.integration.tests.login.LoginValidationTestCase.testInvalidLoginAsSubscriberTestCase()" name="testInvalidLoginAsSubscriberTestCase" class="org.wso2.am.integration.tests.login.LoginValidationTestCase"/>
+        <method signature="org.wso2.am.integration.tests.login.LoginValidationTestCase.testLoginToStoreTestCase()" name="testLoginToStoreTestCase" class="org.wso2.am.integration.tests.login.LoginValidationTestCase"/>
+        <method signature="org.wso2.am.integration.tests.other.APIInvocationFailureTestCase.APIInvocationFailureForSuperTenant()" name="APIInvocationFailureForSuperTenant" class="org.wso2.am.integration.tests.other.APIInvocationFailureTestCase"/>
+        <method signature="org.wso2.am.integration.tests.other.APIInvocationFailureTestCase.APIInvocationFailureForTenant()" name="APIInvocationFailureForTenant" class="org.wso2.am.integration.tests.other.APIInvocationFailureTestCase"/>
+        <method signature="org.wso2.am.integration.tests.other.APIMANAGER2611EndpointValidationTestCase.checkEndpointValidation()" name="checkEndpointValidation" class="org.wso2.am.integration.tests.other.APIMANAGER2611EndpointValidationTestCase"/>
+        <method signature="org.wso2.am.integration.tests.other.APIScopeTestCase.testSetScopeToResourceTestCase()" name="testSetScopeToResourceTestCase" class="org.wso2.am.integration.tests.other.APIScopeTestCase"/>
+        <method signature="org.wso2.am.integration.tests.other.LocationHeaderTestCase.testAPIWithLocationHeader()" name="testAPIWithLocationHeader" class="org.wso2.am.integration.tests.other.LocationHeaderTestCase"/>
+        <method signature="org.wso2.am.integration.tests.other.RelativeUrlLocationHeaderTestCase.testAPIWithRelativeUrlLocationHeader()" name="testAPIWithRelativeUrlLocationHeader" class="org.wso2.am.integration.tests.other.RelativeUrlLocationHeaderTestCase"/>
+        <method signature="org.wso2.am.integration.tests.resources.APIResourceModificationTestCase.testSetScopeToResourceTestCase()" name="testSetScopeToResourceTestCase" class="org.wso2.am.integration.tests.resources.APIResourceModificationTestCase"/>
+        <method signature="org.wso2.am.integration.tests.rest.URLMappingRESTTestCase.testRESTURITemplate()" name="testRESTURITemplate" class="org.wso2.am.integration.tests.rest.URLMappingRESTTestCase"/>
+        <method signature="org.wso2.am.integration.tests.version.DefaultVersionAPITestCase.testDefaultVersionAPI()" name="testDefaultVersionAPI" class="org.wso2.am.integration.tests.version.DefaultVersionAPITestCase"/>
+      </group>
+    </groups>
+    <test name="apim-integration-tests-samples" duration-ms="102096" started-at="2015-08-20T20:06:01Z" finished-at="2015-08-20T20:07:43Z">
+      <class name="org.wso2.am.integration.tests.other.APIMANAGER2611EndpointValidationTestCase">
+        <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="90" started-at="2015-08-20T20:07:17Z" finished-at="2015-08-20T20:07:17Z">
+        </test-method>
+        <test-method status="PASS" signature="checkEndpointValidation()" name="checkEndpointValidation" duration-ms="208" started-at="2015-08-20T20:07:17Z" description="Validate endpoint with Http Head not support End point" finished-at="2015-08-20T20:07:17Z">
+        </test-method>
+        <test-method status="PASS" signature="destroy()" name="destroy" is-config="true" duration-ms="298" started-at="2015-08-20T20:07:17Z" finished-at="2015-08-20T20:07:18Z">
+        </test-method>
+        <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="74" started-at="2015-08-20T20:07:18Z" finished-at="2015-08-20T20:07:18Z">
+        </test-method>
+        <test-method status="PASS" signature="checkEndpointValidation()" name="checkEndpointValidation" duration-ms="150" started-at="2015-08-20T20:07:18Z" description="Validate endpoint with Http Head not support End point" finished-at="2015-08-20T20:07:18Z">
+        </test-method>
+        <test-method status="PASS" signature="destroy()" name="destroy" is-config="true" duration-ms="346" started-at="2015-08-20T20:07:18Z" finished-at="2015-08-20T20:07:18Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.other.RelativeUrlLocationHeaderTestCase">
+        <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="1986" started-at="2015-08-20T20:07:35Z" finished-at="2015-08-20T20:07:37Z">
+        </test-method>
+        <test-method status="PASS" signature="testAPIWithRelativeUrlLocationHeader()" name="testAPIWithRelativeUrlLocationHeader" duration-ms="3814" started-at="2015-08-20T20:07:37Z" description="Check functionality of the API for relative URL location header" finished-at="2015-08-20T20:07:41Z">
+        </test-method>
+        <test-method status="PASS" signature="destroy()" name="destroy" is-config="true" duration-ms="2112" started-at="2015-08-20T20:07:41Z" finished-at="2015-08-20T20:07:43Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.resources.APIResourceModificationTestCase">
+        <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="69" started-at="2015-08-20T20:06:34Z" finished-at="2015-08-20T20:06:34Z">
+        </test-method>
+        <test-method status="PASS" signature="testSetScopeToResourceTestCase()" name="testSetScopeToResourceTestCase" duration-ms="9358" started-at="2015-08-20T20:06:34Z" description="add scope to resource test case" finished-at="2015-08-20T20:06:43Z">
+        </test-method>
+        <test-method status="PASS" signature="destroy()" name="destroy" is-config="true" duration-ms="0" started-at="2015-08-20T20:06:43Z" finished-at="2015-08-20T20:06:43Z">
+        </test-method>
+        <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="69" started-at="2015-08-20T20:06:43Z" finished-at="2015-08-20T20:06:43Z">
+        </test-method>
+        <test-method status="PASS" signature="testSetScopeToResourceTestCase()" name="testSetScopeToResourceTestCase" duration-ms="9538" started-at="2015-08-20T20:06:43Z" description="add scope to resource test case" finished-at="2015-08-20T20:06:53Z">
+        </test-method>
+        <test-method status="PASS" signature="destroy()" name="destroy" is-config="true" duration-ms="0" started-at="2015-08-20T20:06:53Z" finished-at="2015-08-20T20:06:53Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.other.APIInvocationFailureTestCase">
+        <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="7790" started-at="2015-08-20T20:06:05Z" finished-at="2015-08-20T20:06:13Z">
+        </test-method>
+        <test-method status="PASS" signature="APIInvocationFailureForSuperTenant()" name="APIInvocationFailureForSuperTenant" duration-ms="5243" started-at="2015-08-20T20:06:13Z" description="Invalid token for tenant user api" finished-at="2015-08-20T20:06:18Z">
+        </test-method>
+        <test-method status="PASS" signature="APIInvocationFailureForTenant()" name="APIInvocationFailureForTenant" duration-ms="12754" started-at="2015-08-20T20:06:18Z" description="Invalid token for tenant user api" finished-at="2015-08-20T20:06:31Z">
+        </test-method>
+        <test-method status="PASS" signature="destroy()" name="destroy" is-config="true" duration-ms="2946" started-at="2015-08-20T20:06:31Z" finished-at="2015-08-20T20:06:34Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.login.LoginValidationTestCase">
+        <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="223" started-at="2015-08-20T20:06:01Z" finished-at="2015-08-20T20:06:01Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvalidLoginAsPublisherTestCase()" name="testInvalidLoginAsPublisherTestCase" duration-ms="52" started-at="2015-08-20T20:06:01Z" description="Login as invalid user to publisher" finished-at="2015-08-20T20:06:01Z">
+        </test-method>
+        <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="247" started-at="2015-08-20T20:06:01Z" finished-at="2015-08-20T20:06:01Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvalidLoginAsPublisherTestCase()" name="testInvalidLoginAsPublisherTestCase" duration-ms="64" started-at="2015-08-20T20:06:01Z" description="Login as invalid user to publisher" finished-at="2015-08-20T20:06:01Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvalidLoginAsSubscriberTestCase()" name="testInvalidLoginAsSubscriberTestCase" duration-ms="348" started-at="2015-08-20T20:06:01Z" description="Login to publisher as subscriber user" finished-at="2015-08-20T20:06:02Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvalidLoginAsSubscriberTestCase()" name="testInvalidLoginAsSubscriberTestCase" duration-ms="277" started-at="2015-08-20T20:06:02Z" description="Login to publisher as subscriber user" finished-at="2015-08-20T20:06:02Z">
+        </test-method>
+        <test-method status="PASS" signature="testLoginToStoreTestCase()" name="testLoginToStoreTestCase" duration-ms="1694" started-at="2015-08-20T20:06:02Z" description="Login to API store test scenario" finished-at="2015-08-20T20:06:04Z">
+        </test-method>
+        <test-method status="PASS" signature="destroy()" name="destroy" is-config="true" duration-ms="1" started-at="2015-08-20T20:06:04Z" finished-at="2015-08-20T20:06:04Z">
+        </test-method>
+        <test-method status="PASS" signature="testLoginToStoreTestCase()" name="testLoginToStoreTestCase" duration-ms="1493" started-at="2015-08-20T20:06:04Z" description="Login to API store test scenario" finished-at="2015-08-20T20:06:05Z">
+        </test-method>
+        <test-method status="PASS" signature="destroy()" name="destroy" is-config="true" duration-ms="0" started-at="2015-08-20T20:06:05Z" finished-at="2015-08-20T20:06:05Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.other.APIScopeTestCase">
+        <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="71" started-at="2015-08-20T20:07:18Z" finished-at="2015-08-20T20:07:18Z">
+        </test-method>
+        <test-method status="FAIL" signature="testSetScopeToResourceTestCase()" name="testSetScopeToResourceTestCase" duration-ms="7570" started-at="2015-08-20T20:07:18Z" description="Testing the scopes with admin, subscriber roles" finished-at="2015-08-20T20:07:26Z">
+          <exception class="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException">
+            <message>
+              <![CDATA[Unable to generate API access token ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Unable to generate API access token 
+	at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:187)
+	at org.wso2.am.integration.tests.other.APIScopeTestCase.testSetScopeToResourceTestCase(APIScopeTestCase.java:183)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.Exception: Connection error (is server running at http://192.168.19.34:8280/token ?): java.io.IOException: Server returned HTTP response code: 500 for URL: http://192.168.19.34:8280/token
+	at org.wso2.carbon.automation.test.utils.http.client.HttpRequestUtil.doPost(HttpRequestUtil.java:257)
+	at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:184)
+	... 29 more
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="PASS" signature="destroy()" name="destroy" is-config="true" duration-ms="2118" started-at="2015-08-20T20:07:26Z" finished-at="2015-08-20T20:07:28Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.rest.URLMappingRESTTestCase">
+        <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="1789" started-at="2015-08-20T20:07:10Z" finished-at="2015-08-20T20:07:12Z">
+        </test-method>
+        <test-method status="PASS" signature="testRESTURITemplate()" name="testRESTURITemplate" duration-ms="60" started-at="2015-08-20T20:07:12Z" description="Sending a Message Via REST to test uri template fix" finished-at="2015-08-20T20:07:12Z">
+        </test-method>
+        <test-method status="PASS" signature="destroy()" name="destroy" is-config="true" duration-ms="1647" started-at="2015-08-20T20:07:12Z" finished-at="2015-08-20T20:07:14Z">
+        </test-method>
+        <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="1815" started-at="2015-08-20T20:07:14Z" finished-at="2015-08-20T20:07:15Z">
+        </test-method>
+        <test-method status="PASS" signature="testRESTURITemplate()" name="testRESTURITemplate" duration-ms="37" started-at="2015-08-20T20:07:15Z" description="Sending a Message Via REST to test uri template fix" finished-at="2015-08-20T20:07:15Z">
+        </test-method>
+        <test-method status="PASS" signature="destroy()" name="destroy" is-config="true" duration-ms="1449" started-at="2015-08-20T20:07:15Z" finished-at="2015-08-20T20:07:17Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.other.LocationHeaderTestCase">
+        <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="2093" started-at="2015-08-20T20:07:28Z" finished-at="2015-08-20T20:07:30Z">
+        </test-method>
+        <test-method status="PASS" signature="testAPIWithLocationHeader()" name="testAPIWithLocationHeader" duration-ms="4147" started-at="2015-08-20T20:07:30Z" description="Check whether the Location header is correct" finished-at="2015-08-20T20:07:34Z">
+        </test-method>
+        <test-method status="PASS" signature="destroy()" name="destroy" is-config="true" duration-ms="944" started-at="2015-08-20T20:07:34Z" finished-at="2015-08-20T20:07:35Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.version.DefaultVersionAPITestCase">
+        <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="2402" started-at="2015-08-20T20:06:53Z" finished-at="2015-08-20T20:06:55Z">
+        </test-method>
+        <test-method status="PASS" signature="testDefaultVersionAPI()" name="testDefaultVersionAPI" duration-ms="4266" started-at="2015-08-20T20:06:55Z" description="Check functionality of the default version API" finished-at="2015-08-20T20:07:00Z">
+        </test-method>
+        <test-method status="PASS" signature="destroy()" name="destroy" is-config="true" duration-ms="1972" started-at="2015-08-20T20:07:00Z" finished-at="2015-08-20T20:07:02Z">
+        </test-method>
+        <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="2175" started-at="2015-08-20T20:07:02Z" finished-at="2015-08-20T20:07:04Z">
+        </test-method>
+        <test-method status="PASS" signature="testDefaultVersionAPI()" name="testDefaultVersionAPI" duration-ms="4240" started-at="2015-08-20T20:07:04Z" description="Check functionality of the default version API" finished-at="2015-08-20T20:07:08Z">
+        </test-method>
+        <test-method status="PASS" signature="destroy()" name="destroy" is-config="true" duration-ms="2048" started-at="2015-08-20T20:07:08Z" finished-at="2015-08-20T20:07:10Z">
+        </test-method>
+      </class>
+    </test>
+    <test name="apim-integration-tests-api-lifecycle" duration-ms="661074" started-at="2015-08-20T19:55:00Z" finished-at="2015-08-20T20:06:01Z">
+      <class name="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="97" started-at="2015-08-20T20:05:45Z" finished-at="2015-08-20T20:05:45Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="377" started-at="2015-08-20T20:05:45Z" finished-at="2015-08-20T20:05:45Z">
+        </test-method>
+        <test-method status="PASS" signature="testNumberOfUsersInAPIOverview()" name="testNumberOfUsersInAPIOverview" duration-ms="4464" started-at="2015-08-20T20:05:45Z" description="test the user count in API overview is correct" finished-at="2015-08-20T20:05:50Z">
+        </test-method>
+        <test-method status="PASS" signature="testUsersInformationInUserTabInAPIOverview()" name="testUsersInformationInUserTabInAPIOverview" duration-ms="134" started-at="2015-08-20T20:05:50Z" description="test user information in API overview Users tab is correct" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase.testNumberOfUsersInAPIOverview" finished-at="2015-08-20T20:05:50Z">
+        </test-method>
+        <test-method status="PASS" signature="testDocInformationInDocsTabInAPIOverview()" name="testDocInformationInDocsTabInAPIOverview" duration-ms="2901" started-at="2015-08-20T20:05:50Z" description="test user information in API overview Docs tab is correct" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase.testUsersInformationInUserTabInAPIOverview" finished-at="2015-08-20T20:05:53Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="1609" started-at="2015-08-20T20:05:53Z" finished-at="2015-08-20T20:05:54Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="100" started-at="2015-08-20T19:55:31Z" finished-at="2015-08-20T19:55:31Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="351" started-at="2015-08-20T19:55:31Z" finished-at="2015-08-20T19:55:31Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResource()" name="testInvokeGETResource" duration-ms="4109" started-at="2015-08-20T19:55:31Z" description="Test the invocation of GET resource" finished-at="2015-08-20T19:55:36Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokePOSTResourceBeforeAddingPOSTResource()" name="testInvokePOSTResourceBeforeAddingPOSTResource" duration-ms="22" started-at="2015-08-20T19:55:36Z" description="Test the invocation of POST resource, before adding a POSt resource" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase.testInvokeGETResource" finished-at="2015-08-20T19:55:36Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokePOSTAndGETResourceAfterAddingPOSTResource()" name="testInvokePOSTAndGETResourceAfterAddingPOSTResource" duration-ms="3035" started-at="2015-08-20T19:55:36Z" description="Test the invocation of POST and GET resource, after adding a POST resource" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase.testInvokePOSTResourceBeforeAddingPOSTResource" finished-at="2015-08-20T19:55:39Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokePOSTAndGetResourceAfterAddingURLPattern()" name="testInvokePOSTAndGetResourceAfterAddingURLPattern" duration-ms="3014" started-at="2015-08-20T19:55:39Z" description="Test the invocation of POST and GET resource, after adding a URL pattern" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase.testInvokePOSTAndGETResourceAfterAddingPOSTResource" finished-at="2015-08-20T19:55:42Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETAndPOSTResourceAfterRemovePOSTResource()" name="testInvokeGETAndPOSTResourceAfterRemovePOSTResource" duration-ms="2981" started-at="2015-08-20T19:55:42Z" description="Test the invocation of POST and GET resource, after Remove POST resource" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase.testInvokePOSTAndGetResourceAfterAddingURLPattern" finished-at="2015-08-20T19:55:45Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="1523" started-at="2015-08-20T19:55:45Z" finished-at="2015-08-20T19:55:46Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="84" started-at="2015-08-20T20:01:23Z" finished-at="2015-08-20T20:01:23Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="299" started-at="2015-08-20T20:01:23Z" finished-at="2015-08-20T20:01:24Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokeResourceWithAuthTypeApplicationAndApplicationUser()" name="testInvokeResourceWithAuthTypeApplicationAndApplicationUser" duration-ms="4782" started-at="2015-08-20T20:01:24Z" description="Invoke a resource with auth type Application And Application User" finished-at="2015-08-20T20:01:28Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokeResourceWithAuthTypeApplication()" name="testInvokeResourceWithAuthTypeApplication" duration-ms="2831" started-at="2015-08-20T20:01:28Z" description="Invoke a resource with auth type Application" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeResourceWithAuthTypeApplicationAndApplicationUser" finished-at="2015-08-20T20:01:31Z">
+        </test-method>
+        <test-method status="FAIL" signature="testInvokeGETResourceWithAuthTypeApplicationUser()" name="testInvokeGETResourceWithAuthTypeApplicationUser" duration-ms="2935" started-at="2015-08-20T20:01:31Z" description="Invoke a resource with auth type Application User" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeResourceWithAuthTypeApplication" finished-at="2015-08-20T20:01:34Z">
+          <exception class="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException">
+            <message>
+              <![CDATA[Unable to generate API access token ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Unable to generate API access token 
+	at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:187)
+	at org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeGETResourceWithAuthTypeApplicationUser(ChangeAuthTypeOfResourceTestCase.java:170)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.Exception: Connection error (is server running at http://192.168.19.34:8280/token ?): java.io.IOException: Server returned HTTP response code: 500 for URL: http://192.168.19.34:8280/token
+	at org.wso2.carbon.automation.test.utils.http.client.HttpRequestUtil.doPost(HttpRequestUtil.java:257)
+	at org.wso2.am.integration.test.utils.clients.APIStoreRestClient.generateUserAccessKey(APIStoreRestClient.java:184)
+	... 29 more
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="SKIP" signature="testInvokeGETResourceWithAuthTypeNone()" name="testInvokeGETResourceWithAuthTypeNone" duration-ms="1" started-at="2015-08-20T20:01:34Z" description="Invoke a resource with auth type None" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase.testInvokeGETResourceWithAuthTypeApplicationUser" finished-at="2015-08-20T20:01:34Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="1453" started-at="2015-08-20T20:01:34Z" finished-at="2015-08-20T20:01:36Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="82" started-at="2015-08-20T19:59:04Z" finished-at="2015-08-20T19:59:04Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="305" started-at="2015-08-20T19:59:04Z" finished-at="2015-08-20T19:59:05Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokingWithAPIGoldTierApplicationSilver()" name="testInvokingWithAPIGoldTierApplicationSilver" duration-ms="4893" started-at="2015-08-20T19:59:05Z" description="test  invocation of  api under  API tier Gold  and Application Tire Silver." finished-at="2015-08-20T19:59:10Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokingWithAPIGoldTierApplicationGold()" name="testInvokingWithAPIGoldTierApplicationGold" duration-ms="66376" started-at="2015-08-20T19:59:10Z" description="test  invocation of  api under API tier Gold  and Application Tire Gold.." depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase.testInvokingWithAPIGoldTierApplicationSilver" finished-at="2015-08-20T20:00:16Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokingWithAPIGoldTierApplicationSilverFor2ndTime()" name="testInvokingWithAPIGoldTierApplicationSilverFor2ndTime" duration-ms="65667" started-at="2015-08-20T20:00:16Z" description="test  invocation of  api under API tier Gold  and Application Tire Silver.Change the Application tire to silver and test " depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase.testInvokingWithAPIGoldTierApplicationGold" finished-at="2015-08-20T20:01:22Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="1586" started-at="2015-08-20T20:01:22Z" finished-at="2015-08-20T20:01:23Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="92" started-at="2015-08-20T19:56:14Z" finished-at="2015-08-20T19:56:15Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="432" started-at="2015-08-20T19:56:15Z" finished-at="2015-08-20T19:56:15Z">
+        </test-method>
+        <test-method status="PASS" signature="testAPIInvocationBeforeChangeTheEndPointURL()" name="testAPIInvocationBeforeChangeTheEndPointURL" duration-ms="3935" started-at="2015-08-20T19:56:15Z" description="Test  invocation of API before change the  api end point URL." finished-at="2015-08-20T19:56:19Z">
+        </test-method>
+        <test-method status="PASS" signature="testEditEndPointURL()" name="testEditEndPointURL" duration-ms="2843" started-at="2015-08-20T19:56:19Z" description="Test changing of the API end point URL" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase.testAPIInvocationBeforeChangeTheEndPointURL" finished-at="2015-08-20T19:56:22Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokeAPIAfterChangeAPIEndPointURLWithNewEndPointURL()" name="testInvokeAPIAfterChangeAPIEndPointURLWithNewEndPointURL" duration-ms="2345" started-at="2015-08-20T19:56:22Z" description="Test the invocation of API using new end point URL  after end point URL  change" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase.testEditEndPointURL" finished-at="2015-08-20T19:56:24Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="1543" started-at="2015-08-20T19:56:24Z" finished-at="2015-08-20T19:56:26Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="89" started-at="2015-08-20T19:55:46Z" finished-at="2015-08-20T19:55:46Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="420" started-at="2015-08-20T19:55:46Z" finished-at="2015-08-20T19:55:47Z">
+        </test-method>
+        <test-method status="PASS" signature="testAPICreation()" name="testAPICreation" duration-ms="1927" started-at="2015-08-20T19:55:47Z" description="Create a API and  check its availability in Publisher." finished-at="2015-08-20T19:55:49Z">
+        </test-method>
+        <test-method status="PASS" signature="testVisibilityOfAPIInStoreBeforePublishing()" name="testVisibilityOfAPIInStoreBeforePublishing" duration-ms="91" started-at="2015-08-20T19:55:49Z" description="Check the visibility of API in Store before the API publish. it should not be available in store." depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase.testAPICreation" finished-at="2015-08-20T19:55:49Z">
+        </test-method>
+        <test-method status="PASS" signature="testAPIPublishing()" name="testAPIPublishing" duration-ms="1371" started-at="2015-08-20T19:55:49Z" description="Test the API publishing action. Response HTTP message should contains API status change from  CREATED to PUBLISHED" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase.testVisibilityOfAPIInStoreBeforePublishing" finished-at="2015-08-20T19:55:50Z">
+        </test-method>
+        <test-method status="PASS" signature="testVisibilityOfAPIInStoreAfterPublishing()" name="testVisibilityOfAPIInStoreAfterPublishing" duration-ms="87" started-at="2015-08-20T19:55:50Z" description="Test the visibility of API in the store after API publish." depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase.testAPIPublishing" finished-at="2015-08-20T19:55:50Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="1233" started-at="2015-08-20T19:55:50Z" finished-at="2015-08-20T19:55:51Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="82" started-at="2015-08-20T19:56:02Z" finished-at="2015-08-20T19:56:02Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="2888" started-at="2015-08-20T19:56:02Z" finished-at="2015-08-20T19:56:05Z">
+        </test-method>
+        <test-method status="PASS" signature="testVisibilityForCreatorInPublisher()" name="testVisibilityForCreatorInPublisher" duration-ms="6257" started-at="2015-08-20T19:56:05Z" description="Test the visibility pf API in Publisher for API creator " finished-at="2015-08-20T19:56:11Z">
+        </test-method>
+        <test-method status="PASS" signature="testVisibilityForCreatorInStore()" name="testVisibilityForCreatorInStore" duration-ms="107" started-at="2015-08-20T19:56:11Z" description="Test the visibility pf API in Store for API creator" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForCreatorInPublisher" finished-at="2015-08-20T19:56:12Z">
+        </test-method>
+        <test-method status="PASS" signature="testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInPublisher()" name="testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInPublisher" duration-ms="108" started-at="2015-08-20T19:56:12Z" description="Test the visibility pf API in Publisher for admin in same domain " depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForCreatorInStore" finished-at="2015-08-20T19:56:12Z">
+        </test-method>
+        <test-method status="FAIL" signature="testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore()" name="testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore" duration-ms="5" started-at="2015-08-20T19:56:12Z" description="Test the visibility pf API in Store for admin in same domain " depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInPublisher" finished-at="2015-08-20T19:56:12Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[API with  Role admin  visibility is not visible to Admin user with Admin and subscriber role in same domain  in API Store. API Name:APIVisibilityByRoleTest API Version:1.0.0 API Provider Name :testu1  expected:<true> but was:<false>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: API with  Role admin  visibility is not visible to Admin user with Admin and subscriber role in same domain  in API Store. API Name:APIVisibilityByRoleTest API Version:1.0.0 API Provider Name :testu1  expected:<true> but was:<false>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertTrue(Assert.java:37)
+	at org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore(APIVisibilityByRoleTestCase.java:260)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="SKIP" signature="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInPublisher()" name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInPublisher" duration-ms="1" started-at="2015-08-20T19:56:12Z" description="Test the visibility pf API in Publisher for another user in same domain" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore" finished-at="2015-08-20T19:56:12Z">
+        </test-method>
+        <test-method status="SKIP" signature="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInStore()" name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInStore" duration-ms="1" started-at="2015-08-20T19:56:12Z" description="Test the visibility pf API in Store for another user in same domain" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInPublisher" finished-at="2015-08-20T19:56:12Z">
+        </test-method>
+        <test-method status="SKIP" signature="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInPublisher()" name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInPublisher" duration-ms="1" started-at="2015-08-20T19:56:12Z" description="Test the visibility pf API in Publisher for another user in other domain" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInStore" finished-at="2015-08-20T19:56:12Z">
+        </test-method>
+        <test-method status="SKIP" signature="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInStore()" name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInStore" duration-ms="1" started-at="2015-08-20T19:56:12Z" description="Test the visibility pf API in Store for another user in other domain" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInPublisher" finished-at="2015-08-20T19:56:12Z">
+        </test-method>
+        <test-method status="SKIP" signature="testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInPublisher()" name="testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInPublisher" duration-ms="1" started-at="2015-08-20T19:56:12Z" description="Test the visibility pf API in Publisher for admin in other domain" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInStore" finished-at="2015-08-20T19:56:12Z">
+        </test-method>
+        <test-method status="SKIP" signature="testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInStore()" name="testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInStore" duration-ms="0" started-at="2015-08-20T19:56:12Z" description="Test the visibility pf API in Store for admin in other domain" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInPublisher" finished-at="2015-08-20T19:56:12Z">
+        </test-method>
+        <test-method status="SKIP" signature="testVisibilityForAnotherUserWithSubscriberRoleInOtherDomainInStore()" name="testVisibilityForAnotherUserWithSubscriberRoleInOtherDomainInStore" duration-ms="1" started-at="2015-08-20T19:56:12Z" description="Test the visibility pf API in Store for another user in same domain" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithSubscriberRoleInSameDomainInStore" finished-at="2015-08-20T19:56:12Z">
+        </test-method>
+        <test-method status="SKIP" signature="testVisibilityForAnotherUserWithSubscriberRoleInSameDomainInStore()" name="testVisibilityForAnotherUserWithSubscriberRoleInSameDomainInStore" duration-ms="0" started-at="2015-08-20T19:56:12Z" description="Test the visibility pf API in Store for another user in same domain" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInStore" finished-at="2015-08-20T19:56:12Z">
+        </test-method>
+        <test-method status="SKIP" signature="testVisibilityForAnonymousUserInOtherDomainInStore()" name="testVisibilityForAnonymousUserInOtherDomainInStore" duration-ms="1" started-at="2015-08-20T19:56:12Z" description="Test the visibility for API in other domainStore for anonymous user" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnotherUserWithSubscriberRoleInOtherDomainInStore" finished-at="2015-08-20T19:56:12Z">
+        </test-method>
+        <test-method status="SKIP" signature="testVisibilityForAnonymousUserInSameDomainInStore()" name="testVisibilityForAnonymousUserInSameDomainInStore" duration-ms="1" started-at="2015-08-20T19:56:12Z" description="Test the visibility for API in Same domainStore for anonymous user" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase.testVisibilityForAnonymousUserInOtherDomainInStore" finished-at="2015-08-20T19:56:12Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="2696" started-at="2015-08-20T19:56:12Z" finished-at="2015-08-20T19:56:14Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="75" started-at="2015-08-20T20:05:40Z" finished-at="2015-08-20T20:05:40Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="535" started-at="2015-08-20T20:05:40Z" finished-at="2015-08-20T20:05:41Z">
+        </test-method>
+        <test-method status="PASS" signature="testAvailabilityOfTiersInPermissionPageBeforeChangeTiersXML()" name="testAvailabilityOfTiersInPermissionPageBeforeChangeTiersXML" duration-ms="3012" started-at="2015-08-20T20:05:41Z" description="test availability of tiers in Permission Page before change tiers XML" finished-at="2015-08-20T20:05:44Z">
+        </test-method>
+        <test-method status="PASS" signature="testAvailabilityOfTiersInAPIManagePageBeforeChangeTiersXML()" name="testAvailabilityOfTiersInAPIManagePageBeforeChangeTiersXML" duration-ms="201" started-at="2015-08-20T20:05:44Z" description="Test availability of tiers in API Manage Page before change tiers XML" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInPermissionPageBeforeChangeTiersXML" finished-at="2015-08-20T20:05:44Z">
+        </test-method>
+        <test-method status="FAIL" signature="testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML()" name="testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML" duration-ms="74" started-at="2015-08-20T20:05:44Z" description="test availability of tiers in Permission Page after change tiers XML" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInAPIManagePageBeforeChangeTiersXML" finished-at="2015-08-20T20:05:44Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[new tier Platinum  is not available in Tier Permission page before  add new tear in tiers.xml expected:<true> but was:<false>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: new tier Platinum  is not available in Tier Permission page before  add new tear in tiers.xml expected:<true> but was:<false>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertTrue(Assert.java:37)
+	at org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML(EditTiersXMLAndVerifyInPublisherTestCase.java:145)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="SKIP" signature="testAvailabilityOfTiersInAPIManagePageAfterChangeTiersXML()" name="testAvailabilityOfTiersInAPIManagePageAfterChangeTiersXML" duration-ms="1" started-at="2015-08-20T20:05:44Z" description="Test availability of tiers in API Manage Page after change tiers XML" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase.testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML" finished-at="2015-08-20T20:05:44Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="1035" started-at="2015-08-20T20:05:44Z" finished-at="2015-08-20T20:05:45Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="80" started-at="2015-08-20T20:05:24Z" finished-at="2015-08-20T20:05:24Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="293" started-at="2015-08-20T20:05:24Z" finished-at="2015-08-20T20:05:25Z">
+        </test-method>
+        <test-method status="PASS" signature="testEditAPIInformation()" name="testEditAPIInformation" duration-ms="5791" started-at="2015-08-20T20:05:25Z" description="Edit the API Information" finished-at="2015-08-20T20:05:30Z">
+        </test-method>
+        <test-method status="PASS" signature="testUpdatedAPIInformationFromAPIPublisher()" name="testUpdatedAPIInformationFromAPIPublisher" duration-ms="119" started-at="2015-08-20T20:05:30Z" description="Test whether the updated information available in the publisher " depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase.testEditAPIInformation" finished-at="2015-08-20T20:05:30Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="932" started-at="2015-08-20T20:05:30Z" finished-at="2015-08-20T20:05:31Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="80" started-at="2015-08-20T19:56:26Z" finished-at="2015-08-20T19:56:26Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="294" started-at="2015-08-20T19:56:26Z" finished-at="2015-08-20T19:56:26Z">
+        </test-method>
+        <test-method status="FAIL" signature="testFilterByTagsBeforeTagChange()" name="testFilterByTagsBeforeTagChange" duration-ms="12043" started-at="2015-08-20T19:56:26Z" description="Test the filter by Tags before changing the Tags" finished-at="2015-08-20T19:56:38Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[API is not listed  with correct tag, API:APITagTest2 Tag:Tag3 expected:<true> but was:<false>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: API is not listed  with correct tag, API:APITagTest2 Tag:Tag3 expected:<true> but was:<false>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertTrue(Assert.java:37)
+	at org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase.testFilterByTagsBeforeTagChange(ChangeAPITagsTestCase.java:115)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="SKIP" signature="testUpdateTagsAndFilterByTags()" name="testUpdateTagsAndFilterByTags" duration-ms="1" started-at="2015-08-20T19:56:38Z" description="Test the filter by Tags After changing the Tags" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase.testFilterByTagsBeforeTagChange" finished-at="2015-08-20T19:56:38Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="3951" started-at="2015-08-20T19:56:38Z" finished-at="2015-08-20T19:56:42Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="82" started-at="2015-08-20T19:55:51Z" finished-at="2015-08-20T19:55:51Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="4761" started-at="2015-08-20T19:55:51Z" finished-at="2015-08-20T19:55:56Z">
+        </test-method>
+        <test-method status="PASS" signature="testVisibilityForCreatorInPublisher()" name="testVisibilityForCreatorInPublisher" duration-ms="3087" started-at="2015-08-20T19:55:56Z" description="Test the visibility pf API in Publisher for API creator " finished-at="2015-08-20T19:55:59Z">
+        </test-method>
+        <test-method status="PASS" signature="testVisibilityForCreatorInStore()" name="testVisibilityForCreatorInStore" duration-ms="216" started-at="2015-08-20T19:55:59Z" description="Test the visibility pf API in Store for API creator" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForCreatorInPublisher" finished-at="2015-08-20T19:55:59Z">
+        </test-method>
+        <test-method status="PASS" signature="testVisibilityForAdminInSameDomainInPublisher()" name="testVisibilityForAdminInSameDomainInPublisher" duration-ms="81" started-at="2015-08-20T19:55:59Z" description="Test the visibility pf API in Publisher for admin in same domain " depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForCreatorInStore" finished-at="2015-08-20T19:56:00Z">
+        </test-method>
+        <test-method status="PASS" signature="testVisibilityForAdminInSameDomainInStore()" name="testVisibilityForAdminInSameDomainInStore" duration-ms="77" started-at="2015-08-20T19:56:00Z" description="Test the visibility pf API in Store for admin in same domain " depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAdminInSameDomainInPublisher" finished-at="2015-08-20T19:56:00Z">
+        </test-method>
+        <test-method status="PASS" signature="testVisibilityForAnotherUserInSameDomainInPublisher()" name="testVisibilityForAnotherUserInSameDomainInPublisher" duration-ms="79" started-at="2015-08-20T19:56:00Z" description="Test the visibility pf API in Publisher for another user in same domain" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAdminInSameDomainInStore" finished-at="2015-08-20T19:56:00Z">
+        </test-method>
+        <test-method status="PASS" signature="testVisibilityForAnotherUserInSameDomainInStore()" name="testVisibilityForAnotherUserInSameDomainInStore" duration-ms="134" started-at="2015-08-20T19:56:00Z" description="Test the visibility pf API in Store for another user in same domain" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnotherUserInSameDomainInPublisher" finished-at="2015-08-20T19:56:00Z">
+        </test-method>
+        <test-method status="PASS" signature="testVisibilityForAnotherUserInOtherDomainInPublisher()" name="testVisibilityForAnotherUserInOtherDomainInPublisher" duration-ms="149" started-at="2015-08-20T19:56:00Z" description="Test the visibility pf API in Publisher for another user in other domain" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnotherUserInSameDomainInStore" finished-at="2015-08-20T19:56:00Z">
+        </test-method>
+        <test-method status="PASS" signature="testVisibilityForAnotherUserInOtherDomainInStore()" name="testVisibilityForAnotherUserInOtherDomainInStore" duration-ms="413" started-at="2015-08-20T19:56:00Z" description="Test the visibility pf API in Store for another user in other domain" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnotherUserInOtherDomainInPublisher" finished-at="2015-08-20T19:56:00Z">
+        </test-method>
+        <test-method status="PASS" signature="testVisibilityForAdminInOtherDomainInPublisher()" name="testVisibilityForAdminInOtherDomainInPublisher" duration-ms="24" started-at="2015-08-20T19:56:00Z" description="Test the visibility pf API in Publisher for admin in other domain" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnotherUserInOtherDomainInStore" finished-at="2015-08-20T19:56:00Z">
+        </test-method>
+        <test-method status="PASS" signature="testVisibilityForAdminInOtherDomainInStore()" name="testVisibilityForAdminInOtherDomainInStore" duration-ms="110" started-at="2015-08-20T19:56:00Z" description="Test the visibility pf API in Store for admin in other domain" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAdminInOtherDomainInPublisher" finished-at="2015-08-20T19:56:01Z">
+        </test-method>
+        <test-method status="FAIL" signature="testVisibilityForAnonymousUserInSameDomainInStore()" name="testVisibilityForAnonymousUserInSameDomainInStore" duration-ms="518" started-at="2015-08-20T19:56:01Z" description="Test the visibility for API in Same domainStore for anonymous user" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAdminInOtherDomainInStore" finished-at="2015-08-20T19:56:01Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[API  visible to anonymous user in same domain API Store. When Visibility is private.   API Name:APIVisibilityByDomainTest API Version:1.0.0 API Provider Name :testu1  expected:<false> but was:<true>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: API  visible to anonymous user in same domain API Store. When Visibility is private.   API Name:APIVisibilityByDomainTest API Version:1.0.0 API Provider Name :testu1  expected:<false> but was:<true>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertFalse(Assert.java:58)
+	at org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnonymousUserInSameDomainInStore(APIVisibilityByDomainTestCase.java:264)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="SKIP" signature="testVisibilityForAnonymousUserInOtherDomainInStore()" name="testVisibilityForAnonymousUserInOtherDomainInStore" duration-ms="1" started-at="2015-08-20T19:56:01Z" description="Test the visibility for API in other domainStore for anonymous user" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase.testVisibilityForAnonymousUserInSameDomainInStore" finished-at="2015-08-20T19:56:01Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="1185" started-at="2015-08-20T19:56:01Z" finished-at="2015-08-20T19:56:02Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="76" started-at="2015-08-20T20:05:31Z" finished-at="2015-08-20T20:05:31Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="389" started-at="2015-08-20T20:05:31Z" finished-at="2015-08-20T20:05:32Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokeAPIBeforeChangeAPIContext()" name="testInvokeAPIBeforeChangeAPIContext" duration-ms="3929" started-at="2015-08-20T20:05:32Z" description="Test invoke the API before the context change" finished-at="2015-08-20T20:05:36Z">
+        </test-method>
+        <test-method status="PASS" signature="testEditAPIContext()" name="testEditAPIContext" duration-ms="2493" started-at="2015-08-20T20:05:36Z" description="Test changing of the API context" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase.testInvokeAPIBeforeChangeAPIContext" finished-at="2015-08-20T20:05:38Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokeAPIAfterChangeAPIContextWithOldContext()" name="testInvokeAPIAfterChangeAPIContextWithOldContext" duration-ms="30" started-at="2015-08-20T20:05:38Z" description="Test the invocation of API using old context after Context change after the API context change" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase.testEditAPIContext" finished-at="2015-08-20T20:05:38Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokeAPIAfterChangeAPIContextWithNewContext()" name="testInvokeAPIAfterChangeAPIContextWithNewContext" duration-ms="149" started-at="2015-08-20T20:05:38Z" description="Test the invocation of API using new context after Context change" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase.testInvokeAPIAfterChangeAPIContextWithOldContext" finished-at="2015-08-20T20:05:38Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="1485" started-at="2015-08-20T20:05:38Z" finished-at="2015-08-20T20:05:40Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.PluggableVersioningStrategyTestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="77" started-at="2015-08-20T20:05:54Z" finished-at="2015-08-20T20:05:55Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="279" started-at="2015-08-20T20:05:55Z" finished-at="2015-08-20T20:05:55Z">
+        </test-method>
+        <test-method status="PASS" signature="testPluggableVersioningStratergy()" name="testPluggableVersioningStratergy" duration-ms="4643" started-at="2015-08-20T20:05:55Z" description="This test method tests the pluggable versioning stratergy" finished-at="2015-08-20T20:05:59Z">
+        </test-method>
+        <test-method status="PASS" signature="destroy()" name="destroy" is-config="true" duration-ms="1404" started-at="2015-08-20T20:05:59Z" finished-at="2015-08-20T20:06:01Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="132" started-at="2015-08-20T19:55:01Z" finished-at="2015-08-20T19:55:01Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="713" started-at="2015-08-20T19:55:01Z" finished-at="2015-08-20T19:55:01Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokeAPIBeforeChangeAPILifecycleToRetired()" name="testInvokeAPIBeforeChangeAPILifecycleToRetired" duration-ms="4578" started-at="2015-08-20T19:55:01Z" description="Test invocation of the APi before retire" finished-at="2015-08-20T19:55:06Z">
+        </test-method>
+        <test-method status="PASS" signature="testChangeAPILifecycleToRetired()" name="testChangeAPILifecycleToRetired" duration-ms="1168" started-at="2015-08-20T19:55:06Z" description="Change API lifecycle to Retired" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToRetired" finished-at="2015-08-20T19:55:07Z">
+        </test-method>
+        <test-method status="PASS" signature="testAvailabilityOfRetiredAPIInStore()" name="testAvailabilityOfRetiredAPIInStore" duration-ms="199" started-at="2015-08-20T19:55:07Z" description="Test the availability of retired API in the store" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testChangeAPILifecycleToRetired" finished-at="2015-08-20T19:55:07Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokeAPIAfterChangeAPILifecycleToRetired()" name="testInvokeAPIAfterChangeAPILifecycleToRetired" duration-ms="46" started-at="2015-08-20T19:55:07Z" description="Test the invocation of the API after retire" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testAvailabilityOfRetiredAPIInStore" finished-at="2015-08-20T19:55:07Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="1713" started-at="2015-08-20T19:55:07Z" finished-at="2015-08-20T19:55:09Z">
+        </test-method>
+        <test-method status="FAIL" signature="testInvokeAPIBeforeChangeAPILifecycleToRetired()" name="testInvokeAPIBeforeChangeAPILifecycleToRetired" duration-ms="3140" started-at="2015-08-20T19:55:26Z" description="Test invocation of the APi before retire" finished-at="2015-08-20T19:55:30Z">
+          <exception class="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException">
+            <message>
+              <![CDATA[Error in API Subscribe. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin Response Code:200 Response Data :{"error" : true, "message" : "org.wso2.carbon.apimgt.api.APIManagementException: Error while adding the subscription for user: admin"}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Subscribe. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin Response Code:200 Response Data :{"error" : true, "message" : "org.wso2.carbon.apimgt.api.APIManagementException: Error while adding the subscription for user: admin"}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.createPublishAndSubscribeToAPI(APIManagerLifecycleBaseTest.java:372)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToRetired(AccessibilityOfRetireAPITestCase.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="1130" started-at="2015-08-20T19:55:30Z" finished-at="2015-08-20T19:55:31Z">
+        </test-method>
+        <test-method status="SKIP" signature="testChangeAPILifecycleToRetired()" name="testChangeAPILifecycleToRetired" duration-ms="1" started-at="2015-08-20T19:55:31Z" description="Change API lifecycle to Retired" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToRetired" finished-at="2015-08-20T19:55:31Z">
+        </test-method>
+        <test-method status="FAIL" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="0" started-at="2015-08-20T19:55:31Z" finished-at="2015-08-20T19:55:31Z">
+          <exception class="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException">
+            <message>
+              <![CDATA[Exception when delete a API]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:172)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:525)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:202)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:130)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:222)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Deletion. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin  API Context :org.wso2.carbon.automation.test.utils.http.client.HttpResponse@2c91e143Response Code:200 Response Data :{"error" : true, "message" : " Failed to remove the API from : /apimgt/applicationdata/provider/admin/RetireAPITest/1.0.0"}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	... 29 more
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="SKIP" signature="testAvailabilityOfRetiredAPIInStore()" name="testAvailabilityOfRetiredAPIInStore" duration-ms="1" started-at="2015-08-20T19:55:31Z" description="Test the availability of retired API in the store" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testChangeAPILifecycleToRetired" finished-at="2015-08-20T19:55:31Z">
+        </test-method>
+        <test-method status="FAIL" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="0" started-at="2015-08-20T19:55:31Z" finished-at="2015-08-20T19:55:31Z">
+          <exception class="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException">
+            <message>
+              <![CDATA[Exception when delete a API]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:172)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:525)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:202)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:130)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:222)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Deletion. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin  API Context :org.wso2.carbon.automation.test.utils.http.client.HttpResponse@1393537dResponse Code:200 Response Data :{"error" : true, "message" : " Failed to remove the API from : /apimgt/applicationdata/provider/admin/RetireAPITest/1.0.0"}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	... 29 more
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="SKIP" signature="testInvokeAPIAfterChangeAPILifecycleToRetired()" name="testInvokeAPIAfterChangeAPILifecycleToRetired" duration-ms="1" started-at="2015-08-20T19:55:31Z" description="Test the invocation of the API after retire" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.testAvailabilityOfRetiredAPIInStore" finished-at="2015-08-20T19:55:31Z">
+        </test-method>
+        <test-method status="FAIL" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="0" started-at="2015-08-20T19:55:31Z" finished-at="2015-08-20T19:55:31Z">
+          <exception class="org.wso2.am.integration.test.utils.APIManagerIntegrationTestException">
+            <message>
+              <![CDATA[Exception when delete a API]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Exception when delete a API
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:172)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase.cleanUpArtifacts(AccessibilityOfRetireAPITestCase.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:525)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:202)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:130)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:222)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.wso2.am.integration.test.utils.APIManagerIntegrationTestException: Error in API Deletion. API Name:RetireAPITest API Version:1.0.0 API Provider Name :admin  API Context :org.wso2.carbon.automation.test.utils.http.client.HttpResponse@311f56a3Response Code:200 Response Data :{"error" : true, "message" : " Failed to remove the API from : /apimgt/applicationdata/provider/admin/RetireAPITest/1.0.0"}
+	at org.wso2.am.integration.tests.api.lifecycle.APIManagerLifecycleBaseTest.deleteAPI(APIManagerLifecycleBaseTest.java:165)
+	... 29 more
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="110" started-at="2015-08-20T19:55:15Z" finished-at="2015-08-20T19:55:15Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="503" started-at="2015-08-20T19:55:15Z" finished-at="2015-08-20T19:55:16Z">
+        </test-method>
+        <test-method status="PASS" signature="testSubscriptionOfOldAPI()" name="testSubscriptionOfOldAPI" duration-ms="3584" started-at="2015-08-20T19:55:16Z" description="Test subscribe of old api version." finished-at="2015-08-20T19:55:19Z">
+        </test-method>
+        <test-method status="PASS" signature="testPublishCopiedAPIWithOutReSubscriptionRequired()" name="testPublishCopiedAPIWithOutReSubscriptionRequired" duration-ms="3479" started-at="2015-08-20T19:55:19Z" description="Test publishing of copied API with out re-subscription required" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase.testSubscriptionOfOldAPI" finished-at="2015-08-20T19:55:23Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokeOldAPIBeforeSubscribeTheNewVersion()" name="testInvokeOldAPIBeforeSubscribeTheNewVersion" duration-ms="995" started-at="2015-08-20T19:55:23Z" description="Test invocation of old API version  before the new version is subscribed." depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase.testPublishCopiedAPIWithOutReSubscriptionRequired" finished-at="2015-08-20T19:55:24Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokeNewAPIWithoutSubscribeTheNewVersion()" name="testInvokeNewAPIWithoutSubscribeTheNewVersion" duration-ms="154" started-at="2015-08-20T19:55:24Z" description="Test invocation of new API version before the new version is subscribed." depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase.testInvokeOldAPIBeforeSubscribeTheNewVersion" finished-at="2015-08-20T19:55:24Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="2508" started-at="2015-08-20T19:55:24Z" finished-at="2015-08-20T19:55:26Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="89" started-at="2015-08-20T19:56:42Z" finished-at="2015-08-20T19:56:42Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="293" started-at="2015-08-20T19:56:42Z" finished-at="2015-08-20T19:56:42Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokingWithGoldTier()" name="testInvokingWithGoldTier" duration-ms="5045" started-at="2015-08-20T19:56:42Z" description="test  invocation of  api under tier Gold." finished-at="2015-08-20T19:56:47Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokingAfterExpireThrottleExpireTime()" name="testInvokingAfterExpireThrottleExpireTime" duration-ms="65058" started-at="2015-08-20T19:56:47Z" description="test  invocation of APi after expire the throttling block time." depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase.testInvokingWithGoldTier" finished-at="2015-08-20T19:57:52Z">
+        </test-method>
+        <test-method status="PASS" signature="testEditAPITierToSilver()" name="testEditAPITierToSilver" duration-ms="2841" started-at="2015-08-20T19:57:52Z" description="Test changing of the API Tier from Gold to Silver" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase.testInvokingAfterExpireThrottleExpireTime" finished-at="2015-08-20T19:57:55Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokingWithSilverTier()" name="testInvokingWithSilverTier" duration-ms="66701" started-at="2015-08-20T19:57:55Z" description="test  invocation of  api under tier Silver." depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase.testEditAPITierToSilver" finished-at="2015-08-20T19:59:02Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="2236" started-at="2015-08-20T19:59:02Z" finished-at="2015-08-20T19:59:04Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.APIManagerConfigurationChangeTest">
+        <test-method status="PASS" signature="startChangeAPIMConfigureXml()" name="startChangeAPIMConfigureXml" is-config="true" duration-ms="794" started-at="2015-08-20T19:55:00Z" finished-at="2015-08-20T19:55:01Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="77" started-at="2015-08-20T20:01:36Z" finished-at="2015-08-20T20:01:36Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="287" started-at="2015-08-20T20:01:36Z" finished-at="2015-08-20T20:01:36Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters()" name="testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" duration-ms="3993" started-at="2015-08-20T20:01:36Z" description="Test the API with endpoint security enabled with simple password that only has characters and numbers" finished-at="2015-08-20T20:01:40Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2487" started-at="2015-08-20T20:01:40Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:01:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[!]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2575" started-at="2015-08-20T20:01:42Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:01:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[@]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2623" started-at="2015-08-20T20:01:45Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:01:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[#]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2821" started-at="2015-08-20T20:01:48Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:01:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[$]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2597" started-at="2015-08-20T20:01:50Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:01:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[%]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2540" started-at="2015-08-20T20:01:53Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:01:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[^]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2547" started-at="2015-08-20T20:01:56Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:01:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[&]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2658" started-at="2015-08-20T20:01:58Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[*]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2697" started-at="2015-08-20T20:02:01Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[(]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2626" started-at="2015-08-20T20:02:03Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[)]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2673" started-at="2015-08-20T20:02:06Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[_]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2590" started-at="2015-08-20T20:02:09Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2705" started-at="2015-08-20T20:02:11Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[+]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2581" started-at="2015-08-20T20:02:14Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[=]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2612" started-at="2015-08-20T20:02:17Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2709" started-at="2015-08-20T20:02:19Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2749" started-at="2015-08-20T20:02:22Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[}]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2640" started-at="2015-08-20T20:02:25Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2656" started-at="2015-08-20T20:02:27Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[|]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2623" started-at="2015-08-20T20:02:30Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[\]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2695" started-at="2015-08-20T20:02:33Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[:]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2611" started-at="2015-08-20T20:02:35Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[;]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2592" started-at="2015-08-20T20:02:38Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2661" started-at="2015-08-20T20:02:41Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[']]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2581" started-at="2015-08-20T20:02:43Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[<]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2611" started-at="2015-08-20T20:02:46Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[,]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2622" started-at="2015-08-20T20:02:48Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[>]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2719" started-at="2015-08-20T20:02:51Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[.]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2488" started-at="2015-08-20T20:02:54Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[?]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="testInvokeGETResourceWithSecuredEndPointComplexPassword(java.lang.String)" name="testInvokeGETResourceWithSecuredEndPointComplexPassword" duration-ms="2622" started-at="2015-08-20T20:02:56Z" description="Test the API with endpoint security enabled with complex password" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase.testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters" finished-at="2015-08-20T20:02:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[/]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="1574" started-at="2015-08-20T20:02:59Z" finished-at="2015-08-20T20:03:00Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="106" started-at="2015-08-20T19:55:09Z" finished-at="2015-08-20T19:55:09Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="516" started-at="2015-08-20T19:55:09Z" finished-at="2015-08-20T19:55:10Z">
+        </test-method>
+        <test-method status="FAIL" signature="testInvokeAPIBeforeChangeAPILifecycleToBlock()" name="testInvokeAPIBeforeChangeAPILifecycleToBlock" duration-ms="3934" started-at="2015-08-20T19:55:10Z" description="Test invocation of the APi before block" finished-at="2015-08-20T19:55:14Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Response code mismatched when invoke api before block expected:<200> but was:<302>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Response code mismatched when invoke api before block expected:<200> but was:<302>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:365)
+	at org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToBlock(AccessibilityOfBlockAPITestCase.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="SKIP" signature="testChangeAPILifecycleToBlock()" name="testChangeAPILifecycleToBlock" duration-ms="1" started-at="2015-08-20T19:55:14Z" description="Change API lifecycle to block" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase.testInvokeAPIBeforeChangeAPILifecycleToBlock" finished-at="2015-08-20T19:55:14Z">
+        </test-method>
+        <test-method status="SKIP" signature="testInvokeAPIAfterChangeAPILifecycleToBlock()" name="testInvokeAPIAfterChangeAPILifecycleToBlock" duration-ms="1" started-at="2015-08-20T19:55:14Z" description="Invocation og the APi after block" depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase.testChangeAPILifecycleToBlock" finished-at="2015-08-20T19:55:14Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="1463" started-at="2015-08-20T19:55:14Z" finished-at="2015-08-20T19:55:15Z">
+        </test-method>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="77" started-at="2015-08-20T20:03:00Z" finished-at="2015-08-20T20:03:00Z">
+        </test-method>
+        <test-method status="PASS" signature="initialize()" name="initialize" is-config="true" duration-ms="283" started-at="2015-08-20T20:03:00Z" finished-at="2015-08-20T20:03:01Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokingWithAPIGoldTierApplicationGoldResourceUnlimited()" name="testInvokingWithAPIGoldTierApplicationGoldResourceUnlimited" duration-ms="5406" started-at="2015-08-20T20:03:01Z" description="test  the  throttling of a API. API Tier :Gold, Application Tier: GOLD, Resource Tier: Unlimited." finished-at="2015-08-20T20:03:06Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokingWithAPIGoldTierApplicationGoldResourceSilver()" name="testInvokingWithAPIGoldTierApplicationGoldResourceSilver" duration-ms="68030" started-at="2015-08-20T20:03:06Z" description="test  the  throttling of a API. API Tier :Gold, Application Tier: GOLD, Resource Tier: Silver." depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase.testInvokingWithAPIGoldTierApplicationGoldResourceUnlimited" finished-at="2015-08-20T20:04:14Z">
+        </test-method>
+        <test-method status="PASS" signature="testInvokingWithAPIGoldTierApplicationGoldResourceGold()" name="testInvokingWithAPIGoldTierApplicationGoldResourceGold" duration-ms="68186" started-at="2015-08-20T20:04:14Z" description="test  the  throttling of a API. API Tier :Gold, Application Tier: GOLD, Resource Tier: Gold." depends-on-methods="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase.testInvokingWithAPIGoldTierApplicationGoldResourceSilver" finished-at="2015-08-20T20:05:22Z">
+        </test-method>
+        <test-method status="PASS" signature="cleanUpArtifacts()" name="cleanUpArtifacts" is-config="true" duration-ms="1737" started-at="2015-08-20T20:05:22Z" finished-at="2015-08-20T20:05:24Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>

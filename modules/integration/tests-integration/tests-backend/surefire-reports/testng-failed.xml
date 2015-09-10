@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [ApiManager-features-test-suite]">
+  <parameter name="useDefaultListeners" value="false"/>
+  <test name="apim-integration-tests-samples(failed)" preserve-order="false">
+    <parameter name="useDefaultListeners" value="false"/>
+    <classes>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase">
+        <methods>
+          <include name="initialize"/>
+          <include name="init"/>
+          <include name="cleanUpArtifacts"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="cleanUpArtifacts"/>
+          <include name="initialize"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="initialize"/>
+          <include name="cleanUpArtifacts"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.other.LocationHeaderTestCase">
+        <methods>
+          <include name="destroy"/>
+          <include name="setEnvironment"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase">
+        <methods>
+          <include name="cleanUpArtifacts"/>
+          <include name="initialize"/>
+          <include name="init"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="initialize"/>
+          <include name="cleanUpArtifacts"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase">
+        <methods>
+          <include name="cleanUpArtifacts"/>
+          <include name="init"/>
+          <include name="initialize"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="cleanUpArtifacts"/>
+          <include name="initialize"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase">
+        <methods>
+          <include name="initialize"/>
+          <include name="init"/>
+          <include name="cleanUpArtifacts"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.version.DefaultVersionAPITestCase">
+        <methods>
+          <include name="setEnvironment"/>
+          <include name="destroy"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.login.LoginValidationTestCase">
+        <methods>
+          <include name="setEnvironment"/>
+          <include name="destroy"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.rest.URLMappingRESTTestCase">
+        <methods>
+          <include name="destroy"/>
+          <include name="setEnvironment"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="cleanUpArtifacts"/>
+          <include name="initialize"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="cleanUpArtifacts"/>
+          <include name="initialize"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.PluggableVersioningStrategyTestCase">
+        <methods>
+          <include name="initialize"/>
+          <include name="init"/>
+          <include name="destroy"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase">
+        <methods>
+          <include name="initialize"/>
+          <include name="init"/>
+          <include name="cleanUpArtifacts"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.other.APIMANAGER2611EndpointValidationTestCase">
+        <methods>
+          <include name="destroy"/>
+          <include name="setEnvironment"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="initialize"/>
+          <include name="cleanUpArtifacts"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase">
+        <methods>
+          <include name="init"/>
+          <include name="initialize"/>
+          <include name="cleanUpArtifacts"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.resources.APIResourceModificationTestCase">
+        <methods>
+          <include name="destroy"/>
+          <include name="setEnvironment"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase">
+        <methods>
+          <include name="cleanUpArtifacts"/>
+          <include name="init"/>
+          <include name="initialize"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.other.RelativeUrlLocationHeaderTestCase">
+        <methods>
+          <include name="destroy"/>
+          <include name="setEnvironment"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="initialize"/>
+          <include name="cleanUpArtifacts"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase">
+        <methods>
+          <include name="cleanUpArtifacts"/>
+          <include name="init"/>
+          <include name="initialize"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.other.APIScopeTestCase">
+        <methods>
+          <include name="destroy"/>
+          <include name="testSetScopeToResourceTestCase"/>
+          <include name="setEnvironment"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="cleanUpArtifacts"/>
+          <include name="initialize"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.APIManagerConfigurationChangeTest">
+        <methods>
+          <include name="startChangeAPIMConfigureXml"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="initialize"/>
+          <include name="cleanUpArtifacts"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.other.APIInvocationFailureTestCase">
+        <methods>
+          <include name="setEnvironment"/>
+          <include name="destroy"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+  <test name="apim-integration-tests-api-lifecycle(failed)" preserve-order="false">
+    <parameter name="useDefaultListeners" value="false"/>
+    <classes>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfRetireAPITestCase">
+        <methods>
+          <include name="initialize"/>
+          <include name="init"/>
+          <include name="cleanUpArtifacts"/>
+          <include name="testInvokeAPIAfterChangeAPILifecycleToRetired"/>
+          <include name="testInvokeAPIBeforeChangeAPILifecycleToRetired"/>
+          <include name="testChangeAPILifecycleToRetired"/>
+          <include name="testAvailabilityOfRetiredAPIInStore"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeAPIEndPointURLTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="cleanUpArtifacts"/>
+          <include name="initialize"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeAuthTypeOfResourceTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="testInvokeResourceWithAuthTypeApplicationAndApplicationUser"/>
+          <include name="initialize"/>
+          <include name="testInvokeGETResourceWithAuthTypeNone"/>
+          <include name="testInvokeGETResourceWithAuthTypeApplicationUser"/>
+          <include name="cleanUpArtifacts"/>
+          <include name="testInvokeResourceWithAuthTypeApplication"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.other.LocationHeaderTestCase">
+        <methods>
+          <include name="destroy"/>
+          <include name="setEnvironment"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByDomainTestCase">
+        <methods>
+          <include name="initialize"/>
+          <include name="init"/>
+          <include name="testVisibilityForCreatorInStore"/>
+          <include name="testVisibilityForAnotherUserInOtherDomainInStore"/>
+          <include name="testVisibilityForAdminInOtherDomainInStore"/>
+          <include name="testVisibilityForAnonymousUserInOtherDomainInStore"/>
+          <include name="testVisibilityForAnotherUserInOtherDomainInPublisher"/>
+          <include name="testVisibilityForAdminInSameDomainInStore"/>
+          <include name="cleanUpArtifacts"/>
+          <include name="testVisibilityForAdminInSameDomainInPublisher"/>
+          <include name="testVisibilityForAnonymousUserInSameDomainInStore"/>
+          <include name="testVisibilityForAnotherUserInSameDomainInStore"/>
+          <include name="testVisibilityForAnotherUserInSameDomainInPublisher"/>
+          <include name="testVisibilityForCreatorInPublisher"/>
+          <include name="testVisibilityForAdminInOtherDomainInPublisher"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.EditTiersXMLAndVerifyInPublisherTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="testAvailabilityOfTiersInAPIManagePageBeforeChangeTiersXML"/>
+          <include name="testAvailabilityOfTiersInAPIManagePageAfterChangeTiersXML"/>
+          <include name="testAvailabilityOfTiersInPermissionPageBeforeChangeTiersXML"/>
+          <include name="initialize"/>
+          <include name="testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML"/>
+          <include name="cleanUpArtifacts"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.APIPublishingAndVisibilityInStoreTestCase">
+        <methods>
+          <include name="cleanUpArtifacts"/>
+          <include name="init"/>
+          <include name="initialize"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeResourceTierAndTestInvokingTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="cleanUpArtifacts"/>
+          <include name="initialize"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.UsersAndDocsInAPIOverviewTestCase">
+        <methods>
+          <include name="initialize"/>
+          <include name="init"/>
+          <include name="cleanUpArtifacts"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.version.DefaultVersionAPITestCase">
+        <methods>
+          <include name="setEnvironment"/>
+          <include name="destroy"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.login.LoginValidationTestCase">
+        <methods>
+          <include name="setEnvironment"/>
+          <include name="destroy"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.rest.URLMappingRESTTestCase">
+        <methods>
+          <include name="destroy"/>
+          <include name="setEnvironment"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfOldAPIAndCopyAPIWithOutReSubscriptionTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="cleanUpArtifacts"/>
+          <include name="initialize"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.EditAPIAndCheckUpdatedInformationTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="cleanUpArtifacts"/>
+          <include name="initialize"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.PluggableVersioningStrategyTestCase">
+        <methods>
+          <include name="initialize"/>
+          <include name="init"/>
+          <include name="destroy"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITierAndTestInvokingTestCase">
+        <methods>
+          <include name="initialize"/>
+          <include name="init"/>
+          <include name="cleanUpArtifacts"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.other.APIMANAGER2611EndpointValidationTestCase">
+        <methods>
+          <include name="destroy"/>
+          <include name="setEnvironment"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.APIVisibilityByRoleTestCase">
+        <methods>
+          <include name="testVisibilityForCreatorInStore"/>
+          <include name="init"/>
+          <include name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInPublisher"/>
+          <include name="cleanUpArtifacts"/>
+          <include name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInStore"/>
+          <include name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInOtherDomainInStore"/>
+          <include name="testVisibilityForAnotherUserWithSubscriberRoleInSameDomainInStore"/>
+          <include name="testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInPublisher"/>
+          <include name="testVisibilityForAnotherUserWithSubscriberRoleInOtherDomainInStore"/>
+          <include name="testVisibilityForAdminUserWithAdminAndSubscriberRoleInSameDomainInStore"/>
+          <include name="testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInStore"/>
+          <include name="initialize"/>
+          <include name="testVisibilityForCreatorInPublisher"/>
+          <include name="testVisibilityForAnotherUserWithAdminAndSubscriberRoleInSameDomainInPublisher"/>
+          <include name="testVisibilityForAnonymousUserInOtherDomainInStore"/>
+          <include name="testVisibilityForAdminWithAdminAndSubscriberRoleInOtherDomainInPublisher"/>
+          <include name="testVisibilityForAnonymousUserInSameDomainInStore"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeEndPointSecurityOfAPITestCase">
+        <methods>
+          <include name="init"/>
+          <include name="initialize"/>
+          <include name="cleanUpArtifacts"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.resources.APIResourceModificationTestCase">
+        <methods>
+          <include name="destroy"/>
+          <include name="setEnvironment"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.AccessibilityOfBlockAPITestCase">
+        <methods>
+          <include name="cleanUpArtifacts"/>
+          <include name="init"/>
+          <include name="testChangeAPILifecycleToBlock"/>
+          <include name="testInvokeAPIBeforeChangeAPILifecycleToBlock"/>
+          <include name="initialize"/>
+          <include name="testInvokeAPIAfterChangeAPILifecycleToBlock"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.other.RelativeUrlLocationHeaderTestCase">
+        <methods>
+          <include name="destroy"/>
+          <include name="setEnvironment"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.AddEditRemoveRESTResourceTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="initialize"/>
+          <include name="cleanUpArtifacts"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeApplicationTierAndTestInvokingTestCase">
+        <methods>
+          <include name="cleanUpArtifacts"/>
+          <include name="init"/>
+          <include name="initialize"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.other.APIScopeTestCase">
+        <methods>
+          <include name="destroy"/>
+          <include name="setEnvironment"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.ChangeAPITagsTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="testUpdateTagsAndFilterByTags"/>
+          <include name="cleanUpArtifacts"/>
+          <include name="initialize"/>
+          <include name="testFilterByTagsBeforeTagChange"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.APIManagerConfigurationChangeTest">
+        <methods>
+          <include name="startChangeAPIMConfigureXml"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.api.lifecycle.EditAPIContextAndCheckAccessibilityTestCase">
+        <methods>
+          <include name="init"/>
+          <include name="initialize"/>
+          <include name="cleanUpArtifacts"/>
+        </methods>
+      </class>
+      <class name="org.wso2.am.integration.tests.other.APIInvocationFailureTestCase">
+        <methods>
+          <include name="setEnvironment"/>
+          <include name="destroy"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>
