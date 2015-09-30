@@ -23,6 +23,7 @@ import org.apache.commons.logging.LogFactory;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.wso2.am.integration.test.utils.APIManagerIntegrationTestException;
 import org.wso2.am.integration.test.utils.base.APIMIntegrationBaseTest;
@@ -208,15 +209,16 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
             // lifecycle status change activities  available in the api
             if (jsonArray.length() > 0) {
                 for (int index = 1; index < jsonArray.length(); index++) {
-                    if (Long.parseLong(((JSONObject) jsonArray.get(index)).get("date").toString()) >
+                    if (Long.parseLong(((JSONObject) jsonArray.get(index)).get("date").toString()) >=
                             Long.parseLong(latestChange.get("date").toString())) {
                         latestChange = (JSONObject) jsonArray.get(index);
                     }
                 }
             }
             // Check the given status change information is correct in latest lifecycle status change action.
-            if (latestChange.get("oldStatus").toString().equals(oldStatus.getState()) &&
-                    latestChange.get("newStatus").toString().equals(newStatus.getState())) {
+            log.info("LC State " + latestChange.toString());
+            if (latestChange.get("oldStatus").toString().equalsIgnoreCase(oldStatus.getState()) &&
+                    latestChange.get("newStatus").toString().equalsIgnoreCase(newStatus.getState())) {
                 isStatusChangeCorrect = true;
             }
             return isStatusChangeCorrect;
@@ -261,27 +263,27 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
      */
     public void createAndPublishAPI(APIIdentifier apiIdentifier, APICreationRequestBean apiCreationRequestBean,
                                     APIPublisherRestClient publisherRestClient,
-                                    boolean isRequireReSubscription) throws APIManagerIntegrationTestException {
+                                    boolean isRequireReSubscription)
+            throws APIManagerIntegrationTestException {
         //Create the API
         HttpResponse createAPIResponse = publisherRestClient.addAPI(apiCreationRequestBean);
-        if (createAPIResponse.getResponseCode() == HTTP_RESPONSE_CODE_OK &&
-                getValueFromJSON(createAPIResponse, "error").equals("false")) {
+        try {
+            verifyResponse(createAPIResponse);
             log.info("API Created :" + getAPIIdentifierString(apiIdentifier));
             //Publish the API
             HttpResponse publishAPIResponse = publishAPI(apiIdentifier, publisherRestClient, isRequireReSubscription);
-            if (!(publishAPIResponse.getResponseCode() == HTTP_RESPONSE_CODE_OK &&
-                    verifyAPIStatusChange(publishAPIResponse, APILifeCycleState.CREATED, APILifeCycleState.PUBLISHED))) {
+            verifyResponse(publishAPIResponse);
+            if (!verifyAPIStatusChange(publishAPIResponse, APILifeCycleState.CREATED, APILifeCycleState.PUBLISHED)) {
                 throw new APIManagerIntegrationTestException("Error in API Publishing" +
-                        getAPIIdentifierString(apiIdentifier) + "Response Code:" + publishAPIResponse.getResponseCode() +
-                        " Response Data :" + publishAPIResponse.getData());
+                                                             getAPIIdentifierString(apiIdentifier) + "Response Code:" + publishAPIResponse.getResponseCode() +
+                                                             " Response Data :" + publishAPIResponse.getData());
             }
             log.info("API Published :" + getAPIIdentifierString(apiIdentifier));
-        } else {
-            throw new APIManagerIntegrationTestException("Error in API Creation." +
-                    getAPIIdentifierString(apiIdentifier) +
-                    "Response Code:" + createAPIResponse.getResponseCode() +
-                    " Response Data :" + createAPIResponse.getData());
+        } catch (JSONException e) {
+            throw new APIManagerIntegrationTestException("Error in JSON String " + e.getMessage(), e);
         }
+
+
     }
 
 
