@@ -22,6 +22,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.wso2.am.integration.test.utils.APIManagerIntegrationTestException;
+import org.wso2.am.integration.test.utils.base.APIMIntegrationConstants;
 import org.wso2.am.integration.test.utils.bean.APICreationRequestBean;
 import org.wso2.am.integration.test.utils.bean.APILifeCycleState;
 import org.wso2.am.integration.test.utils.bean.APILifeCycleStateRequest;
@@ -65,7 +66,8 @@ public class AccessibilityOfBlockAPITestCase extends APIManagerLifecycleBaseTest
     private APIStoreRestClient apiStoreClientUser1;
 
     @BeforeClass(alwaysRun = true)
-    public void initialize() throws APIManagerIntegrationTestException, XPathExpressionException, MalformedURLException {
+    public void initialize() throws APIManagerIntegrationTestException, XPathExpressionException,
+                                    MalformedURLException {
         super.init();
         apiEndPointUrl = getGatewayURLHttp() + API_END_POINT_POSTFIX_URL;
         providerName = user.getUserName();
@@ -98,20 +100,26 @@ public class AccessibilityOfBlockAPITestCase extends APIManagerLifecycleBaseTest
         requestHeaders.put("accept", "text/xml");
         requestHeaders.put("Authorization", "Bearer " + accessToken);
         //Invoke  old version
-        HttpResponse oldVersionInvokeResponse =
-                HttpRequestUtil.doGet(getAPIInvocationURLHttp( API_CONTEXT,
-                        API_VERSION_1_0_0) + API_END_POINT_METHOD, requestHeaders);
+        waitForAPIDeploymentSync(user.getUserName(), API_NAME, API_VERSION_1_0_0, APIMIntegrationConstants.IS_API_EXISTS);
+
+        HttpResponse oldVersionInvokeResponse;
+
+        oldVersionInvokeResponse =
+                HttpRequestUtil.doGet(getAPIInvocationURLHttp(API_CONTEXT,
+                                                              API_VERSION_1_0_0) + API_END_POINT_METHOD, requestHeaders);
+
         assertEquals(oldVersionInvokeResponse.getResponseCode(), HTTP_RESPONSE_CODE_OK,
-                "Response code mismatched when invoke api before block");
+                     "Response code mismatched when invoke api before block");
         assertTrue(oldVersionInvokeResponse.getData().contains(API_RESPONSE_DATA),
-                "Response data mismatched when invoke  API  before block" +
-                        " Response Data:" + oldVersionInvokeResponse.getData());
+                   "Response data mismatched when invoke  API  before block" +
+                   " Response Data:" + oldVersionInvokeResponse.getData());
     }
 
 
     @Test(groups = {"wso2.am"}, description = "Change API lifecycle to block",
-            dependsOnMethods = "testInvokeAPIBeforeChangeAPILifecycleToBlock")
-    public void testChangeAPILifecycleToBlock() throws APIManagerIntegrationTestException {
+          dependsOnMethods = "testInvokeAPIBeforeChangeAPILifecycleToBlock")
+    public void testChangeAPILifecycleToBlock()
+            throws APIManagerIntegrationTestException, IOException, XPathExpressionException {
         //Block the API version 1.0.0
         APILifeCycleStateRequest blockUpdateRequest =
                 new APILifeCycleStateRequest(API_NAME, providerName, APILifeCycleState.BLOCKED);
@@ -119,25 +127,35 @@ public class AccessibilityOfBlockAPITestCase extends APIManagerLifecycleBaseTest
         //Change API lifecycle  to Block
         HttpResponse blockAPIActionResponse =
                 apiPublisherClientUser1.changeAPILifeCycleStatus(blockUpdateRequest);
-        assertEquals(blockAPIActionResponse.getResponseCode(), HTTP_RESPONSE_CODE_OK, "Response code mismatched");
-        assertTrue(verifyAPIStatusChange(blockAPIActionResponse, APILifeCycleState.PUBLISHED,
-                APILifeCycleState.BLOCKED), "API status Change is invalid when block an API :" +
-                getAPIIdentifierString(apiIdentifier) + " Response Code:" + blockAPIActionResponse.getData());
+        System.out.println("2 : " + blockAPIActionResponse.getData());
+        assertEquals(blockAPIActionResponse.getResponseCode(),
+                     HTTP_RESPONSE_CODE_OK,
+                     "Response code mismatched");
+
+        assertTrue(verifyAPIStatusChange(blockAPIActionResponse,
+                                         APILifeCycleState.PUBLISHED,
+                                         APILifeCycleState.BLOCKED),
+                   "API status Change is invalid when block an API :" +
+                   getAPIIdentifierString(apiIdentifier) + "Response Code:" +
+                   blockAPIActionResponse.getData());
     }
 
 
     @Test(groups = {"wso2.am"}, description = "Invocation og the APi after block",
-            dependsOnMethods = "testChangeAPILifecycleToBlock")
+          dependsOnMethods = "testChangeAPILifecycleToBlock")
     public void testInvokeAPIAfterChangeAPILifecycleToBlock() throws Exception {
         //Invoke  old version
+
+        waitForAPIDeploymentSync(user.getUserName(), API_NAME, API_VERSION_1_0_0, APIMIntegrationConstants.IS_API_BLOCKED);
         HttpResponse oldVersionInvokeResponse =
-                HttpRequestUtil.doGet(getAPIInvocationURLHttp(API_CONTEXT, API_VERSION_1_0_0)  + API_END_POINT_METHOD,
-                        requestHeaders);
+                HttpRequestUtil.doGet(getAPIInvocationURLHttp(API_CONTEXT, API_VERSION_1_0_0) + API_END_POINT_METHOD,
+                                      requestHeaders);
+        System.out.println("3 : " + oldVersionInvokeResponse.getData());
         assertEquals(oldVersionInvokeResponse.getResponseCode(), HTTP_RESPONSE_CODE_SERVICE_UNAVAILABLE,
-                "Response code mismatched when invoke api after block");
+                     "Response code mismatched when invoke api after block");
         assertTrue(oldVersionInvokeResponse.getData().contains(HTTP_RESPONSE_DATA_API_BLOCK),
-                "Response data mismatched when invoke  API  after block" +
-                        " Response Data:" + oldVersionInvokeResponse.getData());
+                   "Response data mismatched when invoke  API  after block" +
+                   " Response Data:" + oldVersionInvokeResponse.getData());
     }
 
     @AfterClass(alwaysRun = true)

@@ -22,6 +22,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.wso2.am.integration.test.utils.APIManagerIntegrationTestException;
+import org.wso2.am.integration.test.utils.base.APIMIntegrationConstants;
 import org.wso2.am.integration.test.utils.bean.APICreationRequestBean;
 import org.wso2.am.integration.test.utils.clients.APIPublisherRestClient;
 import org.wso2.am.integration.test.utils.clients.APIStoreRestClient;
@@ -98,6 +99,7 @@ public class ChangeApplicationTierAndTestInvokingTestCase extends APIManagerLife
         createPublishAndSubscribeToAPI(
                 apiIdentifier, apiCreationRequestBean, apiPublisherClientUser1, apiStoreClientUser1,
                 applicationNameSilver);
+        waitForAPIDeploymentSync(user.getUserName(), API_NAME, API_VERSION_1_0_0, APIMIntegrationConstants.IS_API_EXISTS);
         //get access token
         String accessToken = generateApplicationKeys(apiStoreClientUser1, applicationNameSilver).getAccessToken();
 
@@ -107,6 +109,7 @@ public class ChangeApplicationTierAndTestInvokingTestCase extends APIManagerLife
         requestHeaders.put("Authorization", "Bearer " + accessToken);
         long startTime = System.currentTimeMillis();
         long currentTime;
+
         for (int invocationCount = 1; invocationCount <= SILVER_INVOCATION_LIMIT_PER_MIN; invocationCount++) {
             currentTime = System.currentTimeMillis();
             //Invoke  API
@@ -121,6 +124,7 @@ public class ChangeApplicationTierAndTestInvokingTestCase extends APIManagerLife
                             (currentTime - startTime) + " milliseconds under Gold API and Silver Application level tier");
         }
         currentTime = System.currentTimeMillis();
+
         HttpResponse invokeResponse = HttpRequestUtil.doGet(getAPIInvocationURLHttp(API_CONTEXT, API_VERSION_1_0_0)  + "/" +
                 API_END_POINT_METHOD, requestHeaders);
         assertEquals(invokeResponse.getResponseCode(), HTTP_RESPONSE_CODE_SERVICE_UNAVAILABLE,

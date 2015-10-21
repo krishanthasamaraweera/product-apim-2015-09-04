@@ -182,7 +182,10 @@ public class TokenAPITestCase extends APIMIntegrationBaseTest {
         String consumerSecret =
                 response.getJSONObject("data").getJSONObject("key").getString("consumerSecret");
         //Obtain user access token
-        Thread.sleep(2000);
+
+        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(),
+                                 APIMIntegrationConstants.IS_API_EXISTS);
+
         String requestBody = "grant_type=password&username=admin&password=admin&scope=PRODUCTION";
         URL tokenEndpointURL = new URL(getGatewayURLNhttp() + "token");
         JSONObject accessTokenGenerationResponse = new JSONObject(
@@ -201,7 +204,9 @@ public class TokenAPITestCase extends APIMIntegrationBaseTest {
         requestHeaders.put("Authorization", "Bearer " + userAccessToken);
         requestHeaders.put("accept", "text/xml");
 
-        Thread.sleep(2000);
+        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(),
+                                 APIMIntegrationConstants.IS_API_EXISTS);
+
         HttpResponse youTubeResponse = HttpRequestUtil
                 .doGet(gatewayUrl, requestHeaders);
         //check JWT headers here
@@ -244,7 +249,10 @@ public class TokenAPITestCase extends APIMIntegrationBaseTest {
         assert errorResponse != null;
         assertEquals(errorResponse.getResponseCode(), 503,
                      "Response code mismatched while token API test case");
-        Thread.sleep(60000);
+
+        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(),
+                                 APIMIntegrationConstants.IS_API_EXISTS);
+
         errorResponse = HttpRequestUtil
                 .doGet(gatewayUrl, requestHeaders);
         log.info("Error response " + errorResponse);

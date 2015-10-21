@@ -23,6 +23,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.wso2.am.integration.test.utils.APIManagerIntegrationTestException;
+import org.wso2.am.integration.test.utils.base.APIMIntegrationConstants;
 import org.wso2.am.integration.test.utils.bean.APICreationRequestBean;
 import org.wso2.am.integration.test.utils.clients.APIPublisherRestClient;
 import org.wso2.am.integration.test.utils.clients.APIStoreRestClient;
@@ -46,8 +47,8 @@ import static org.testng.Assert.assertTrue;
  * the response body.
  */
 public class ChangeEndPointSecurityOfAPITestCase extends APIManagerLifecycleBaseTest {
-    private final String API_NAME = "ChangeEndPointSecurityOfAPITest";
-    private final String API_CONTEXT = "ChangeEndPointSecurityOfAPI";
+    private final String API_NAME = "ChangeEndPointSecurityOfAPITest99";
+    private final String API_CONTEXT = "ChangeEndPointSecurityOfAPI99";
     private final String API_TAGS = "security, username, password";
     private final String API_END_POINT_POSTFIX_URL = "jaxrs_basic/services/customers/customerservice/";
     private final String API_DESCRIPTION = "This is test API create by API manager integration test";
@@ -61,7 +62,8 @@ public class ChangeEndPointSecurityOfAPITestCase extends APIManagerLifecycleBase
     private APIIdentifier apiIdentifier;
 
     @BeforeClass(alwaysRun = true)
-    public void initialize() throws APIManagerIntegrationTestException, XPathExpressionException, RemoteException {
+    public void initialize()
+            throws APIManagerIntegrationTestException, XPathExpressionException, RemoteException {
         super.init();
         apiEndPointUrl = getGatewayURLHttp() + API_END_POINT_POSTFIX_URL;
         providerName = user.getUserName();
@@ -83,8 +85,9 @@ public class ChangeEndPointSecurityOfAPITestCase extends APIManagerLifecycleBase
 
 
     @Test(groups = {"wso2.am"}, description = "Test the API with endpoint security enabled with simple password" +
-            " that only has characters and numbers")
-    public void testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters() throws Exception {
+                                              " that only has characters and numbers")
+    public void testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters()
+            throws Exception {
         String endpointUsername = "admin1";
         char[] endpointPassword = {'a', 'd', 'm', 'i', 'n', '1', '2', '3'};
         byte[] userNamePasswordByteArray = (endpointUsername + ":" + String.valueOf(endpointPassword)).getBytes();
@@ -93,7 +96,7 @@ public class ChangeEndPointSecurityOfAPITestCase extends APIManagerLifecycleBase
         apiStoreClientUser1.addApplication(APPLICATION_NAME, TIER_UNLIMITED, "", "");
         APICreationRequestBean apiCreationRequestBean =
                 new APICreationRequestBean(API_NAME, API_CONTEXT, API_VERSION_1_0_0, providerName,
-                        new URL(apiEndPointUrl));
+                                           new URL(apiEndPointUrl));
         apiCreationRequestBean.setTags(API_TAGS);
         apiCreationRequestBean.setDescription(API_DESCRIPTION);
         apiCreationRequestBean.setEndpointType("secured");
@@ -105,27 +108,32 @@ public class ChangeEndPointSecurityOfAPITestCase extends APIManagerLifecycleBase
         apiIdentifier.setTier(TIER_UNLIMITED);
         createPublishAndSubscribeToAPI(
                 apiIdentifier, apiCreationRequestBean, apiPublisherClientUser1, apiStoreClientUser1, APPLICATION_NAME);
+        waitForAPIDeploymentSync(user.getUserName(), API_NAME, API_VERSION_1_0_0, APIMIntegrationConstants.IS_API_EXISTS);
+
         String accessToken = generateApplicationKeys(apiStoreClientUser1, APPLICATION_NAME).getAccessToken();
         requestHeadersGet.put("Authorization", "Bearer " + accessToken);
+
         HttpResponse httpResponseGet =
                 HttpRequestUtil.doGet(getAPIInvocationURLHttp(API_CONTEXT, API_VERSION_1_0_0) + "/sec",
-                        requestHeadersGet);
+                                      requestHeadersGet);
         assertEquals(httpResponseGet.getResponseCode(), HTTP_RESPONSE_CODE_OK, "Invocation fails for GET request for " +
-                "endpoint type secured. username:" + endpointUsername + " password:" + String.valueOf(endpointPassword));
+                                                                               "endpoint type secured. username:" + endpointUsername + " password:" + String.valueOf(endpointPassword));
         assertTrue(httpResponseGet.getData().contains(encodedUserNamePassword), "Response Data not match for GET" +
-                " request for endpoint type secured. Expected value :" + encodedUserNamePassword + " not contains in " +
-                "response data:" + httpResponseGet.getData() + "username:" + endpointUsername + " password:" +
-                String.valueOf(endpointPassword));
+                                                                                " request for endpoint type secured. Expected value :" + encodedUserNamePassword + " not contains in " +
+                                                                                "response data:" + httpResponseGet.getData() + "username:" + endpointUsername + " password:" +
+                                                                                String.valueOf(endpointPassword));
 
     }
 
 
     @Test(groups = {"wso2.am"}, dataProvider = "SymbolCharacters", description = "Test the API with endpoint security" +
-            " enabled with complex password",
-            dependsOnMethods = "testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters")
-    public void testInvokeGETResourceWithSecuredEndPointComplexPassword(String st) throws Exception {
+                                                                                 " enabled with complex password",
+          dependsOnMethods = "testInvokeGETResourceWithSecuredEndPointPasswordOnlyNumbersAndLetters")
+    public void testInvokeGETResourceWithSecuredEndPointComplexPassword(String symbolicCharacter)
+            throws Exception {
+
         String endpointUsername = "user";
-        char[] endpointPassword = {'a', 'b', 'c', 'd', st.charAt(0), 'e', 'f', 'g', 'h', 'i', 'j', 'k'};
+        char[] endpointPassword = {'a', 'b', 'c', 'd', symbolicCharacter.charAt(0), 'e', 'f', 'g', 'h', 'i', 'j', 'k'};
         byte[] userNamePasswordByteArray = (endpointUsername + ":" + String.valueOf(endpointPassword)).getBytes();
         String encodedUserNamePassword = DatatypeConverter.printBase64Binary(userNamePasswordByteArray);
         APICreationRequestBean apiCreationRequestBean =
@@ -136,25 +144,35 @@ public class ChangeEndPointSecurityOfAPITestCase extends APIManagerLifecycleBase
         apiCreationRequestBean.setEndpointType("secured");
         apiCreationRequestBean.setEpUsername(endpointUsername);
         apiCreationRequestBean.setEpPassword(URLEncoder.encode(String.valueOf(endpointPassword), "UTF-8"));
+
         //Update API with Edited information
         HttpResponse updateAPIHTTPResponse = apiPublisherClientUser1.updateAPI(apiCreationRequestBean);
         assertEquals(updateAPIHTTPResponse.getResponseCode(), HTTP_RESPONSE_CODE_OK, "Update APi with new Resource " +
-                "information fail");
+                                                                                     "information fail");
         assertEquals(updateAPIHTTPResponse.getData(), "{\"error\" : false}", "Update APi with new Resource information fail");
         //Send GET request
+
+        waitForAPIDeploymentSync(user.getUserName(), API_NAME, API_VERSION_1_0_0, encodedUserNamePassword);
+
         HttpResponse httpResponseGet =
                 HttpRequestUtil.doGet(getAPIInvocationURLHttp(API_CONTEXT, API_VERSION_1_0_0) + "/sec",
-                        requestHeadersGet);
-        assertEquals(httpResponseGet.getResponseCode(), HTTP_RESPONSE_CODE_OK, "Invocation fails for GET request for " +
-                "endpoint type secured. username:" + endpointUsername + " password:" + String.valueOf(endpointPassword));
-        assertTrue(httpResponseGet.getData().contains(encodedUserNamePassword), "Response Data not match for GET" +
-                " request for endpoint type secured. Expected value : " + encodedUserNamePassword + " not contains in " +
-                "response data: " + httpResponseGet.getData() + " username:" + endpointUsername + " password:" +
-                String.valueOf(endpointPassword));
+                                      requestHeadersGet);
+
+        assertEquals(httpResponseGet.getResponseCode(),
+                     HTTP_RESPONSE_CODE_OK, "Invocation fails for GET request for " +
+                                            "endpoint type secured. username:" + endpointUsername +
+                                            " password:" + String.valueOf(endpointPassword));
+
+        assertTrue(httpResponseGet.getData().contains(encodedUserNamePassword),
+                   "Response Data not match for GET" +
+                   " request for endpoint type secured. Expected value : " + encodedUserNamePassword + " not contains in " +
+                   "response data: " + httpResponseGet.getData() + " username:" + endpointUsername + " password:" +
+                   String.valueOf(endpointPassword));
     }
 
     @AfterClass(alwaysRun = true)
-    public void cleanUpArtifacts() throws APIManagerIntegrationTestException, XPathExpressionException {
+    public void cleanUpArtifacts()
+            throws APIManagerIntegrationTestException, XPathExpressionException {
         apiStoreClientUser1.removeApplication(APPLICATION_NAME);
         deleteAPI(apiIdentifier, apiPublisherClientUser1);
 

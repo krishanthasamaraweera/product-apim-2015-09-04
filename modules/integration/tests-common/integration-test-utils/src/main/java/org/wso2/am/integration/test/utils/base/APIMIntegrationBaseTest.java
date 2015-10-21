@@ -16,6 +16,7 @@
 *under the License.
 */
 package org.wso2.am.integration.test.utils.base;
+
 import org.apache.axiom.om.OMElement;
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.logging.Log;
@@ -33,6 +34,7 @@ import org.wso2.carbon.automation.engine.context.AutomationContext;
 import org.wso2.carbon.automation.engine.context.TestUserMode;
 import org.wso2.carbon.automation.engine.context.beans.User;
 import org.wso2.carbon.automation.engine.frameworkutils.FrameworkPathUtil;
+import org.wso2.carbon.automation.test.utils.http.client.HttpRequestUtil;
 import org.wso2.carbon.automation.test.utils.http.client.HttpResponse;
 import org.wso2.carbon.integration.common.utils.LoginLogoutClient;
 
@@ -40,6 +42,7 @@ import javax.xml.stream.XMLStreamException;
 import javax.xml.xpath.XPathExpressionException;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.regex.Matcher;
 
@@ -117,8 +120,8 @@ public class APIMIntegrationBaseTest {
      * init the object with tenant domain, user key and instance of store,publisher and gateway
      * create context objects and construct URL bean
      *
-     * @param domainKey         - tenant domain key
-     * @param userKey           - tenant user key
+     * @param domainKey - tenant domain key
+     * @param userKey   - tenant user key
      * @throws APIManagerIntegrationTestException - if test configuration init fails
      */
     protected void init(String domainKey, String userKey)
@@ -267,9 +270,11 @@ public class APIMIntegrationBaseTest {
     protected String getGatewayMgtURLHttp() throws XPathExpressionException {
         return gatewayUrlsMgt.getWebAppURLHttp();
     }
+
     protected String getGatewayMgtBackenURLHttps() throws XPathExpressionException {
         return gatewayUrlsMgt.getWebAppURLHttp();
     }
+
     protected String getGatewayMgtURLHttps() throws XPathExpressionException {
         return gatewayUrlsMgt.getWebAppURLHttps();
     }
@@ -292,11 +297,12 @@ public class APIMIntegrationBaseTest {
     }
 
     protected String getAPIInvocationURLHttp(String apiContext) throws XPathExpressionException {
-        return gatewayContextWrk.getContextUrls().getServiceUrl().replace("/services", "") + "/" +apiContext;
+        return gatewayContextWrk.getContextUrls().getServiceUrl().replace("/services", "") + "/" + apiContext;
     }
 
-    protected String getAPIInvocationURLHttp(String apiContext, String version) throws XPathExpressionException {
-        return gatewayContextWrk.getContextUrls().getServiceUrl().replace("/services", "") + "/" +apiContext + "/" + version;
+    protected String getAPIInvocationURLHttp(String apiContext, String version)
+            throws XPathExpressionException {
+        return gatewayContextWrk.getContextUrls().getServiceUrl().replace("/services", "") + "/" + apiContext + "/" + version;
     }
 
     protected String getAPIInvocationURLHttps(String apiContext) throws XPathExpressionException {
@@ -305,8 +311,9 @@ public class APIMIntegrationBaseTest {
 
     /**
      * Cleaning up the API manager by removing all APIs and applications other than default application
+     *
      * @throws APIManagerIntegrationTestException - occurred when calling the apis
-     * @throws org.json.JSONException                      - occurred when reading the json
+     * @throws org.json.JSONException             - occurred when reading the json
      */
     protected void cleanUp() throws Exception {
 
@@ -318,7 +325,7 @@ public class APIMIntegrationBaseTest {
         verifyResponse(subscriptionDataResponse);
         JSONObject jsonSubscription = new JSONObject(subscriptionDataResponse.getData());
 
-        if(jsonSubscription.getString("error").equals("false")) {
+        if (jsonSubscription.getString("error").equals("false")) {
             JSONObject jsonSubscriptionsObject = jsonSubscription.getJSONObject("subscriptions");
             JSONArray jsonApplicationsArray = jsonSubscriptionsObject.getJSONArray("applications");
 
@@ -330,7 +337,7 @@ public class APIMIntegrationBaseTest {
                 for (int j = 0; j < subscribedAPIJSONArray.length(); j++) {
                     JSONObject subscribedAPI = subscribedAPIJSONArray.getJSONObject(j);
                     verifyResponse(apiStore.removeAPISubscription(subscribedAPI.getString("name"), subscribedAPI.getString("version"),
-                                                   subscribedAPI.getString("provider"), String.valueOf(id)));
+                                                                  subscribedAPI.getString("provider"), String.valueOf(id)));
                 }
             }
         }
@@ -363,6 +370,73 @@ public class APIMIntegrationBaseTest {
         JSONObject responseData = new JSONObject(httpResponse.getData());
         Assert.assertFalse(responseData.getBoolean("error"), "Error message received " + httpResponse.getData());
 
+    }
+
+    protected void waitForAPIDeploymentSync(String apiProvider, String apiName, String apiVersion,
+                                            String expectedResponse)
+            throws XPathExpressionException {
+
+        long currentTime = System.currentTimeMillis();
+        long waitTime = currentTime + (90 * 1000);
+
+        while (waitTime > System.currentTimeMillis()) {
+            HttpResponse response = null;
+            try {
+                response = HttpRequestUtil.sendGetRequest(getGatewayURLHttp() +
+                                                          "APIStatusMonitor/api_status/api-data/" +
+                                                          apiProvider + "--" + apiName +
+                                                          ":v" + apiVersion, null);
+            } catch (IOException ignored) {
+                log.warn("WebAPP:" + " APIStatusMonitor not yet deployed or" + " API :" + apiName + " not yet deployed");
+            }
+
+            log.info("WAIT for availability of API :" + apiName + " with version: " + apiVersion +
+                     " with expected response : " + expectedResponse);
+
+            if (response != null) {
+                if (response.getData().contains(expectedResponse)) {
+                    log.info("API :" + apiName + " with version: " + apiVersion +
+                             " with expected response " + expectedResponse + " found");
+                    break;
+                } else {
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException ignored) {
+
+                    }
+                }
+            }
+        }
+    }
+
+    protected void waitForAPIUnDeploymentSync(String apiProvider, String apiName, String apiVersion,
+                                              String expectedResponse)
+            throws IOException, XPathExpressionException {
+
+        long currentTime = System.currentTimeMillis();
+        long waitTime = currentTime + (90 * 1000);
+
+        while (waitTime > System.currentTimeMillis()) {
+            HttpResponse response = HttpRequestUtil.sendGetRequest(getGatewayURLHttp() +
+                                                                   "APIStatusMonitor/api_status/api-data/" +
+                                                                   apiProvider + "--" + apiName +
+                                                                   ":v" + apiVersion, null);
+
+            log.info("WAIT for meta data sync of API :" + apiName + " with version: " + apiVersion +
+                     " without entry : " + expectedResponse);
+
+            if (!response.getData().contains(expectedResponse)) {
+                log.info("API :" + apiName + " with version: " + apiVersion +
+                         " with expected response " + expectedResponse + " not found");
+                break;
+            } else {
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException ignored) {
+
+                }
+            }
+        }
     }
 
 }

@@ -27,4 +27,9 @@ public class APIMIntegrationConstants {
     public static final String AM_GATEWAY_MGT_INSTANCE = "gateway-mgt";
     public static final String AM_GATEWAY_WRK_INSTANCE = "gateway-wrk";
     public static final String AM_KEY_MANAGER_INSTANCE = "keyManager";
+    public static final String IS_API_EXISTS = "\"isApiExists\":true";
+    public static final String IS_WEB_APP_EXISTS = "\"isWebAppExists\":true";
+    public static final String IS_API_BLOCKED = "API blocked";
+    public static final String IS_API_NOT_EXISTS = "\"isApiExists\":false";
+    public static final String AM_MONITORING_WEB_APP_NAME = "APIStatusMonitor";
 }

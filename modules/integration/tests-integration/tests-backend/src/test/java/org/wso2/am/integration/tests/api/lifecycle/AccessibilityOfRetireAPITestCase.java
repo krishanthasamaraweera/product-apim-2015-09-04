@@ -22,6 +22,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.wso2.am.integration.test.utils.APIManagerIntegrationTestException;
+import org.wso2.am.integration.test.utils.base.APIMIntegrationConstants;
 import org.wso2.am.integration.test.utils.bean.APICreationRequestBean;
 import org.wso2.am.integration.test.utils.bean.APILifeCycleState;
 import org.wso2.am.integration.test.utils.bean.APILifeCycleStateRequest;
@@ -99,6 +100,9 @@ public class AccessibilityOfRetireAPITestCase extends APIManagerLifecycleBaseTes
         requestHeaders.put("accept", "text/xml");
         requestHeaders.put("Authorization", "Bearer " + accessToken);
         //Invoke  old version
+        waitForAPIDeploymentSync(user.getUserName(), API_NAME, API_VERSION_1_0_0,
+                                 APIMIntegrationConstants.IS_API_EXISTS);
+
         HttpResponse oldVersionInvokeResponse =
                 HttpRequestUtil.doGet(getAPIInvocationURLHttp(API_CONTEXT,  API_VERSION_1_0_0) +
                         API_END_POINT_METHOD, requestHeaders);
@@ -112,14 +116,15 @@ public class AccessibilityOfRetireAPITestCase extends APIManagerLifecycleBaseTes
 
     @Test(groups = {"wso2.am"}, description = "Change API lifecycle to Retired",
             dependsOnMethods = "testInvokeAPIBeforeChangeAPILifecycleToRetired")
-    public void testChangeAPILifecycleToRetired() throws APIManagerIntegrationTestException {
+    public void testChangeAPILifecycleToRetired()
+            throws APIManagerIntegrationTestException, InterruptedException {
         //Block the API version 1.0.0
-        APILifeCycleStateRequest blockUpdateRequest =
+        APILifeCycleStateRequest retiredUpdateRequest =
                 new APILifeCycleStateRequest(API_NAME, providerName, APILifeCycleState.RETIRED);
-        blockUpdateRequest.setVersion(API_VERSION_1_0_0);
-        //Change API lifecycle  to Block
+        retiredUpdateRequest.setVersion(API_VERSION_1_0_0);
+        //Change API lifecycle  to Retired
         HttpResponse blockAPIActionResponse =
-                apiPublisherRestClient.changeAPILifeCycleStatus(blockUpdateRequest);
+                apiPublisherRestClient.changeAPILifeCycleStatus(retiredUpdateRequest);
         assertEquals(blockAPIActionResponse.getResponseCode(), HTTP_RESPONSE_CODE_OK, "Response code mismatched");
         assertTrue(verifyAPIStatusChange(blockAPIActionResponse, APILifeCycleState.PUBLISHED,
                 APILifeCycleState.RETIRED), "API status Change is invalid when retire an API :" +
@@ -144,6 +149,9 @@ public class AccessibilityOfRetireAPITestCase extends APIManagerLifecycleBaseTes
     public void testInvokeAPIAfterChangeAPILifecycleToRetired() throws Exception {
 
         //Invoke  old version
+        waitForAPIDeploymentSync(user.getUserName(), API_NAME, API_VERSION_1_0_0,
+                                 APIMIntegrationConstants.IS_API_NOT_EXISTS);
+
         HttpResponse oldVersionInvokeResponse =
                 HttpRequestUtil.doGet(getAPIInvocationURLHttp(API_CONTEXT, API_VERSION_1_0_0)  +
                         API_END_POINT_METHOD, requestHeaders);

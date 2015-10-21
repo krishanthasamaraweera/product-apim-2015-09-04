@@ -22,6 +22,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.wso2.am.integration.test.utils.APIManagerIntegrationTestException;
+import org.wso2.am.integration.test.utils.base.APIMIntegrationConstants;
 import org.wso2.am.integration.test.utils.bean.APICreationRequestBean;
 import org.wso2.am.integration.test.utils.clients.APIPublisherRestClient;
 import org.wso2.am.integration.test.utils.clients.APIStoreRestClient;
@@ -94,6 +95,7 @@ public class ChangeAPITierAndTestInvokingTestCase extends APIManagerLifecycleBas
         apiCreationRequestBean.setTier(TIER_GOLD);
         createPublishAndSubscribeToAPI(
                 apiIdentifier, apiCreationRequestBean, apiPublisherClientUser1, apiStoreClientUser1, applicationNameGold);
+        waitForAPIDeploymentSync(user.getUserName(), API_NAME, API_VERSION_1_0_0, APIMIntegrationConstants.IS_API_EXISTS);
 
         //get access token
         String accessToken = generateApplicationKeys(apiStoreClientUser1, applicationNameGold).getAccessToken();
@@ -102,11 +104,15 @@ public class ChangeAPITierAndTestInvokingTestCase extends APIManagerLifecycleBas
         requestHeadersGoldTier = new HashMap<String, String>();
         requestHeadersGoldTier.put("Authorization", "Bearer " + accessToken);
         requestHeadersGoldTier.put("accept", "text/xml");
+
+
         long startTime = System.currentTimeMillis();
         long currentTime;
+
         for (int invocationCount = 1; invocationCount <= GOLD_INVOCATION_LIMIT_PER_MIN; invocationCount++) {
             currentTime = System.currentTimeMillis();
             //Invoke  API
+
             HttpResponse invokeResponse =
                     HttpRequestUtil.doGet(getAPIInvocationURLHttp(API_CONTEXT, API_VERSION_1_0_0)  + "/" +
                             API_END_POINT_METHOD, requestHeadersGoldTier);
@@ -118,6 +124,7 @@ public class ChangeAPITierAndTestInvokingTestCase extends APIManagerLifecycleBas
                             (currentTime - startTime) + " milliseconds under Gold API level tier");
         }
         currentTime = System.currentTimeMillis();
+
         HttpResponse invokeResponse = HttpRequestUtil.doGet(getAPIInvocationURLHttp(API_CONTEXT,
                 API_VERSION_1_0_0)  + "/" + API_END_POINT_METHOD, requestHeadersGoldTier);
         assertEquals(invokeResponse.getResponseCode(), HTTP_RESPONSE_CODE_SERVICE_UNAVAILABLE,

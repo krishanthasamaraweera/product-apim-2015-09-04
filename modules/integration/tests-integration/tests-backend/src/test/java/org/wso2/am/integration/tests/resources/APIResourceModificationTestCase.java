@@ -25,6 +25,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
 import org.wso2.am.integration.test.utils.base.APIMIntegrationBaseTest;
+import org.wso2.am.integration.test.utils.base.APIMIntegrationConstants;
 import org.wso2.am.integration.test.utils.bean.APILifeCycleState;
 import org.wso2.am.integration.test.utils.bean.APILifeCycleStateRequest;
 import org.wso2.am.integration.test.utils.bean.APIRequest;
@@ -61,6 +62,7 @@ public class APIResourceModificationTestCase extends APIMIntegrationBaseTest {
         super.init(userMode);
         String publisherURLHttp = getPublisherURLHttp();
         apiPublisher = new APIPublisherRestClient(publisherURLHttp);
+
         providerName = user.getUserName();
     }
 
@@ -87,9 +89,17 @@ public class APIResourceModificationTestCase extends APIMIntegrationBaseTest {
         //add assertion
         apiPublisher.addAPI(apiRequest);
 
+
+
+
         APILifeCycleStateRequest updateRequest = new APILifeCycleStateRequest(APIName, providerName,
                 APILifeCycleState.PUBLISHED);
+
         apiPublisher.changeAPILifeCycleStatus(updateRequest);
+
+
+        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(),
+                                 APIMIntegrationConstants.IS_API_EXISTS);
 
         // resource are modified by using swagger doc. create the swagger doc
         // with modified

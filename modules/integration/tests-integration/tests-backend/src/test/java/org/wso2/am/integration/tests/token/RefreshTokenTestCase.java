@@ -161,7 +161,9 @@ public class RefreshTokenTestCase extends APIMIntegrationBaseTest {
                 response.getJSONObject("data").getJSONObject("key").getString("consumerSecret");
 
         //Obtain user access token
-        Thread.sleep(2000);
+        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(),
+                                 APIMIntegrationConstants.IS_API_EXISTS);
+
         String requestBody = "grant_type=password&username=" + user.getUserName() + "&password=" + user.getPassword() + "&scope=PRODUCTION";
         URL tokenEndpointURL = new URL(getGatewayURLNhttp() + "token");
         JSONObject accessTokenGenerationResponse = new JSONObject(
@@ -176,7 +178,9 @@ public class RefreshTokenTestCase extends APIMIntegrationBaseTest {
         //Check Access Token
         requestHeaders.put("Authorization", "Bearer " + userAccessToken);
         requestHeaders.put("accept", "text/xml");
-        Thread.sleep(2000);
+
+        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(),
+                                 APIMIntegrationConstants.IS_API_EXISTS);
 
         String apiUrl = getAPIInvocationURLHttp("refreshTokenTestAPI/1.0.0/customers/123");
 
@@ -202,7 +206,10 @@ public class RefreshTokenTestCase extends APIMIntegrationBaseTest {
         //Check with new Access Token
         requestHeaders.put("Authorization", "Bearer " + userAccessToken);
         requestHeaders.put("accept", "text/xml");
-        Thread.sleep(2000);
+
+        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(),
+                                 APIMIntegrationConstants.IS_API_EXISTS);
+
         httpResponse = HttpRequestUtil.doGet(apiUrl, requestHeaders);
         //check JWT headers here
         assertEquals(httpResponse.getResponseCode(), Response.Status.OK.getStatusCode(), "Response code mismatched");

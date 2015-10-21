@@ -185,7 +185,9 @@ public class TagsRatingCommentTestCase extends APIMIntegrationBaseTest {
         //Do get,post,put,delete all here
         //HttpResponse youTubeResponse = HttpRequestUtil.doGet(getApiInvocationURLHttp("commentRating/1.0.0/most_popular"), requestHeaders);
 
-        Thread.sleep(10000);
+        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(),
+                                 APIMIntegrationConstants.IS_API_EXISTS);
+
         HttpResponse youTubeResponse1 = HttpRequestUtil.doGet(gatewayUrl, new HashMap<String, String>());
         assertEquals(youTubeResponse1.getResponseCode(), 401, "Response code mismatched");
         // URL url1 = new URL(url);

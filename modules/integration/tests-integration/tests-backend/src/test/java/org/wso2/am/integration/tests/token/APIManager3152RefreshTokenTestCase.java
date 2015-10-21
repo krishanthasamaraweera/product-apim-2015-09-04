@@ -23,6 +23,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.wso2.am.integration.test.utils.base.APIMIntegrationBaseTest;
+import org.wso2.am.integration.test.utils.base.APIMIntegrationConstants;
 import org.wso2.am.integration.test.utils.bean.*;
 import org.wso2.am.integration.test.utils.clients.APIPublisherRestClient;
 import org.wso2.am.integration.test.utils.clients.APIStoreRestClient;
@@ -123,7 +124,9 @@ public class APIManager3152RefreshTokenTestCase extends APIMIntegrationBaseTest 
         String consumerSecret = response.getJSONObject("data").getJSONObject("key").getString("consumerSecret");
 
         //Obtain user access token
-        Thread.sleep(2000);
+        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(),
+                                 APIMIntegrationConstants.IS_API_EXISTS);
+
         String requestBody = "grant_type=password&username=" + userName + "@11wso2.com&password=" +
                              storeContext.getContextTenant().getTenantAdmin().getPassword() + "&scope=PRODUCTION";
         URL tokenEndpointURL = new URL(gatewayUrlsWrk.getWebAppURLNhttp() + "token");
@@ -185,7 +188,9 @@ public class APIManager3152RefreshTokenTestCase extends APIMIntegrationBaseTest 
         String consumerSecret = response.getJSONObject("data").getJSONObject("key").getString("consumerSecret");
 
         //Obtain user access token
-        Thread.sleep(2000);
+        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(),
+                                 APIMIntegrationConstants.IS_API_EXISTS);
+
         String requestBody = "grant_type=password&username=" + userName + "&password=" +
                              storeContext.getContextTenant().getTenantAdmin().getPassword() + "&scope=PRODUCTION";
         URL tokenEndpointURL = new URL(getAPIInvocationURLHttp("token"));

@@ -66,7 +66,7 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
     protected static final String TIER_SILVER = "Silver";
     protected static final String MESSAGE_THROTTLED_OUT =
             "<amt:code>900800</amt:code><amt:message>Message Throttled Out</amt:message><amt:description>" +
-                    "You have exceeded your quota</amt:description>";
+            "You have exceeded your quota</amt:description>";
     protected static final int THROTTLING_UNIT_TIME = 60000;
     protected static final int THROTTLING_ADDITIONAL_WAIT_TIME = 5000;
     //protected static String gatewayWebAppUrl;
@@ -86,7 +86,7 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
      */
     protected String getAPIIdentifierString(APIIdentifier apiIdentifier) {
         return " API Name:" + apiIdentifier.getApiName() + " API Version:" + apiIdentifier.getVersion() +
-                " API Provider Name :" + apiIdentifier.getProviderName() + " ";
+               " API Provider Name :" + apiIdentifier.getProviderName() + " ";
 
     }
 
@@ -101,7 +101,8 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
      *                                            APIStoreRestClient.java
      */
     protected HttpResponse subscribeToAPI(APIIdentifier apiIdentifier, String applicationName,
-                                          APIStoreRestClient storeRestClient) throws APIManagerIntegrationTestException {
+                                          APIStoreRestClient storeRestClient)
+            throws APIManagerIntegrationTestException {
         SubscriptionRequest subscriptionRequest =
                 new SubscriptionRequest(apiIdentifier.getApiName(), apiIdentifier.getProviderName());
         subscriptionRequest.setVersion(apiIdentifier.getVersion());
@@ -123,7 +124,8 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
      *                                            in APIStoreRestClient.java
      */
 
-    protected ApplicationKeyBean generateApplicationKeys(APIStoreRestClient storeRestClient, String applicationName)
+    protected ApplicationKeyBean generateApplicationKeys(APIStoreRestClient storeRestClient,
+                                                         String applicationName)
             throws APIManagerIntegrationTestException {
 
         try {
@@ -155,19 +157,20 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
      * @throws APIManagerIntegrationTestException - Exception throws by the method call of deleteApi() in
      *                                            APIPublisherRestClient.java.
      */
-    protected void deleteAPI(APIIdentifier apiIdentifier, APIPublisherRestClient publisherRestClient)
+    protected void deleteAPI(APIIdentifier apiIdentifier,
+                             APIPublisherRestClient publisherRestClient)
             throws APIManagerIntegrationTestException {
 
-            HttpResponse deleteHTTPResponse =
-                    publisherRestClient.deleteAPI(apiIdentifier.getApiName(), apiIdentifier.getVersion(),
-                            apiIdentifier.getProviderName());
-            if (!(deleteHTTPResponse.getResponseCode() == HTTP_RESPONSE_CODE_OK &&
-                    getValueFromJSON(deleteHTTPResponse, "error").equals("false"))) {
-                throw new APIManagerIntegrationTestException("Error in API Deletion." +
-                        getAPIIdentifierString(apiIdentifier) + " API Context :" + deleteHTTPResponse +
-                        "Response Code:" + deleteHTTPResponse.getResponseCode() +
-                        " Response Data :" + deleteHTTPResponse.getData());
-            }
+        HttpResponse deleteHTTPResponse =
+                publisherRestClient.deleteAPI(apiIdentifier.getApiName(), apiIdentifier.getVersion(),
+                                              apiIdentifier.getProviderName());
+        if (!(deleteHTTPResponse.getResponseCode() == HTTP_RESPONSE_CODE_OK &&
+              getValueFromJSON(deleteHTTPResponse, "error").equals("false"))) {
+            throw new APIManagerIntegrationTestException("Error in API Deletion." +
+                                                         getAPIIdentifierString(apiIdentifier) + " API Context :" + deleteHTTPResponse +
+                                                         "Response Code:" + deleteHTTPResponse.getResponseCode() +
+                                                         " Response Data :" + deleteHTTPResponse.getData());
+        }
     }
 
     /**
@@ -178,13 +181,14 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
      * @return String - The value of provided key as a String
      * @throws APIManagerIntegrationTestException - Exception throws when resolving the JSON object in the HTTP response
      */
-    protected String getValueFromJSON(HttpResponse httpResponse, String key) throws APIManagerIntegrationTestException {
+    protected String getValueFromJSON(HttpResponse httpResponse, String key)
+            throws APIManagerIntegrationTestException {
         try {
             JSONObject jsonObject = new JSONObject(httpResponse.getData());
             return jsonObject.get(key).toString();
         } catch (JSONException e) {
             throw new APIManagerIntegrationTestException("Exception thrown when resolving the JSON object in the HTTP " +
-                    "response ", e);
+                                                         "response ", e);
         }
     }
 
@@ -199,7 +203,8 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
      * @throws APIManagerIntegrationTestException - Exception throws when resolving the JSON object in the HTTP response
      */
     public boolean verifyAPIStatusChange(HttpResponse httpResponse, APILifeCycleState oldStatus,
-                                         APILifeCycleState newStatus) throws APIManagerIntegrationTestException {
+                                         APILifeCycleState newStatus)
+            throws APIManagerIntegrationTestException {
         boolean isStatusChangeCorrect = false;
         try {
             JSONObject jsonRootObject = new JSONObject(httpResponse.getData());
@@ -210,7 +215,7 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
             if (jsonArray.length() > 0) {
                 for (int index = 1; index < jsonArray.length(); index++) {
                     if (Long.parseLong(((JSONObject) jsonArray.get(index)).get("date").toString()) >=
-                            Long.parseLong(latestChange.get("date").toString())) {
+                        Long.parseLong(latestChange.get("date").toString())) {
                         latestChange = (JSONObject) jsonArray.get(index);
                     }
                 }
@@ -218,15 +223,15 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
             // Check the given status change information is correct in latest lifecycle status change action.
             log.info("LC State " + latestChange.toString());
             if (latestChange.get("oldStatus").toString().equalsIgnoreCase(oldStatus.getState()) &&
-                    latestChange.get("newStatus").toString().equalsIgnoreCase(newStatus.getState())) {
+                latestChange.get("newStatus").toString().equalsIgnoreCase(newStatus.getState())) {
                 isStatusChangeCorrect = true;
             }
             return isStatusChangeCorrect;
         } catch (JSONException e) {
             throw new APIManagerIntegrationTestException(
                     "Exception thrown when resolving the JSON object in the HTTP response to verify the status change." +
-                            " HTTP response data: " + httpResponse.getData() + " HTTP response message: " +
-                            httpResponse.getResponseMessage() + " HTTP response code: " + httpResponse.getResponseCode(), e);
+                    " HTTP response data: " + httpResponse.getData() + " HTTP response message: " +
+                    httpResponse.getResponseMessage() + " HTTP response code: " + httpResponse.getResponseCode(), e);
         }
     }
 
@@ -241,11 +246,13 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
      * @throws APIManagerIntegrationTestException -  Exception throws by the method call of
      *                                            changeAPILifeCycleStatusToPublish() in APIPublisherRestClient.java.
      */
-    protected HttpResponse publishAPI(APIIdentifier apiIdentifier, APIPublisherRestClient publisherRestClient,
-                                      boolean isRequireReSubscription) throws APIManagerIntegrationTestException {
+    protected HttpResponse publishAPI(APIIdentifier apiIdentifier,
+                                      APIPublisherRestClient publisherRestClient,
+                                      boolean isRequireReSubscription)
+            throws APIManagerIntegrationTestException {
         APILifeCycleStateRequest publishUpdateRequest =
                 new APILifeCycleStateRequest(apiIdentifier.getApiName(), apiIdentifier.getProviderName(),
-                        APILifeCycleState.PUBLISHED);
+                                             APILifeCycleState.PUBLISHED);
         publishUpdateRequest.setVersion(apiIdentifier.getVersion());
         return publisherRestClient.changeAPILifeCycleStatusToPublish(apiIdentifier, isRequireReSubscription);
 
@@ -261,7 +268,8 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
      * @param isRequireReSubscription - If publish with re-subscription required option true else false.
      * @throws APIManagerIntegrationTestException - Exception throws by API create and publish activities.
      */
-    public void createAndPublishAPI(APIIdentifier apiIdentifier, APICreationRequestBean apiCreationRequestBean,
+    public void createAndPublishAPI(APIIdentifier apiIdentifier,
+                                    APICreationRequestBean apiCreationRequestBean,
                                     APIPublisherRestClient publisherRestClient,
                                     boolean isRequireReSubscription)
             throws APIManagerIntegrationTestException {
@@ -313,17 +321,18 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
      * @throws APIManagerIntegrationTestException - Exception throws by API copy activities.
      */
     protected void copyAPI(APIIdentifier apiIdentifier, String newAPIVersion,
-                           APIPublisherRestClient publisherRestClient) throws APIManagerIntegrationTestException {
+                           APIPublisherRestClient publisherRestClient)
+            throws APIManagerIntegrationTestException {
         //Copy API to version  to newVersion
         HttpResponse httpResponseCopyAPI =
                 publisherRestClient.copyAPI(apiIdentifier.getProviderName(),
-                        apiIdentifier.getApiName(), apiIdentifier.getVersion(), newAPIVersion, "");
+                                            apiIdentifier.getApiName(), apiIdentifier.getVersion(), newAPIVersion, "");
         if (!(httpResponseCopyAPI.getResponseCode() == HTTP_RESPONSE_CODE_OK &&
-                getValueFromJSON(httpResponseCopyAPI, "error").equals("false"))) {
+              getValueFromJSON(httpResponseCopyAPI, "error").equals("false"))) {
             throw new APIManagerIntegrationTestException("Error in API Copy." +
-                    getAPIIdentifierString(apiIdentifier) + "  New API Version :" + newAPIVersion +
-                    "Response Code:" + httpResponseCopyAPI.getResponseCode() +
-                    " Response Data :" + httpResponseCopyAPI.getData());
+                                                         getAPIIdentifierString(apiIdentifier) + "  New API Version :" + newAPIVersion +
+                                                         "Response Code:" + httpResponseCopyAPI.getResponseCode() +
+                                                         " Response Data :" + httpResponseCopyAPI.getData());
         }
     }
 
@@ -338,8 +347,11 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
      * @param isRequireReSubscription - If publish with re-subscription required option true else false.
      * @throws APIManagerIntegrationTestException -Exception throws by copyAPI() and publishAPI() method calls
      */
-    protected void copyAndPublishCopiedAPI(APIIdentifier apiIdentifier, String newAPIVersion, APIPublisherRestClient
-            publisherRestClient, boolean isRequireReSubscription) throws APIManagerIntegrationTestException {
+    protected void copyAndPublishCopiedAPI(APIIdentifier apiIdentifier, String newAPIVersion,
+                                           APIPublisherRestClient
+                                                   publisherRestClient,
+                                           boolean isRequireReSubscription)
+            throws APIManagerIntegrationTestException {
 
         copyAPI(apiIdentifier, newAPIVersion, publisherRestClient);
         APIIdentifier copiedAPIIdentifier =
@@ -359,19 +371,29 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
      * @param applicationName        - Name of the Application that the API need to subscribe.
      * @throws APIManagerIntegrationTestException - Exception throws by API create publish and subscribe a API activities.
      */
-    protected void createPublishAndSubscribeToAPI(APIIdentifier apiIdentifier, APICreationRequestBean apiCreationRequestBean,
+    protected void createPublishAndSubscribeToAPI(APIIdentifier apiIdentifier,
+                                                  APICreationRequestBean apiCreationRequestBean,
                                                   APIPublisherRestClient publisherRestClient,
-                                                  APIStoreRestClient storeRestClient, String applicationName)
+                                                  APIStoreRestClient storeRestClient,
+                                                  String applicationName)
             throws APIManagerIntegrationTestException {
+
         createAndPublishAPI(apiIdentifier, apiCreationRequestBean, publisherRestClient, false);
-        HttpResponse httpResponseSubscribeAPI = subscribeToAPI(apiIdentifier, applicationName, storeRestClient);
+
+        HttpResponse httpResponseSubscribeAPI =
+                subscribeToAPI(apiIdentifier, applicationName, storeRestClient);
+
         if (!(httpResponseSubscribeAPI.getResponseCode() == HTTP_RESPONSE_CODE_OK &&
-                getValueFromJSON(httpResponseSubscribeAPI, "error").equals("false"))) {
+              getValueFromJSON(httpResponseSubscribeAPI, "error").equals("false"))) {
+
             throw new APIManagerIntegrationTestException("Error in API Subscribe." +
-                    getAPIIdentifierString(apiIdentifier) +
-                    "Response Code:" + httpResponseSubscribeAPI.getResponseCode() +
-                    " Response Data :" + httpResponseSubscribeAPI.getData());
+                                                         getAPIIdentifierString(apiIdentifier) +
+                                                         "Response Code:" +
+                                                         httpResponseSubscribeAPI.getResponseCode() +
+                                                         " Response Data :" +
+                                                         httpResponseSubscribeAPI.getData());
         }
+
         log.info("API Subscribed :" + getAPIIdentifierString(apiIdentifier));
     }
 
@@ -400,7 +422,7 @@ public class APIManagerLifecycleBaseTest extends APIMIntegrationBaseTest {
                     bufferedReader.close();
                 } catch (IOException e) {
                     log.warn("Error when closing the buffer reade which used to reed the file:" + fileLocation +
-                            ". Error:" + e.getMessage());
+                             ". Error:" + e.getMessage());
                 }
             }
         }

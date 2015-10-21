@@ -66,13 +66,14 @@ public class EditTiersXMLAndVerifyInPublisherTestCase extends APIManagerLifecycl
 
     @BeforeClass(alwaysRun = true)
     public void initialize() throws APIManagerIntegrationTestException, XPathExpressionException,
-            RemoteException, ResourceAdminServiceExceptionException, MalformedURLException {
+                                    RemoteException, ResourceAdminServiceExceptionException,
+                                    MalformedURLException {
         super.init();
         apiEndPointUrl = getGatewayURLHttp() + API_END_POINT_POSTFIX_URL;
         providerName = user.getUserName();
         apiCreationRequestBean =
                 new APICreationRequestBean(API_NAME, API_CONTEXT, API_VERSION_1_0_0, providerName,
-                        new URL(apiEndPointUrl));
+                                           new URL(apiEndPointUrl));
         apiCreationRequestBean.setTags(API_TAGS);
         apiCreationRequestBean.setDescription(API_DESCRIPTION);
         String publisherURLHttp = getPublisherURLHttp();
@@ -89,17 +90,18 @@ public class EditTiersXMLAndVerifyInPublisherTestCase extends APIManagerLifecycl
         apiIdentifier = new APIIdentifier(providerName, API_NAME, API_VERSION_1_0_0);
         String artifactsLocation =
                 TestConfigurationProvider.getResourceLocation() + File.separator + "artifacts" +
-                        File.separator + "AM" + File.separator + "lifecycletest" + File.separator + "tiers.xml";
+                File.separator + "AM" + File.separator + "lifecycletest" + File.separator + "tiers.xml";
         resourceAdminServiceClient =
-                new ResourceAdminServiceClient(gatewayContextMgt.getContextUrls().getBackEndUrl(),
-                        createSession(gatewayContextMgt));
+                new ResourceAdminServiceClient(publisherContext.getContextUrls().getBackEndUrl(),
+                                               createSession(publisherContext));
         originalTiersXML = resourceAdminServiceClient.getTextContent(TIER_XML_REG_CONFIG_LOCATION);
         newTiersXML = readFile(artifactsLocation);
     }
 
 
     @Test(groups = {"wso2.am"}, description = "test availability of tiers in Permission Page before change tiers XML")
-    public void testAvailabilityOfTiersInPermissionPageBeforeChangeTiersXML() throws APIManagerIntegrationTestException {
+    public void testAvailabilityOfTiersInPermissionPageBeforeChangeTiersXML()
+            throws APIManagerIntegrationTestException {
         //Create a API
         APIIdentifier apiIdentifier = new APIIdentifier(providerName, API_NAME, API_VERSION_1_0_0);
         createAndPublishAPI(apiIdentifier, apiCreationRequestBean, apiPublisherClientUser1, false);
@@ -107,58 +109,65 @@ public class EditTiersXMLAndVerifyInPublisherTestCase extends APIManagerLifecycl
         HttpResponse tierPermissionPageHttpResponse =
                 apiPublisherClientUser1.getTierPermissionsPage();
         assertEquals(tierPermissionPageHttpResponse.getResponseCode(), HTTP_RESPONSE_CODE_OK,
-                "Response code mismatched when invoke to get Tier Permission Page");
+                     "Response code mismatched when invoke to get Tier Permission Page");
         assertTrue(tierPermissionPageHttpResponse.getData().contains(TIER_PERMISSION_PAGE_TIER_GOLD),
-                "default tier Gold is not available in Tier Permission page before  add new tear in tiers.xml");
+                   "default tier Gold is not available in Tier Permission page before  add new tear in tiers.xml");
         assertFalse(tierPermissionPageHttpResponse.getData().contains(TIER_PERMISSION_PAGE_TIER_PLATINUM),
-                "new tier Platinum available in Tier Permission page before  add new tear in tiers.xml");
+                    "new tier Platinum available in Tier Permission page before  add new tear in tiers.xml");
     }
 
 
     @Test(groups = {"wso2.am"}, description = "Test availability of tiers in API Manage Page before change tiers XML",
-            dependsOnMethods = "testAvailabilityOfTiersInPermissionPageBeforeChangeTiersXML")
-    public void testAvailabilityOfTiersInAPIManagePageBeforeChangeTiersXML() throws APIManagerIntegrationTestException {
+          dependsOnMethods = "testAvailabilityOfTiersInPermissionPageBeforeChangeTiersXML")
+    public void testAvailabilityOfTiersInAPIManagePageBeforeChangeTiersXML()
+            throws APIManagerIntegrationTestException {
 
         HttpResponse tierManagePageHttpResponse =
                 apiPublisherClientUser1.getAPIManagePage(API_NAME, providerName, API_VERSION_1_0_0);
         assertEquals(tierManagePageHttpResponse.getResponseCode(), HTTP_RESPONSE_CODE_OK,
-                "Response code mismatched when invoke to get Tier Permission Page");
+                     "Response code mismatched when invoke to get Tier Permission Page");
         assertTrue(tierManagePageHttpResponse.getData().contains(TIER_MANAGE_PAGE_TIER_GOLD),
-                "default tier  Gold is not available in Tier Permission page before  add new tear in tiers.xml");
+                   "default tier  Gold is not available in Tier Permission page before  add new tear in tiers.xml");
         assertFalse(tierManagePageHttpResponse.getData().contains(TIER_MANAGE_PAGE_TIER_PLATINUM),
-                "new tier Platinum available in Tier Permission page before  add new tear in tiers.xml");
+                    "new tier Platinum available in Tier Permission page before  add new tear in tiers.xml");
     }
 
 
     @Test(groups = {"wso2.am"}, description = "test availability of tiers in Permission Page after change tiers XML",
-            dependsOnMethods = "testAvailabilityOfTiersInAPIManagePageBeforeChangeTiersXML")
+          dependsOnMethods = "testAvailabilityOfTiersInAPIManagePageBeforeChangeTiersXML")
     public void testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML() throws RemoteException,
-            ResourceAdminServiceExceptionException, APIManagerIntegrationTestException {
+                                                                                    ResourceAdminServiceExceptionException,
+                                                                                    APIManagerIntegrationTestException {
         //Changing the Tier XML
         resourceAdminServiceClient.updateTextContent(TIER_XML_REG_CONFIG_LOCATION, newTiersXML);
         HttpResponse tierPermissionPageHttpResponse =
                 apiPublisherClientUser1.getTierPermissionsPage();
         assertEquals(tierPermissionPageHttpResponse.getResponseCode(), HTTP_RESPONSE_CODE_OK,
-                "Response code mismatched when invoke to get Tier Permission Page");
+                     "Response code mismatched when invoke to get Tier Permission Page");
         assertTrue(tierPermissionPageHttpResponse.getData().contains(TIER_PERMISSION_PAGE_TIER_GOLD),
-                "default tier Gold is not available in Tier Permission page before  add new tear in tiers.xml");
+                   "default tier Gold is not available in Tier Permission page before  add new tear in tiers.xml");
+
         assertTrue(tierPermissionPageHttpResponse.getData().contains(TIER_PERMISSION_PAGE_TIER_PLATINUM),
-                "new tier Platinum  is not available in Tier Permission page before  add new tear in tiers.xml");
+                   "new tier Platinum  is not available in Tier Permission page before  add new tear in tiers.xml");
 
     }
 
 
     @Test(groups = {"wso2.am"}, description = "Test availability of tiers in API Manage Page after change tiers XML",
-            dependsOnMethods = "testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML")
-    public void testAvailabilityOfTiersInAPIManagePageAfterChangeTiersXML() throws APIManagerIntegrationTestException {
+          dependsOnMethods = "testAvailabilityOfTiersInPermissionPageAfterChangeTiersXML")
+    public void testAvailabilityOfTiersInAPIManagePageAfterChangeTiersXML()
+            throws APIManagerIntegrationTestException {
         HttpResponse tierManagePageHttpResponse =
                 apiPublisherClientUser1.getAPIManagePage(API_NAME, providerName, API_VERSION_1_0_0);
+
         assertEquals(tierManagePageHttpResponse.getResponseCode(), HTTP_RESPONSE_CODE_OK,
-                "Response code mismatched when invoke to get Tier Permission Page");
+                     "Response code mismatched when invoke to get Tier Permission Page");
+
         assertTrue(tierManagePageHttpResponse.getData().contains(TIER_MANAGE_PAGE_TIER_GOLD),
-                "default tier Gold is not available in Tier Permission page before  add new tear in tiers.xml");
+                   "default tier Gold is not available in Tier Permission page before  add new tear in tiers.xml");
+
         assertTrue(tierManagePageHttpResponse.getData().contains(TIER_MANAGE_PAGE_TIER_PLATINUM),
-                "new tier Platinum available in Tier Permission page before  add new tear in tiers.xml");
+                   "new tier Platinum available in Tier Permission page before  add new tear in tiers.xml");
     }
 
 

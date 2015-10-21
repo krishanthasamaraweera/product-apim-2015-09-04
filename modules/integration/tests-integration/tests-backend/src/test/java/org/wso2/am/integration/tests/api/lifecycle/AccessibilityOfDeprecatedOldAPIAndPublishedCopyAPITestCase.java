@@ -23,6 +23,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.wso2.am.integration.test.utils.APIManagerIntegrationTestException;
+import org.wso2.am.integration.test.utils.base.APIMIntegrationConstants;
 import org.wso2.am.integration.test.utils.bean.APICreationRequestBean;
 import org.wso2.am.integration.test.utils.bean.APILifeCycleState;
 import org.wso2.am.integration.test.utils.bean.APILifeCycleStateRequest;
@@ -34,6 +35,7 @@ import org.wso2.carbon.automation.test.utils.http.client.HttpRequestUtil;
 import org.wso2.carbon.automation.test.utils.http.client.HttpResponse;
 
 import javax.xml.xpath.XPathExpressionException;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
@@ -93,6 +95,7 @@ public class AccessibilityOfDeprecatedOldAPIAndPublishedCopyAPITestCase extends 
         apiStoreClientUser2.login(
                 storeContext.getContextTenant().getTenantUserList().get(0).getUserName(),
                 storeContext.getContextTenant().getTenantUserList().get(0).getPassword());
+
         apiStoreClientUser1.addApplication(APPLICATION_NAME, TIER_UNLIMITED, "", "");
     }
 
@@ -149,10 +152,21 @@ public class AccessibilityOfDeprecatedOldAPIAndPublishedCopyAPITestCase extends 
 
     @Test(groups = {"wso2.am"}, description = "Test the visibility of API in the store after API deprecate.",
             dependsOnMethods = "testDeprecateOldVersion")
-    public void testVisibilityOfOldAPIInStoreAfterDeprecate() throws APIManagerIntegrationTestException {
+    public void testVisibilityOfOldAPIInStoreAfterDeprecate()
+            throws APIManagerIntegrationTestException, IOException, XPathExpressionException {
         //Verify the API in API Store
+
+        waitForAPIDeploymentSync(user.getUserName(), apiIdentifierAPI1Version1.getApiName(),
+                                 apiIdentifierAPI1Version1.getVersion(),
+                                 APIMIntegrationConstants.IS_API_EXISTS);
+
+        waitForAPIDeploymentSync(user.getUserName(), API_NAME, API_VERSION_2_0_0,
+                                 APIMIntegrationConstants.IS_API_EXISTS);
+
+
         List<APIIdentifier> apiStoreAPIIdentifierList =
                 APIMTestCaseUtils.getAPIIdentifierListFromHttpResponse(apiStoreClientUser1.getAPI());
+
         assertTrue(APIMTestCaseUtils.isAPIAvailable(apiIdentifierAPI1Version1, apiStoreAPIIdentifierList),
                 "Old API version is not visible in API Store after deprecate." +
                         getAPIIdentifierString(apiIdentifierAPI1Version1));
@@ -166,6 +180,7 @@ public class AccessibilityOfDeprecatedOldAPIAndPublishedCopyAPITestCase extends 
         //Verify the API in API Store
         List<APIIdentifier> apiStoreAPIIdentifierList =
                 APIMTestCaseUtils.getAPIIdentifierListFromHttpResponse(apiStoreClientUser1.getAPI());
+
         assertTrue(APIMTestCaseUtils.isAPIAvailable(apiIdentifierAPI1Version2, apiStoreAPIIdentifierList),
                 "New API version is not visible in API Store after deprecate the old version." +
                         getAPIIdentifierString(apiIdentifierAPI1Version2));

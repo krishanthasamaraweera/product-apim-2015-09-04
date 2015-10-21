@@ -19,6 +19,9 @@
 package org.wso2.am.integration.test.utils.clients;
 
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.poi.hwpf.model.Sttb;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,6 +31,7 @@ import org.wso2.am.integration.test.utils.bean.SubscriptionRequest;
 import org.wso2.carbon.automation.test.utils.http.client.HttpRequestUtil;
 import org.wso2.carbon.automation.test.utils.http.client.HttpResponse;
 
+import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
@@ -41,6 +45,7 @@ import static org.testng.Assert.assertFalse;
 public class APIStoreRestClient {
     private String backendURL;
     private Map<String, String> requestHeaders = new HashMap<String, String>();
+    private static final Log log = LogFactory.getLog(APIStoreRestClient.class);
 
     public APIStoreRestClient(String backendURL) {
         this.backendURL = backendURL;
@@ -628,15 +633,37 @@ public class APIStoreRestClient {
      * @param apiTag - API tag the need ti filter the api.
      * @return HttpResponse - Response  that contains the web page with filtered API when  click the API Tag link
      * @throws APIManagerIntegrationTestException - Exception throws when check the Authentication and
-     * HttpRequestUtil.sendGetRequest() method call
+     *                                            HttpRequestUtil.sendGetRequest() method call
      */
-    public HttpResponse getAPIPageFilteredWithTags(String apiTag) throws APIManagerIntegrationTestException {
+    public HttpResponse getAPIPageFilteredWithTags(String apiTag)
+            throws APIManagerIntegrationTestException {
         try {
             checkAuthentication();
             return HttpRequestUtil.sendGetRequest(backendURL + "/store/apis/list", "tag=" + apiTag + "&tenant=carbon.super");
         } catch (IOException ex) {
             throw new APIManagerIntegrationTestException("Exception when get APO page filtered by tag", ex);
         }
+    }
+
+    /**
+     * This method will return swagger document of given api name and version
+     *
+     * @param userName   - User who request the swagger document
+     * @param apiName    - Name of the API
+     * @param apiVersion - Version of the API
+     * @return - HTTP Response of the GET swagger document request
+     * @throws APIManagerIntegrationTestException - Throws if swagger document GET request fails
+     */
+    public HttpResponse getSwaggerDocument(String userName, String apiName, String apiVersion)
+            throws APIManagerIntegrationTestException {
+        try {
+            checkAuthentication();
+            return HttpRequestUtil.sendGetRequest(backendURL + "store/api-docs/" + userName + "/" +
+                                                  apiName + "/" + apiVersion, null);
+        } catch (IOException ex) {
+            throw new APIManagerIntegrationTestException("Exception when get APO page filtered by tag", ex);
+        }
+
     }
 
     /**
@@ -647,14 +674,15 @@ public class APIStoreRestClient {
      * @throws APIManagerIntegrationTestException - Exception throws when check the Authentication and
      *                                            HttpRequestUtil.doPost() method call.
      */
-    public HttpResponse subscribeToAPI(SubscriptionRequest subscriptionRequest) throws APIManagerIntegrationTestException {
+    public HttpResponse subscribeToAPI(SubscriptionRequest subscriptionRequest)
+            throws APIManagerIntegrationTestException {
         //This method  do the same functionality as subscribe(), except this method  always returns the response object
         //regardless of the response code. But subscribe() returns the response object only if  the response code is
         // 200 or else it will return an Exception.
         try {
             checkAuthentication();
             return HttpRequestUtil.doPost(new URL(backendURL +
-                    "/store/site/blocks/subscription/subscription-add/ajax/subscription-add.jag")
+                                                  "/store/site/blocks/subscription/subscription-add/ajax/subscription-add.jag")
                     , subscriptionRequest.generateRequestParameters(), requestHeaders);
         } catch (Exception ex) {
             throw new APIManagerIntegrationTestException("Exception when Subscribing to a API", ex);
@@ -680,12 +708,13 @@ public class APIStoreRestClient {
 //        }
 //    }
 
-    public HttpResponse getAPIListFromStoreAsAnonymousUser(String tenantDomain) throws APIManagerIntegrationTestException {
+    public HttpResponse getAPIListFromStoreAsAnonymousUser(String tenantDomain)
+            throws APIManagerIntegrationTestException {
         try {
             HttpResponse httpResponse = HttpRequestUtil.sendGetRequest(backendURL + "store/site/blocks/api/recently-added/ajax/list.jag"
                     , "action=getRecentlyAddedAPIs&tenant=" + tenantDomain);
 
-            if(new JSONObject(httpResponse.getData()).getBoolean("error")){
+            if (new JSONObject(httpResponse.getData()).getBoolean("error")) {
                 throw new APIManagerIntegrationTestException("Error when getting API list as AsAnonymousUser");
             }
 
@@ -696,6 +725,40 @@ public class APIStoreRestClient {
 
         } catch (JSONException e) {
             throw new APIManagerIntegrationTestException("Response message is not JSON Response");
+        }
+    }
+
+    public void waitForSwaggerDocument(String userName, String apiName, String apiVersion,
+                                       String expectedResponse)
+            throws IOException, XPathExpressionException {
+
+        long currentTime = System.currentTimeMillis();
+        long waitTime = currentTime + (90 * 1000);
+        HttpResponse response = null;
+
+        while (waitTime > System.currentTimeMillis()) {
+
+            log.info("WAIT for swagger document of API :" + apiName + " with version: " + apiVersion
+                     + " user :" + userName + " with expected response : " + expectedResponse);
+
+            try {
+                response = getSwaggerDocument(userName, apiName, apiVersion);
+            } catch (APIManagerIntegrationTestException ignored) {
+
+            }
+            if (response != null) {
+                if (response.getData().contains(expectedResponse)) {
+                    log.info("API :" + apiName + " with version: " + apiVersion +
+                             " with expected response " + expectedResponse + " found");
+                    break;
+                } else {
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException ignored) {
+
+                    }
+                }
+            }
         }
     }
 

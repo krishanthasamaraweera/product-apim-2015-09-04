@@ -24,6 +24,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
 import org.wso2.am.integration.test.utils.base.APIMIntegrationBaseTest;
+import org.wso2.am.integration.test.utils.base.APIMIntegrationConstants;
 import org.wso2.am.integration.test.utils.bean.APILifeCycleState;
 import org.wso2.am.integration.test.utils.bean.APILifeCycleStateRequest;
 import org.wso2.am.integration.test.utils.bean.APIRequest;
@@ -141,13 +142,19 @@ public class DefaultVersionAPITestCase extends APIMIntegrationBaseTest {
 
         String  apiInvocationUrl = getAPIInvocationURLHttp(apiContext);
 
+        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(),
+                                 APIMIntegrationConstants.IS_API_EXISTS);
 
         //Going to access the API without the version in the request url.
         HttpResponse directResponse = HttpRequestUtil.doGet(endpointUrl, new HashMap<String, String>());
 
         Map<String, String> headers = new HashMap<String, String>();
         headers.put("Authorization", "Bearer " + accessToken);
+
         //Invoke the API
+        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(),
+                                 APIMIntegrationConstants.IS_API_EXISTS);
+
         HttpResponse httpResponse = HttpRequestUtil.doGet(apiInvocationUrl, headers);
 
         //Check if accessing the back-end directly and accessing it via the API yield the same responses.
