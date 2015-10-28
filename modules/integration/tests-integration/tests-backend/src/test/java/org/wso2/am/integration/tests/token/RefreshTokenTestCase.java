@@ -84,6 +84,8 @@ public class RefreshTokenTestCase extends APIMIntegrationBaseTest {
           configFiles/hostobjecttest/api-manager.xml
           configFiles/tokenTest/log4j.properties
         */
+        executionEnvironment =
+                gatewayContextWrk.getConfigurationValue(ContextXpathConstants.EXECUTION_ENVIRONMENT);
 
         if(this.executionEnvironment.equalsIgnoreCase(ExecutionEnvironment.STANDALONE.name())) {
             String sourcePath = TestConfigurationProvider.getResourceLocation() + File.separator +
@@ -109,8 +111,6 @@ public class RefreshTokenTestCase extends APIMIntegrationBaseTest {
         }
 
         backEndEndpointUrl = getGatewayURLHttp() + "jaxrs_basic/services/customers/customerservice";
-        executionEnvironment =
-                gatewayContextWrk.getConfigurationValue(ContextXpathConstants.EXECUTION_ENVIRONMENT);
 
         String publisherURLHttp = publisherUrls.getWebAppURLHttp();
         String storeURLHttp = storeUrls.getWebAppURLHttp();

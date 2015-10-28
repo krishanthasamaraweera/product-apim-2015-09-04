@@ -89,6 +89,9 @@ public class TokenAPITestCase extends APIMIntegrationBaseTest {
           To tests issue mentioned in https://wso2.org/jira/browse/APIMANAGER-2065 please run this test against
           WSo2 Load balancer fronted 2 gateways 2 key manager setup with WSClient mode. Please refer resource api-manager.xml file.
         */
+        executionEnvironment =
+                gatewayContextWrk.getConfigurationValue(ContextXpathConstants.EXECUTION_ENVIRONMENT);
+
         if(this.executionEnvironment.equalsIgnoreCase(ExecutionEnvironment.STANDALONE.name())) {
             String sourcePath = TestConfigurationProvider.getResourceLocation() + File.separator + "artifacts" +
                     File.separator + "AM" + File.separator + "lifecycletest" + File.separator + "jaxrs_basic.war";
@@ -107,8 +110,6 @@ public class TokenAPITestCase extends APIMIntegrationBaseTest {
             serverConfigurationManager.applyConfiguration(
                     new File(getAMResourceLocation() + File.separator + "configFiles/tokenTest/" + "log4j.properties"));
         }
-        executionEnvironment =
-                gatewayContextWrk.getConfigurationValue(ContextXpathConstants.EXECUTION_ENVIRONMENT);
 
         apiPublisher = new APIPublisherRestClient(getPublisherURLHttp());
         apiStore = new APIStoreRestClient(getStoreURLHttp());
