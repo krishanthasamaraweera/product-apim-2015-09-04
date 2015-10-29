@@ -71,7 +71,7 @@ public class RefreshTokenTestCase extends APIMIntegrationBaseTest {
     public static Object[][] userModeDataProvider() {
         return new Object[][]{
                 new Object[]{TestUserMode.SUPER_TENANT_ADMIN},
-                //new Object[]{TestUserMode.TENANT_ADMIN},
+                new Object[]{TestUserMode.TENANT_ADMIN},
         };
     }
 
@@ -136,12 +136,13 @@ public class RefreshTokenTestCase extends APIMIntegrationBaseTest {
         apiRequest.setVersion(APIVersion);
         apiRequest.setSandbox(backEndEndpointUrl);
         apiRequest.setProvider(user.getUserName());
-        Thread.sleep(5000);
         apiPublisher.addAPI(apiRequest);
         APILifeCycleStateRequest updateRequest =
                 new APILifeCycleStateRequest(APIName, user.getUserName(), APILifeCycleState.PUBLISHED);
         apiPublisher.changeAPILifeCycleStatus(updateRequest);
 
+        //TODO Replace Thread.sleep with Tenant supported web app wait
+        Thread.sleep(15000);
         apiStore.login(storeContext.getContextTenant().getContextUser().getUserName(),
                 storeContext.getContextTenant().getContextUser().getPassword());
         apiStore.addApplication("RefreshTokenTestAPI-Application", "Gold", "", "this-is-test");
@@ -168,7 +169,8 @@ public class RefreshTokenTestCase extends APIMIntegrationBaseTest {
                 response.getJSONObject("data").getJSONObject("key").getString("consumerSecret");
 
         //Obtain user access token
-        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(), APIMIntegrationConstants.IS_API_EXISTS);
+        Thread.sleep(15000);
+        //waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(), APIMIntegrationConstants.IS_API_EXISTS);
 
         String requestBody = "grant_type=password&username=" + user.getUserName() + "&password=" + user.getPassword() + "&scope=PRODUCTION";
         URL tokenEndpointURL = new URL(gatewayUrlsWrk.getWebAppURLNhttp() + "token");
@@ -185,10 +187,10 @@ public class RefreshTokenTestCase extends APIMIntegrationBaseTest {
         requestHeaders.put("accept", "text/xml");
 
         //Should wait to key sync. Should be fixed with proper way
-        Thread.sleep(9000);
+        Thread.sleep(15000);
 
         String apiUrl = getAPIInvocationURLHttp("refreshTokenTestAPI/1.0.0/customers/123");;
-        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(), APIMIntegrationConstants.IS_API_EXISTS);
+        //waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(), APIMIntegrationConstants.IS_API_EXISTS);
 
         HttpResponse httpResponse = HttpRequestUtil.doGet(apiUrl, requestHeaders);
         //check JWT headers here
@@ -213,8 +215,9 @@ public class RefreshTokenTestCase extends APIMIntegrationBaseTest {
         requestHeaders.put("Authorization", "Bearer " + userAccessToken);
         requestHeaders.put("accept", "text/xml");
 
-        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(),
-                APIMIntegrationConstants.IS_API_EXISTS);
+        Thread.sleep(15000);
+//        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(),
+//                APIMIntegrationConstants.IS_API_EXISTS);
 
         httpResponse = HttpRequestUtil.doGet(apiUrl, requestHeaders);
         //check JWT headers here
