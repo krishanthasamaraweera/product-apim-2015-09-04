@@ -119,7 +119,8 @@ public class APIManager3152RefreshTokenTestCase extends APIMIntegrationBaseTest 
         APILifeCycleStateRequest updateRequest = new APILifeCycleStateRequest(APIName, userName + "@11wso2.com",
                 APILifeCycleState.PUBLISHED);
         apiPublisher.changeAPILifeCycleStatus(updateRequest);
-
+        Thread.sleep(20000);
+        //TODO Replace Thread.sleep with Tenant supported web app wait
         apiStore.login(userName + "@11wso2.com", storeContext.getContextTenant().getTenantAdmin().getPassword());
         SubscriptionRequest subscriptionRequest = new SubscriptionRequest(APIName, userName + "@11wso2.com");
         subscriptionRequest.setTier("Gold");
@@ -180,7 +181,8 @@ public class APIManager3152RefreshTokenTestCase extends APIMIntegrationBaseTest 
         APILifeCycleStateRequest updateRequest = new APILifeCycleStateRequest(APIName, userName,
                 APILifeCycleState.PUBLISHED);
         apiPublisher.changeAPILifeCycleStatus(updateRequest);
-
+        Thread.sleep(20000);
+        //TODO Replace Thread.sleep with Tenant supported web app wait
         apiStore.login(userName, storeContext.getContextTenant().getTenantAdmin().getPassword());
         SubscriptionRequest subscriptionRequest = new SubscriptionRequest(APIName, userName);
         subscriptionRequest.setTier("Gold");
