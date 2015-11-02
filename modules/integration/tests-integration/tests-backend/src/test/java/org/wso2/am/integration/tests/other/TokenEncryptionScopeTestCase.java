@@ -21,6 +21,7 @@ package org.wso2.am.integration.tests.other;
 import org.apache.axis2.AxisFault;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.Assert;
@@ -38,7 +39,9 @@ import org.wso2.am.integration.test.utils.clients.APIPublisherRestClient;
 import org.wso2.am.integration.test.utils.clients.APIStoreRestClient;
 import org.wso2.carbon.automation.engine.annotations.ExecutionEnvironment;
 import org.wso2.carbon.automation.engine.annotations.SetEnvironment;
+import org.wso2.carbon.automation.engine.context.ContextXpathConstants;
 import org.wso2.carbon.automation.test.utils.common.TestConfigurationProvider;
+import org.wso2.carbon.automation.test.utils.http.client.HttpResponse;
 import org.wso2.carbon.integration.common.admin.client.UserManagementClient;
 import org.wso2.carbon.integration.common.utils.mgt.ServerConfigurationManager;
 import org.wso2.carbon.user.mgt.stub.UserAdminUserAdminException;
@@ -50,105 +53,99 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.rmi.RemoteException;
 
-@SetEnvironment(executionEnvironments = {ExecutionEnvironment.STANDALONE})
+@SetEnvironment(executionEnvironments = {ExecutionEnvironment.ALL})
 public class TokenEncryptionScopeTestCase extends APIMIntegrationBaseTest {
 
     private static final Log log = LogFactory.getLog(TokenEncryptionScopeTestCase.class);
-
     private APIPublisherRestClient apiPublisher;
-
     private APIStoreRestClient apiStore;
-
     private UserManagementClient userManagementClient = null;
-
     private static final String API_NAME = "TokenEncryptionAPI";
-
     private static final String API_VERSION = "1.0.0";
-
     private static final String APP_NAME = "TokenEncryptionApp";
-
     private static final String USER_SAM = "sam";
-
     private static final String APP_DEV_USER = "mike";
-
     private static final String APP_DEV_PWD = "mike123";
-
     private static final String SUBSCRIBER_ROLE = "subscriber";
-
     private ServerConfigurationManager serverManager;
-
     private static final String APIM_CONFIG_XML = "api-manager.xml";
-
     private static final String IDENTITY_CONFIG_XML = "identity.xml";
-
     private static String apiProvider;
+    private String executionEnvironment;
 
     @BeforeClass(alwaysRun = true)
     public void setEnvironment() throws Exception {
 
         super.init();
 
+        executionEnvironment =
+                gatewayContextWrk.getConfigurationValue(ContextXpathConstants.EXECUTION_ENVIRONMENT);
+
         apiProvider = publisherContext.getSuperTenant().getContextUser().getUserName();
 
-        String carbonHome = System.getProperty(ServerConstants.CARBON_HOME);
-        String artifactsLocation = TestConfigurationProvider.getResourceLocation() +
-                                   File.separator + "artifacts" + File.separator + "AM" + File.separator +
-                                   "configFiles" + File.separator + "token_encryption" + File.separator;
+        if (this.executionEnvironment.equalsIgnoreCase(ExecutionEnvironment.STANDALONE.name())) {
+            String carbonHome = System.getProperty(ServerConstants.CARBON_HOME);
+            String artifactsLocation = TestConfigurationProvider.getResourceLocation() +
+                    File.separator + "artifacts" + File.separator + "AM" + File.separator +
+                    "configFiles" + File.separator + "token_encryption" + File.separator;
 
-        String apimConfigArtifactLocation = artifactsLocation + APIM_CONFIG_XML;
-        String identityConfigArtifactLocation = artifactsLocation + IDENTITY_CONFIG_XML;
+            String apimConfigArtifactLocation = artifactsLocation + APIM_CONFIG_XML;
+            String identityConfigArtifactLocation = artifactsLocation + IDENTITY_CONFIG_XML;
 
-        String apimRepositoryConfigLocation = carbonHome + File.separator + "repository" +
-                                              File.separator + "conf" + File.separator + APIM_CONFIG_XML;
+            String apimRepositoryConfigLocation = carbonHome + File.separator + "repository" +
+                    File.separator + "conf" + File.separator + APIM_CONFIG_XML;
 
-        String identityRepositoryConfigLocation = carbonHome + File.separator + "repository" +
-                                                  File.separator + "conf" + File.separator + IDENTITY_CONFIG_XML;
+            String identityRepositoryConfigLocation = carbonHome + File.separator + "repository" +
+                    File.separator + "conf" + File.separator + IDENTITY_CONFIG_XML;
+            File apimConfSourceFile = new File(apimConfigArtifactLocation);
+            File apimConfTargetFile = new File(apimRepositoryConfigLocation);
+            File identityConfSourceFile = new File(identityConfigArtifactLocation);
+            File identityConfTargetFile = new File(identityRepositoryConfigLocation);
 
-        File apimConfSourceFile = new File(apimConfigArtifactLocation);
-        File apimConfTargetFile = new File(apimRepositoryConfigLocation);
+            serverManager = new ServerConfigurationManager(gatewayContextWrk);
 
-        File identityConfSourceFile = new File(identityConfigArtifactLocation);
-        File identityConfTargetFile = new File(identityRepositoryConfigLocation);
+            // apply configuration to  api-manager.xml
+            serverManager.applyConfigurationWithoutRestart(apimConfSourceFile, apimConfTargetFile, true);
+            log.info("api-manager.xml configuration file copy from :" + apimConfigArtifactLocation +
+                    " to :" + apimRepositoryConfigLocation);
 
-        serverManager = new ServerConfigurationManager(gatewayContextWrk);
-
-        // apply configuration to  api-manager.xml
-        serverManager.applyConfigurationWithoutRestart(apimConfSourceFile, apimConfTargetFile, true);
-        log.info("api-manager.xml configuration file copy from :" + apimConfigArtifactLocation +
-                 " to :" + apimRepositoryConfigLocation);
-
-        // apply configuration to identity.xml
-        serverManager.applyConfigurationWithoutRestart(identityConfSourceFile, identityConfTargetFile, true);
-        log.info("identity.xml configuration file copy from :" + identityConfigArtifactLocation +
-                 " to :" + identityRepositoryConfigLocation);
-
-        serverManager.restartGracefully();
+            // apply configuration to identity.xml
+            serverManager.applyConfigurationWithoutRestart(identityConfSourceFile, identityConfTargetFile, true);
+            log.info("identity.xml configuration file copy from :" + identityConfigArtifactLocation +
+                    " to :" + identityRepositoryConfigLocation);
+            serverManager.restartGracefully();
+        }
 
         //Initialize publisher and store.
         String publisherURLHttp = publisherUrls.getWebAppURLHttp();
-
         String storeURLHttp = storeUrls.getWebAppURLHttp();
-
         apiPublisher = new APIPublisherRestClient(publisherURLHttp);
-
         apiStore = new APIStoreRestClient(storeURLHttp);
     }
 
     @Test(groups = "wso2.am", description = "Check if Scopes work fine with token encryption enabled.")
-    public void testTokenEncryptionWithScopes() {
+    public void testTokenEncryptionWithScopes() throws Exception {
 
         try {
-            userManagementClient = new UserManagementClient(publisherContext.getContextUrls().getBackEndUrl(),
+            userManagementClient = new UserManagementClient(gatewayContextMgt.getContextUrls().getBackEndUrl(),
                                                             publisherContext.getContextTenant().getContextUser().getUserName(),
                                                             publisherContext.getContextTenant().getContextUser().getPassword());
             //adding new role subscriber
+            if(userManagementClient.roleNameExists(SUBSCRIBER_ROLE)){
+                userManagementClient.deleteRole(SUBSCRIBER_ROLE);
+            }
             userManagementClient.addRole(SUBSCRIBER_ROLE, new String[]{}, new String[]{"/permission/admin/login",
+
                                                                                        "/permission/admin/manage/api/subscribe"});
-
             //creating user sam
+            if(userManagementClient.userNameExists(SUBSCRIBER_ROLE,USER_SAM)){
+                userManagementClient.deleteUser(USER_SAM);
+            }
             userManagementClient.addUser(USER_SAM, "sam123", new String[]{SUBSCRIBER_ROLE}, "sam");
-
             //creating user mike
+            if(userManagementClient.userNameExists(SUBSCRIBER_ROLE,APP_DEV_USER)){
+                userManagementClient.deleteUser(APP_DEV_USER);
+            }
             userManagementClient.addUser(APP_DEV_USER, APP_DEV_PWD, new String[]{SUBSCRIBER_ROLE}, APP_DEV_USER);
 
         } catch (AxisFault axisFault) {
@@ -202,7 +199,8 @@ public class TokenEncryptionScopeTestCase extends APIMIntegrationBaseTest {
                     API_NAME, apiProvider,
                     APILifeCycleState.PUBLISHED);
             apiPublisher.changeAPILifeCycleStatus(updateRequest);
-
+            //TODO Replace Thread.sleep with Tenant supported web app wait
+            Thread.sleep(20000);
             //resources are modified using swagger doc.
             // admin_scope(used for POST) :- admin
             // user_scope (used for GET) :- admin,subscriber
@@ -265,29 +263,81 @@ public class TokenEncryptionScopeTestCase extends APIMIntegrationBaseTest {
             log.error("Error occurred while getting credentials from the publisher/store context ", e);
             //Fail the test case
             Assert.assertTrue(false);
+        } catch (InterruptedException e) {
+            log.error("Error occurred ", e);
         }
     }
 
     @AfterClass(alwaysRun = true)
     public void destroy() throws Exception {
-
-        if (apiStore != null) {
-            apiStore.removeApplication(APP_NAME);
-        }
-
-        if (apiPublisher != null) {
-            apiPublisher.deleteAPI(API_NAME, API_VERSION, apiProvider);
-        }
-
+        cleanUp("carbon,super","mike","mike123");
+//        if (apiStore != null) {
+//            apiStore.removeApplication(APP_NAME);
+//        }
+//
+//        if (apiPublisher != null) {
+//            apiPublisher.deleteAPI(API_NAME, API_VERSION, apiProvider);
+//        }
         if (userManagementClient != null) {
             userManagementClient.deleteUser(USER_SAM);
             userManagementClient.deleteUser(APP_DEV_USER);
             userManagementClient.deleteRole(SUBSCRIBER_ROLE);
         }
-
-        serverManager.restoreToLastConfiguration();
-        serverManager.restartGracefully();
-        log.info("Restored configuration and restarted gracefully...");
+        if (this.executionEnvironment.equalsIgnoreCase(ExecutionEnvironment.STANDALONE.name())) {
+            serverManager.restoreToLastConfiguration();
+            serverManager.restartGracefully();
+            log.info("Restored configuration and restarted gracefully...");
+        }
     }
 
+    /*  Removing API subscription, application and API of the tenant 11wso2.com*/
+    protected void cleanUp(String tenantDomain, String userName, String password) throws Exception {
+        APIStoreRestClient apiStore = new APIStoreRestClient(this.getStoreURLHttp());
+        apiStore.login(userName, password);
+        APIPublisherRestClient publisherRestClient = new APIPublisherRestClient(this.getPublisherURLHttp());
+        publisherRestClient.login("admin","admin");
+        HttpResponse subscriptionDataResponse = apiStore.getAllSubscriptions();
+        this.verifyResponse(subscriptionDataResponse);
+        JSONObject jsonSubscription = new JSONObject(subscriptionDataResponse.getData());
+        JSONArray jsonAPIArray;
+        int i;
+        JSONObject api;
+        if (jsonSubscription.getString("error").equals("false")) {
+            JSONObject applicationData = jsonSubscription.getJSONObject("subscriptions");
+            JSONArray jsonApplicationData = applicationData.getJSONArray("applications");
+
+            for (int applicationArray = 0; applicationArray < jsonApplicationData.length(); ++applicationArray) {
+                JSONObject apiData = jsonApplicationData.getJSONObject(applicationArray);
+                int jsonAPIData = apiData.getInt("id");
+                jsonAPIArray = apiData.getJSONArray("subscriptions");
+
+                for (i = 0; i < jsonAPIArray.length(); ++i) {
+                    api = jsonAPIArray.getJSONObject(i);
+                    this.verifyResponse(apiStore.removeAPISubscription(api.getString("name"), api.getString("version"),
+                            api.getString("provider"), String.valueOf(jsonAPIData)));
+                }
+            }
+        }
+
+        String var13 = apiStore.getAllApplications().getData();
+        JSONObject var14 = new JSONObject(var13);
+        JSONArray var15 = var14.getJSONArray("applications");
+
+        JSONObject var17;
+        for (int var16 = 0; var16 < var15.length(); ++var16) {
+            var17 = var15.getJSONObject(var16);
+            if (!var17.getString("name").equals("DefaultApplication")) {
+                this.verifyResponse(apiStore.removeApplication(var17.getString("name")));
+            }
+        }
+
+        String var18 = apiStore.getAPI().getData();
+        var17 = new JSONObject(var18);
+        jsonAPIArray = var17.getJSONArray("apis");
+
+        for (i = 0; i < jsonAPIArray.length(); ++i) {
+            api = jsonAPIArray.getJSONObject(i);
+            this.verifyResponse(publisherRestClient.deleteAPI(api.getString("name"), api.getString("version"), userName + "@" + tenantDomain));
+        }
+    }
 }
