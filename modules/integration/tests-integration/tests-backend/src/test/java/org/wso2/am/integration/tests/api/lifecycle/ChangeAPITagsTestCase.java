@@ -101,15 +101,24 @@ public class ChangeAPITagsTestCase extends APIManagerLifecycleBaseTest {
                     new APICreationRequestBean(apiName, apiContext, API_VERSION_1_0_0, providerName,
                             new URL(apiEndPointUrl));
             apiCreationRequestBean.setTags(apiTags);
-            apiCreationRequestBean.setDescription(API_DESCRIPTION);
+            apiCreationRequestBean.setDescription(API_DESCRIPTION + " with tags " + apiTags );
             createAndPublishAPIWithoutRequireReSubscription(apiIdentifier, apiCreationRequestBean,
                     apiPublisherClientUser1);
-            waitForAPIDeploymentSync(apiIdentifier.getProviderName(), apiIdentifier.getApiName(),
-                                     apiIdentifier.getVersion(), APIMIntegrationConstants.IS_API_EXISTS);
+
+            waitForAPIDeploymentSync(apiIdentifier.getProviderName(),
+                                     apiIdentifier.getApiName(),
+                                     apiIdentifier.getVersion(),
+                                     APIMIntegrationConstants.IS_API_EXISTS);
+
+            apiStoreClientUser1.waitForSwaggerDocument(apiIdentifier.getProviderName(),
+                                                   apiIdentifier.getApiName(),
+                                                   apiIdentifier.getVersion(),
+                                                   apiTags);
         }
 
         HttpResponse apiPageFilteredWithTagsResponse =
                 apiStoreClientUser1.getAPIPageFilteredWithTags(TEST_TAG);
+
         assertEquals(apiPageFilteredWithTagsResponse.getResponseCode(), HTTP_RESPONSE_CODE_OK, "Response code wan not" +
                 " Ok:200 for retrieving the API page filtered with tags");
         String apiPageFilteredWithTagsResponseString = apiPageFilteredWithTagsResponse.getData();
@@ -121,6 +130,7 @@ public class ChangeAPITagsTestCase extends APIManagerLifecycleBaseTest {
                 //API Link should be in page
                 assertTrue(apiPageFilteredWithTagsResponseString.contains(apiLinkToTestInPage),
                         "API is not listed  with correct tag, API:" + apiTagEntry.getKey() + " Tag:" + TEST_TAG);
+
             } else {
                 //API Link should not be in page
                 assertFalse(apiPageFilteredWithTagsResponseString.contains(apiLinkToTestInPage),
@@ -133,6 +143,7 @@ public class ChangeAPITagsTestCase extends APIManagerLifecycleBaseTest {
     @Test(groups = {"wso2.am"}, description = "Test the filter by Tags After changing the Tags",
             dependsOnMethods = "testFilterByTagsBeforeTagChange")
     public void testUpdateTagsAndFilterByTags() throws APIManagerIntegrationTestException, MalformedURLException {
+
         for (Map.Entry<String, String> apiTagEntry : apiTagsMapAfterChange.entrySet()) {
             String apiName = apiTagEntry.getKey();
             String apiTags = apiTagEntry.getValue();
@@ -150,7 +161,10 @@ public class ChangeAPITagsTestCase extends APIManagerLifecycleBaseTest {
                     "Error in API Update in API Name:" + apiName +
                             "Response Data:" + updateAPIHTTPResponse.getData());
         }
-        HttpResponse apiPageFilteredWithTagsResponse = apiStoreClientUser1.getAPIPageFilteredWithTags(TEST_TAG);
+
+        HttpResponse apiPageFilteredWithTagsResponse =
+                apiStoreClientUser1.getAPIPageFilteredWithTags(TEST_TAG);
+
         assertEquals(apiPageFilteredWithTagsResponse.getResponseCode(), HTTP_RESPONSE_CODE_OK, "Response code wan not" +
                 " Ok:200 for retrieving the API page filtered with tags");
         String apiPageFilteredWithTagsResponseString = apiPageFilteredWithTagsResponse.getData();

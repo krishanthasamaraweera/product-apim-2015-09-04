@@ -30,6 +30,7 @@ import org.wso2.am.integration.test.utils.bean.APILifeCycleState;
 import org.wso2.am.integration.test.utils.bean.APILifeCycleStateRequest;
 import org.wso2.am.integration.test.utils.bean.APIRequest;
 import org.wso2.am.integration.test.utils.clients.APIPublisherRestClient;
+import org.wso2.am.integration.test.utils.clients.APIStoreRestClient;
 import org.wso2.carbon.automation.engine.context.TestUserMode;
 import org.wso2.carbon.automation.test.utils.http.client.HttpResponse;
 
@@ -40,6 +41,7 @@ import static org.testng.Assert.assertEquals;
 public class APIResourceModificationTestCase extends APIMIntegrationBaseTest {
 
     private APIPublisherRestClient apiPublisher;
+    private APIStoreRestClient apiStoreRestClient;
     private String APIName = "APIResourceTestAPI";
     private String APIVersion = "1.0.0";
     private String providerName = "";
@@ -61,7 +63,9 @@ public class APIResourceModificationTestCase extends APIMIntegrationBaseTest {
     public void setEnvironment() throws Exception {
         super.init(userMode);
         String publisherURLHttp = getPublisherURLHttp();
+        String storeURLHttp = getStoreURLHttp();
         apiPublisher = new APIPublisherRestClient(publisherURLHttp);
+        apiStoreRestClient = new APIStoreRestClient(storeURLHttp);
 
         providerName = user.getUserName();
     }
@@ -116,6 +120,8 @@ public class APIResourceModificationTestCase extends APIMIntegrationBaseTest {
                 "\"x-wso2-security\":{\"apim\":{\"x-wso2-scopes\":[{\"name\":\"testscope\",\"description\":\"\",\"key\":\"scopeKey\",\"roles\":\"internal/subscriber\"}]}}}";
 
         HttpResponse response = apiPublisher.updateResourceOfAPI(providerName, APIName, APIVersion, modifiedResource);
+
+        apiStoreRestClient.waitForSwaggerDocument(providerName, APIName, APIVersion, "Unlimited");
 
         JSONObject jsonObject = new JSONObject(response.getData());
         boolean error = (Boolean) jsonObject.get("error");
