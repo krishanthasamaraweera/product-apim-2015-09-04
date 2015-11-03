@@ -18,6 +18,7 @@
 
 package org.wso2.am.integration.tests.token;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -29,6 +30,8 @@ import org.wso2.am.integration.test.utils.clients.APIPublisherRestClient;
 import org.wso2.am.integration.test.utils.clients.APIStoreRestClient;
 import org.wso2.carbon.automation.engine.annotations.ExecutionEnvironment;
 import org.wso2.carbon.automation.engine.annotations.SetEnvironment;
+import org.wso2.carbon.automation.engine.context.ContextXpathConstants;
+import org.wso2.carbon.automation.test.utils.http.client.HttpResponse;
 import org.wso2.carbon.integration.common.admin.client.TenantManagementServiceClient;
 import org.wso2.carbon.integration.common.utils.mgt.ServerConfigurationManager;
 
@@ -41,7 +44,7 @@ import static org.testng.Assert.assertNotNull;
  In this test case, It will check refresh token is present in the token response with grant type as password in
  tenant mode.
  */
-@SetEnvironment(executionEnvironments = {ExecutionEnvironment.STANDALONE})
+@SetEnvironment(executionEnvironments = {ExecutionEnvironment.ALL})
 public class APIManager3152RefreshTokenTestCase extends APIMIntegrationBaseTest {
 
     private APIPublisherRestClient apiPublisher;
@@ -50,12 +53,15 @@ public class APIManager3152RefreshTokenTestCase extends APIMIntegrationBaseTest 
     private String userName;
     private String publisherURLHttp;
     private String storeURLHttp;
+    private String executionEnvironment;
 
     @BeforeClass(alwaysRun = true)
     public void deployService() throws Exception {
 
         super.init();
 
+        executionEnvironment =
+                gatewayContextWrk.getConfigurationValue(ContextXpathConstants.EXECUTION_ENVIRONMENT);
         /*
          If test run in external distributed deployment you need to copy following resources accordingly.
          configFiles/hostobjecttest/api-manager.xml
@@ -67,11 +73,14 @@ public class APIManager3152RefreshTokenTestCase extends APIMIntegrationBaseTest 
 
         userName = user.getUserName();
 
-        serverConfigurationManager = new ServerConfigurationManager(gatewayContextWrk);
-        serverConfigurationManager.applyConfigurationWithoutRestart(new File(getAMResourceLocation()
-                                                                             + File.separator + "configFiles" + File.separator + "tokenTest" + File.separator + "api-manager.xml"));
-        serverConfigurationManager.applyConfiguration(new File(getAMResourceLocation()
-                                                               + File.separator + "configFiles" + File.separator + "tokenTest" + File.separator + "log4j.properties"));
+        if (this.executionEnvironment.equalsIgnoreCase(ExecutionEnvironment.STANDALONE.name())) {
+
+            serverConfigurationManager = new ServerConfigurationManager(gatewayContextWrk);
+            serverConfigurationManager.applyConfigurationWithoutRestart(new File(getAMResourceLocation()
+                    + File.separator + "configFiles" + File.separator + "tokenTest" + File.separator + "api-manager.xml"));
+            serverConfigurationManager.applyConfiguration(new File(getAMResourceLocation()
+                    + File.separator + "configFiles" + File.separator + "tokenTest" + File.separator + "log4j.properties"));
+        }
         super.init();
 
         // create a tenant
@@ -79,8 +88,10 @@ public class APIManager3152RefreshTokenTestCase extends APIMIntegrationBaseTest 
                 publisherContext.getContextUrls().getBackEndUrl(), createSession(publisherContext));
 
         tenantManagementServiceClient.addTenant("11wso2.com",
-                                                publisherContext.getContextTenant().getTenantAdmin().getPassword(),
-                                                publisherContext.getContextTenant().getTenantAdmin().getUserName(), "demo");
+                publisherContext.getContextTenant().getTenantAdmin().getPassword(),
+                publisherContext.getContextTenant().getTenantAdmin().getUserName(), "demo");
+        executionEnvironment =
+                gatewayContextWrk.getConfigurationValue(ContextXpathConstants.EXECUTION_ENVIRONMENT);
     }
 
     @Test(groups = "wso2.am", description = "Check whether refresh token issued in tenant mode")
@@ -106,16 +117,18 @@ public class APIManager3152RefreshTokenTestCase extends APIMIntegrationBaseTest 
         apiRequest.setProvider(userName + "@11wso2.com");
         apiPublisher.addAPI(apiRequest);
         APILifeCycleStateRequest updateRequest = new APILifeCycleStateRequest(APIName, userName + "@11wso2.com",
-                                                                              APILifeCycleState.PUBLISHED);
+                APILifeCycleState.PUBLISHED);
         apiPublisher.changeAPILifeCycleStatus(updateRequest);
-
+        Thread.sleep(20000);
+        //TODO Replace Thread.sleep with Tenant supported web app wait
         apiStore.login(userName + "@11wso2.com", storeContext.getContextTenant().getTenantAdmin().getPassword());
         SubscriptionRequest subscriptionRequest = new SubscriptionRequest(APIName, userName + "@11wso2.com");
         subscriptionRequest.setTier("Gold");
         apiStore.subscribe(subscriptionRequest);
+        apiStore.addApplication("RefreshTokenTestAPI-Application", "Gold", "", "this-is-test");
 
         //Generate production token and invoke with that
-        APPKeyRequestGenerator generateAppKeyRequest = new APPKeyRequestGenerator("DefaultApplication");
+        APPKeyRequestGenerator generateAppKeyRequest = new APPKeyRequestGenerator("RefreshTokenTestAPI-Application");
         String responseString = apiStore.generateApplicationKey(generateAppKeyRequest).getData();
         JSONObject response = new JSONObject(responseString);
 
@@ -124,16 +137,13 @@ public class APIManager3152RefreshTokenTestCase extends APIMIntegrationBaseTest 
         String consumerSecret = response.getJSONObject("data").getJSONObject("key").getString("consumerSecret");
 
         //Obtain user access token
-        waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(),
-                                 APIMIntegrationConstants.IS_API_EXISTS);
-
         String requestBody = "grant_type=password&username=" + userName + "@11wso2.com&password=" +
-                             storeContext.getContextTenant().getTenantAdmin().getPassword() + "&scope=PRODUCTION";
+                storeContext.getContextTenant().getTenantAdmin().getPassword() + "&scope=PRODUCTION";
         URL tokenEndpointURL = new URL(gatewayUrlsWrk.getWebAppURLNhttp() + "token");
         JSONObject accessTokenGenerationResponse = new JSONObject(apiStore.generateUserAccessKey(consumerKey,
-                                                                                                 consumerSecret,
-                                                                                                 requestBody,
-                                                                                                 tokenEndpointURL).getData());
+                consumerSecret,
+                requestBody,
+                tokenEndpointURL).getData());
 
         /*
         Response would be like 
@@ -157,7 +167,6 @@ public class APIManager3152RefreshTokenTestCase extends APIMIntegrationBaseTest 
         String APIVersion = "1.0.0";
 
         userName = storeContext.getSuperTenant().getTenantAdmin().getUserName();
-
         apiPublisher = new APIPublisherRestClient(publisherURLHttp);
         apiStore = new APIStoreRestClient(storeURLHttp);
 
@@ -170,16 +179,18 @@ public class APIManager3152RefreshTokenTestCase extends APIMIntegrationBaseTest 
         apiRequest.setSandbox(url);
         apiPublisher.addAPI(apiRequest);
         APILifeCycleStateRequest updateRequest = new APILifeCycleStateRequest(APIName, userName,
-                                                                              APILifeCycleState.PUBLISHED);
+                APILifeCycleState.PUBLISHED);
         apiPublisher.changeAPILifeCycleStatus(updateRequest);
-
+        Thread.sleep(20000);
+        //TODO Replace Thread.sleep with Tenant supported web app wait
         apiStore.login(userName, storeContext.getContextTenant().getTenantAdmin().getPassword());
         SubscriptionRequest subscriptionRequest = new SubscriptionRequest(APIName, userName);
         subscriptionRequest.setTier("Gold");
         apiStore.subscribe(subscriptionRequest);
+        apiStore.addApplication("RefreshTokenTestAPI-Application", "Gold", "", "this-is-test");
 
         //Generate production token and invoke with that
-        APPKeyRequestGenerator generateAppKeyRequest = new APPKeyRequestGenerator("DefaultApplication");
+        APPKeyRequestGenerator generateAppKeyRequest = new APPKeyRequestGenerator("RefreshTokenTestAPI-Application");
         String responseString = apiStore.generateApplicationKey(generateAppKeyRequest).getData();
         JSONObject response = new JSONObject(responseString);
 
@@ -189,24 +200,77 @@ public class APIManager3152RefreshTokenTestCase extends APIMIntegrationBaseTest 
 
         //Obtain user access token
         waitForAPIDeploymentSync(apiRequest.getProvider(), apiRequest.getName(), apiRequest.getVersion(),
-                                 APIMIntegrationConstants.IS_API_EXISTS);
+                APIMIntegrationConstants.IS_API_EXISTS);
 
         String requestBody = "grant_type=password&username=" + userName + "&password=" +
-                             storeContext.getContextTenant().getTenantAdmin().getPassword() + "&scope=PRODUCTION";
+                storeContext.getContextTenant().getTenantAdmin().getPassword() + "&scope=PRODUCTION";
         URL tokenEndpointURL = new URL(getAPIInvocationURLHttp("token"));
         JSONObject accessTokenGenerationResponse = new JSONObject(apiStore.generateUserAccessKey(consumerKey,
-                                                                                                 consumerSecret,
-                                                                                                 requestBody,
-                                                                                                 tokenEndpointURL).getData());
+                consumerSecret,
+                requestBody,
+                tokenEndpointURL).getData());
 
         assertNotNull(accessTokenGenerationResponse.getString("refresh_token"), "Refresh Token Can Not Be Null");
-
     }
 
     @AfterClass(alwaysRun = true)
     public void unDeployService() throws Exception {
+
+        cleanUp("11wso2.com", "admin", "admin");
         super.cleanUp();
-        serverConfigurationManager.restoreToLastConfiguration();
+        if (this.executionEnvironment.equalsIgnoreCase(ExecutionEnvironment.STANDALONE.name())) {
+            serverConfigurationManager.restoreToLastConfiguration();
+        }
     }
 
+    /*  Removing API subscription, application and API of the tenant 11wso2.com*/
+    protected void cleanUp(String tenantDomain, String userName, String password) throws Exception {
+        APIStoreRestClient apiStore = new APIStoreRestClient(this.getStoreURLHttp());
+        apiStore.login(userName + "@" + tenantDomain, password);
+        APIPublisherRestClient publisherRestClient = new APIPublisherRestClient(this.getPublisherURLHttp());
+        publisherRestClient.login(userName + "@" + tenantDomain, password);
+        HttpResponse subscriptionDataResponse = apiStore.getAllSubscriptions();
+        this.verifyResponse(subscriptionDataResponse);
+        JSONObject jsonSubscription = new JSONObject(subscriptionDataResponse.getData());
+        JSONArray jsonAPIArray;
+        int i;
+        JSONObject api;
+        if (jsonSubscription.getString("error").equals("false")) {
+            JSONObject applicationData = jsonSubscription.getJSONObject("subscriptions");
+            JSONArray jsonApplicationData = applicationData.getJSONArray("applications");
+
+            for (int applicationArray = 0; applicationArray < jsonApplicationData.length(); ++applicationArray) {
+                JSONObject apiData = jsonApplicationData.getJSONObject(applicationArray);
+                int jsonAPIData = apiData.getInt("id");
+                jsonAPIArray = apiData.getJSONArray("subscriptions");
+
+                for (i = 0; i < jsonAPIArray.length(); ++i) {
+                    api = jsonAPIArray.getJSONObject(i);
+                    this.verifyResponse(apiStore.removeAPISubscription(api.getString("name"), api.getString("version"),
+                            api.getString("provider"), String.valueOf(jsonAPIData)));
+                }
+            }
+        }
+
+        String var13 = apiStore.getAllApplications().getData();
+        JSONObject var14 = new JSONObject(var13);
+        JSONArray var15 = var14.getJSONArray("applications");
+
+        JSONObject var17;
+        for (int var16 = 0; var16 < var15.length(); ++var16) {
+            var17 = var15.getJSONObject(var16);
+            if (!var17.getString("name").equals("DefaultApplication")) {
+                this.verifyResponse(apiStore.removeApplication(var17.getString("name")));
+            }
+        }
+
+        String var18 = apiStore.getAPI().getData();
+        var17 = new JSONObject(var18);
+        jsonAPIArray = var17.getJSONArray("apis");
+
+        for (i = 0; i < jsonAPIArray.length(); ++i) {
+            api = jsonAPIArray.getJSONObject(i);
+            this.verifyResponse(publisherRestClient.deleteAPI(api.getString("name"), api.getString("version"), userName + "@" + tenantDomain));
+        }
+    }
 }
