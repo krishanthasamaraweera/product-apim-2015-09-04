@@ -733,6 +733,11 @@
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.api.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.jaggeryjs</groupId>
+                <artifactId>org.jaggeryjs.jaggery.app.mgt.stub</artifactId>
+                <version>${jaggery.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -831,7 +836,7 @@
         <carbon.rest.api.version>4.2.2</carbon.rest.api.version>
         <rampart.wso2.version>1.6.1-wso2v13</rampart.wso2.version>
         <slf4j.api.version>1.5.6</slf4j.api.version>
-
+        <jaggery.version>0.11.0</jaggery.version>
 
     </properties>
 
