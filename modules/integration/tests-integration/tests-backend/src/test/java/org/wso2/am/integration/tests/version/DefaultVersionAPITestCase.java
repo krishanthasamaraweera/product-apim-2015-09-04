@@ -54,9 +54,9 @@ import static org.testng.Assert.assertEquals;
  */
 public class DefaultVersionAPITestCase extends APIMIntegrationBaseTest {
 
+    public static final String DEFAULT_VERSION_APP = "DefaultVersionAPP" + (int )(Math.random() * 100 + 1);
     private APIPublisherRestClient apiPublisher;
     private APIStoreRestClient apiStore;
-    private String gatewaySessionCookie;
     private String provider;
 
     @Factory(dataProvider = "userModeDataProvider")
@@ -76,7 +76,7 @@ public class DefaultVersionAPITestCase extends APIMIntegrationBaseTest {
     @BeforeClass(alwaysRun = true)
     public void setEnvironment() throws Exception {
         super.init(userMode);
-        gatewaySessionCookie = createSession(gatewayContextMgt);
+        String gatewaySessionCookie = createSession(gatewayContextMgt);
         //Initialize publisher and store.
         apiPublisher = new APIPublisherRestClient(getPublisherURLHttp());
         apiStore = new APIStoreRestClient(getStoreURLHttp());
@@ -124,16 +124,16 @@ public class DefaultVersionAPITestCase extends APIMIntegrationBaseTest {
         apiStore.login(user.getUserName(), user.getPassword());
 
         //Add an Application in the Store.
-        response = apiStore.addApplication("DefaultVersionAPP", "Unlimited", "", "");
+        response = apiStore.addApplication(DEFAULT_VERSION_APP, "Unlimited", "", "");
         verifyResponse(response);
 
         //Subscribe the API to the DefaultApplication
         SubscriptionRequest subscriptionRequest =
-                new SubscriptionRequest(apiName, apiVersion, provider, "DefaultVersionAPP", "Unlimited");
+                new SubscriptionRequest(apiName, apiVersion, provider,DEFAULT_VERSION_APP, "Unlimited");
         response = apiStore.subscribe(subscriptionRequest);
 
         //Generate production token and invoke with that
-        APPKeyRequestGenerator generateAppKeyRequest = new APPKeyRequestGenerator("DefaultVersionAPP");
+        APPKeyRequestGenerator generateAppKeyRequest = new APPKeyRequestGenerator(DEFAULT_VERSION_APP);
         String responseString = apiStore.generateApplicationKey(generateAppKeyRequest).getData();
         JSONObject jsonResponse = new JSONObject(responseString);
 

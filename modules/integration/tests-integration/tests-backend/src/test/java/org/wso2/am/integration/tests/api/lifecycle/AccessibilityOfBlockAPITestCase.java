@@ -48,8 +48,8 @@ import static org.testng.Assert.assertTrue;
 public class AccessibilityOfBlockAPITestCase extends APIManagerLifecycleBaseTest {
 
 
-    private final String API_NAME = "BlockAPITest";
-    private final String API_CONTEXT = "BlockAPI";
+    private final String API_NAME = "BlockAPITest100";
+    private final String API_CONTEXT = "BlockAPI100";
     private final String API_TAGS = "testTag1, testTag2, testTag3";
     private final String API_DESCRIPTION = "This is test API create by API manager integration test";
     private final String API_END_POINT_METHOD = "/customers/123";
@@ -104,6 +104,15 @@ public class AccessibilityOfBlockAPITestCase extends APIManagerLifecycleBaseTest
 
         HttpResponse oldVersionInvokeResponse;
 
+//        for( int a = 0 ; a < 10000 ; a++){
+//            oldVersionInvokeResponse =
+//                    HttpRequestUtil.doGet(getAPIInvocationURLHttp(API_CONTEXT,
+//                                                                  API_VERSION_1_0_0) + API_END_POINT_METHOD, requestHeaders);
+//            System.out.println("Response data" + oldVersionInvokeResponse.getData());
+//            Thread.sleep(500);
+//
+//        }
+
         oldVersionInvokeResponse =
                 HttpRequestUtil.doGet(getAPIInvocationURLHttp(API_CONTEXT,
                                                               API_VERSION_1_0_0) + API_END_POINT_METHOD, requestHeaders);
@@ -146,7 +155,10 @@ public class AccessibilityOfBlockAPITestCase extends APIManagerLifecycleBaseTest
     public void testInvokeAPIAfterChangeAPILifecycleToBlock() throws Exception {
         //Invoke  old version
 
-        waitForAPIDeploymentSync(user.getUserName(), API_NAME, API_VERSION_1_0_0, APIMIntegrationConstants.IS_API_BLOCKED);
+        waitForAPIDeploymentSync(providerName, API_NAME, API_VERSION_1_0_0, APIMIntegrationConstants.IS_API_BLOCKED);
+
+
+
         HttpResponse oldVersionInvokeResponse =
                 HttpRequestUtil.doGet(getAPIInvocationURLHttp(API_CONTEXT, API_VERSION_1_0_0) + API_END_POINT_METHOD,
                                       requestHeaders);
