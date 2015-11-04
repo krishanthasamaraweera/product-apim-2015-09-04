@@ -278,9 +278,9 @@ public class HostObjectTestCase extends APIMIntegrationBaseTest {
     @AfterClass(alwaysRun = true)
     public void destroy() throws Exception {
 
-        WebAppAdminClient publisherWebAppAdminClient=new WebAppAdminClient("https://pub.am.wso2.com/services/", publisherSessionCookie);
+        WebAppAdminClient publisherWebAppAdminClient=new WebAppAdminClient(publisherUrls.getServiceURL(), publisherSessionCookie);
         publisherWebAppAdminClient.deleteWebAppFile(folderPublisher);
-        WebAppAdminClient storeWebAppAdminClient=new WebAppAdminClient("https://store.am.wso2.com/services/", storeSessionCookie);
+        WebAppAdminClient storeWebAppAdminClient=new WebAppAdminClient(storeUrls.getServiceURL(), storeSessionCookie);
         storeWebAppAdminClient.deleteWebAppFile(folderStore);
 
         if (this.executionEnvironment.equalsIgnoreCase(ExecutionEnvironment.STANDALONE.name())) {
