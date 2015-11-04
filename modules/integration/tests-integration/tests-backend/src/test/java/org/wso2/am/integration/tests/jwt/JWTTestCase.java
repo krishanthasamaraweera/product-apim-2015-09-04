@@ -443,7 +443,7 @@ public class JWTTestCase extends APIMIntegrationBaseTest {
         assertTrue("JWT claim subscriber invalid. Received " + claim, claim.contains("admin@wso2.com"));
 
         claim = jsonObject.getString("http://wso2.org/claims/apicontext");
-        assertTrue("JWT claim apicontext invalid. Received " + claim, claim.contains("/t/wso2.com/tokenTest"));
+        assertTrue("JWT claim apicontext invalid. Received " + claim, claim.contains("/t/wso2.com/tokenTest/1.0.0"));
 
     }
 
