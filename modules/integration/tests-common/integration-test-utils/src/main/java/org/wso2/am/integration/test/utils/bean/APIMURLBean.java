@@ -32,6 +32,7 @@ public class APIMURLBean {
     private String webAppURLHttps; // web app URL https, ex: https://localhost:9443
     private String webAppURLNhttp; // web app URL nhttp, ex: http://localhost:8280
     private String webAppURLNhttps; // web app URL nhttps, ex: https://localhost:8243
+    private String serviceURL;
 
     /**
      * construct basic URL's to be used from the given automation context object
@@ -76,6 +77,7 @@ public class APIMURLBean {
         }
         webAppURLNhttps = tempUrl + "/";
 
+        serviceURL = contextUrls.getSecureServiceUrl();
 
     }
 
@@ -94,4 +96,6 @@ public class APIMURLBean {
     public String getWebAppURLNhttps() {
         return webAppURLNhttps;
     }
+
+    public String getServiceURL() { return  serviceURL; }
 }

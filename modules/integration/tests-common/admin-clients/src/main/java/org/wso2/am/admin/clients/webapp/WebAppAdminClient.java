@@ -140,4 +140,13 @@ public class WebAppAdminClient {
         return list;
     }
 
+    /**
+     * Delete Web app providing the app name
+     * @param webAppName
+     * @throws RemoteException - Exception occurs when call the method deleteWebAppFile()
+     */
+    public void deleteWebAppFile(String webAppName) throws RemoteException {
+        webappAdminStub.deleteWebapp(webAppName);
+    }
+
 }

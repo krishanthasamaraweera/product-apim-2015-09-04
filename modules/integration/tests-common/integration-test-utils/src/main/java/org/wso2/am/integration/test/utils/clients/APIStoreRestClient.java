@@ -728,6 +728,15 @@ public class APIStoreRestClient {
         }
     }
 
+    /**
+     * Wait for swagger document until its updated.
+     * @param userName - Name of the api provider
+     * @param apiName  - API Name
+     * @param apiVersion - API Version
+     * @param expectedResponse - Expected response of the API
+     * @throws IOException - Throws if Swagger document cannot be found
+     * @throws XPathExpressionException - Throws if Swagger document cannot be found
+     */
     public void waitForSwaggerDocument(String userName, String apiName, String apiVersion,
                                        String expectedResponse)
             throws IOException, XPathExpressionException {
@@ -751,13 +760,14 @@ public class APIStoreRestClient {
                     log.info("API :" + apiName + " with version: " + apiVersion +
                              " with expected response " + expectedResponse + " found");
                     break;
-                } else {
-                    try {
-                        Thread.sleep(500);
-                    } catch (InterruptedException ignored) {
-
-                    }
                 }
+            } else {
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException ignored) {
+
+                }
+
             }
         }
     }
