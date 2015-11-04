@@ -452,4 +452,12 @@ public class JWTTestCase extends APIMIntegrationBaseTest {
         //super.cleanUp();
         serverConfigurationManager.restoreToLastConfiguration();
     }
+
+    /**
+     * In this test class server is restarted multiple times since updated claims are not picked unless cache is expired
+     * In a clustered setup following alternatives are available
+     * 1. Introduce a new deployment pattern lowering the cache expire time
+     * 2. Restart instances using MCollective commands (which nodes to restart?)
+     */
+
 }
