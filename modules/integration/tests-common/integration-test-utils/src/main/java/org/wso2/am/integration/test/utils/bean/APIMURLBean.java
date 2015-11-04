@@ -32,7 +32,8 @@ public class APIMURLBean {
     private String webAppURLHttps; // web app URL https, ex: https://localhost:9443
     private String webAppURLNhttp; // web app URL nhttp, ex: http://localhost:8280
     private String webAppURLNhttps; // web app URL nhttps, ex: https://localhost:8243
-    private String serviceURL;
+    private String superTenantserviceURL; // super tenant service URL
+    private String jaggeryAppURL; // jagerry app hosted URL
 
     /**
      * construct basic URL's to be used from the given automation context object
@@ -77,7 +78,15 @@ public class APIMURLBean {
         }
         webAppURLNhttps = tempUrl + "/";
 
-        serviceURL = contextUrls.getSecureServiceUrl();
+        superTenantserviceURL = contextUrls.getSecureServiceUrl().split("/t/")[0] + "/";
+
+        String tempJaggURL = contextUrls.getServiceUrl();
+        if(tempJaggURL.contains("/t/")){
+            jaggeryAppURL = tempJaggURL.split("/services/")[0] + "/" + tempJaggURL.split("/services/")[1]+ "/jaggeryapps/";
+        }
+        else {
+            jaggeryAppURL = contextUrls.getServiceUrl().replace("/services", "/");
+        }
 
     }
 
@@ -97,5 +106,7 @@ public class APIMURLBean {
         return webAppURLNhttps;
     }
 
-    public String getServiceURL() { return  serviceURL; }
+    public String getServiceURL() { return  superTenantserviceURL; }
+
+    public String getJaggeryAppURL() { return jaggeryAppURL; }
 }
